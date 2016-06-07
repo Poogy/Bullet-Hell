@@ -193,10 +193,6 @@ if (dash&lt;dash_max &amp;&amp; !dash_cd &amp;&amp; key_dash) {
   if dash==3 alarm[2]=90;
 } 
 
-//Restart und schließen(zum Testen)
-if key_restart game_restart();
-if key_end game_end();
-
 //Death
 if hp&lt;=0 game_restart();
 
@@ -222,9 +218,9 @@ if hp&lt;=0 game_restart();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(ft_info);
+            <string>//draw_set_font(ft_info);
 draw_set_color(c_blue);
-draw_text(100,100,"Bullet Type:"+string(bullet));
+draw_text(48,48*4,"Bullet Type:"+string(bullet));
 draw_self();
 </string>
           </argument>

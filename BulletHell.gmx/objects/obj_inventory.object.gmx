@@ -703,6 +703,7 @@ else                        {tier_armor = 0;}
             <kind>1</kind>
             <string>///Draw the inventory
 //Mats
+/*Gute Array version
 for (i=0;i&lt;array_length_1d(n);i++){
         if (n[i] &gt; 0) &amp;&amp; (type[i] == "mat"){
            draw_sprite(sprite[i],0,48+48*j,48*1);
@@ -713,26 +714,48 @@ for (i=0;i&lt;array_length_1d(n);i++){
 
         } 
 }
+*/
+items_mats[0]=LEATHER;
+items_mats[1]=IRON;
+items_mats[2]=BLACKROCK;
+
+for (i=0;i&lt;array_length_1d(items_mats);i++){
+        if (n[items_mats[i]] &gt; 0){
+           draw_sprite(sprite[items_mats[i]],0,48+48*i,48*1);
+              if (stackable[items_mats[i]] == true){
+                 draw_set_color(c_white);
+                 draw_text(64+48*i,48*1,string(n[items_mats[i]]));
+           }
+
+        } 
+}
 
 //Misc
-for (i=0;i&lt;array_length_1d(n);i++){
-        if (n[i] &gt; 0) &amp;&amp; (type[i] == "misc"){
-           draw_sprite(sprite[i],0,48+48*i,48*2);
-              if (stackable[i] == true){
+
+items_misc[0]=KEY_GOLDEN;
+
+for (i=0;i&lt;array_length_1d(items_misc);i++){
+        if (n[items_misc[i]] &gt; 0){
+           draw_sprite(sprite[items_misc[i]],0,48+48*i,48*2);
+              if (stackable[items_misc[i]] == true){
                  draw_set_color(c_white);
-                 draw_text(64+48*i,48*2,string(n[i]));
+                 draw_text(64+48*i,48*2,string(n[items_misc[i]]));
            }
+
         } 
 }
 
 //Use
-for (i=0;i&lt;array_length_1d(n);i++){
-        if (n[i] &gt; 0) &amp;&amp; (type[i] == "use"){
-           draw_sprite(sprite[i],0,48+48*i,48*3);
-              if (stackable[i] == true){
+items_use[0]=MONEY_BAG_SMALL;
+
+for (i=0;i&lt;array_length_1d(items_use);i++){
+        if (n[items_use[i]] &gt; 0){
+           draw_sprite(sprite[items_use[i]],0,48+48*i,48*3);
+              if (stackable[items_use[i]] == true){
                  draw_set_color(c_white);
-                 draw_text(64+48*i,48*3,string(n[i]));
+                 draw_text(64+48*i,48*3,string(n[items_use[i]]));
            }
+
         } 
 }
 

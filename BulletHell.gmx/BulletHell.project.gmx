@@ -63,6 +63,9 @@
     <script>scripts\scr_save_game.gml</script>
     <script>scripts\scr_load_game.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\ft_info</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_bullet</object>
     <objects name="Lifeforms">
