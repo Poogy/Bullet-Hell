@@ -32,6 +32,42 @@ dmg=2;
         </arguments>
       </action>
     </event>
+    <event eventtype="1" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Drop leather
+if (scr_chance(1)) {
+   instance_create(x+random_range(-7,7), y+random_range(-7,7),obj_mat_leather);
+}
+
+//Drop iron
+if (scr_chance(1)) {
+   instance_create(x+random_range(-7,7), y+random_range(-7,7),obj_mat_iron);
+}
+
+//Drop blackrock
+if (scr_chance(1)) {
+   instance_create(x+random_range(-7,7), y+random_range(-7,7),obj_mat_blackrock);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -61,30 +97,6 @@ if hp&lt;=0 instance_destroy();
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_bullet">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hp-=other.dmg;
-with other instance_destroy();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="4" ename="obj_player">
       <action>
         <libid>1</libid>
@@ -104,6 +116,30 @@ with other instance_destroy();
             <kind>1</kind>
             <string>other.hp-=dmg;
 instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bullet">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hp-=other.dmg;
+with other instance_destroy();
 </string>
           </argument>
         </arguments>
