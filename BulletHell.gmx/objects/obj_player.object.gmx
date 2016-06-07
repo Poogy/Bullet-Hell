@@ -221,9 +221,9 @@ if hp&lt;=0 game_restart();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(ft_info);
+            <string>//draw_set_font(ft_info);
 draw_set_color(c_blue);
-draw_text(100,100,"Bullet Type:"+string(bullet));
+draw_text(48,48*4,"Bullet Type:"+string(bullet));
 draw_self();
 </string>
           </argument>
