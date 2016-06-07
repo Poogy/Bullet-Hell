@@ -3,8 +3,8 @@
   <spriteName>spr_player</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-10</depth>
-  <persistent>-1</persistent>
+  <depth>0</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,18 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_speed = 0;
-vspeed      = 0;
-hspeed      = 0;
-shoot       = false;
+            <string>vspeed=0;
+hspeed=0;
 
-hp          = 5;
-maxhp       = hp;
-
-dash        = 0;
-dash_max    = 3;
-dash_cd     = false;
-weapon      = 1;
+bullet=0;
+shoot=false;
+hp=5;
+dash=0;
+dash_max=3;
+dash_cd=false;
 </string>
           </argument>
         </arguments>
@@ -146,23 +143,44 @@ if (!dash_cd) {
     if key_down vspeed=3;
 }
 
+//Bullet wechseln
+if key_scroll_up {
+    if bullet&lt;2 bullet++;
+    else bullet=0;
+}
+if key_scroll_down {
+    if bullet&gt;0 bullet--;
+    else bullet=2;
+}
+
 //Spielerbewegung animiert
 image_angle=point_direction(x,y,mouse_x,mouse_y)-90;
 
 //Schießen
 if (!shoot &amp;&amp; key_shoot) {
-   shoot=true;
-   alarm[0]=10;
-   
-           if (weapon == 0) {
-        instance_create(x,y,obj_bullet);
-    } else if (weapon == 1) {
-        instance_create(x,y,obj_bullet);
-    } else if (weapon == 2) {
-        instance_create(x,y,obj_bullet);
+    shoot=true;
+    //Bullet 0: Pistol
+    if bullet==0 {
+        alarm[0]=10;
         instance_create(x,y,obj_bullet);
     }
+    //Bullet 1: SMG
+    else if bullet==1 {
+        alarm[0]=5;
+        instance_create(x,y,obj_bullet);
+    }
+    //Bullet 2: "Heimer W"
+    else if bullet==2 {
+        alarm[0]=20;
+        repeat 3 instance_create(x,y,obj_bullet);
+    }
+    //Bullet 3: Laser
+    else if bullet==3 {
+        laser=1;
+        if laser==1 instance_create(x,y,obj_bullet);
+    }
 }
+if !key_shoot || bullet!=3 laser=0;
 
 //Dash
 if (dash&lt;dash_max &amp;&amp; !dash_cd &amp;&amp; key_dash) {
@@ -173,10 +191,41 @@ if (dash&lt;dash_max &amp;&amp; !dash_cd &amp;&amp; key_dash) {
   move_towards_point(mouse_x,mouse_y,20);
   alarm[1]=10;
   if dash==3 alarm[2]=90;
-}
+} 
+
+//Restart und schließen(zum Testen)
+if key_restart game_restart();
+if key_end game_end();
 
 //Death
 if hp&lt;=0 game_restart();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_font(ft_info);
+draw_set_color(c_blue);
+draw_text(100,100,"Bullet Type:"+string(bullet));
+draw_self();
 </string>
           </argument>
         </arguments>
