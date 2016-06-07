@@ -441,7 +441,7 @@
     <option_tizen_minor_version>0</option_tizen_minor_version>
     <option_tizen_network_urls></option_tizen_network_urls>
     <option_tizen_orientation>0</option_tizen_orientation>
-    <option_tizen_push_enable>0</option_tizen_push_enable>
+    <option_tizen_push_enable>-1</option_tizen_push_enable>
     <option_tizen_scaling>0</option_tizen_scaling>
     <option_tizen_splash_png>Configs\Default\tizen\splash.png</option_tizen_splash_png>
     <option_tizen_texture_page>1024</option_tizen_texture_page>

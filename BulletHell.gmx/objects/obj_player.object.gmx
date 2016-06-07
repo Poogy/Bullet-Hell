@@ -30,7 +30,9 @@ hspeed=0;
 
 bullet=0;
 shoot=false;
+laser=1;
 hp=5;
+
 dash=0;
 dash_max=3;
 dash_cd=false;
@@ -145,12 +147,12 @@ if (!dash_cd) {
 
 //Bullet wechseln
 if key_scroll_up {
-    if bullet&lt;2 bullet++;
+    if bullet&lt;3 bullet++;
     else bullet=0;
 }
 if key_scroll_down {
     if bullet&gt;0 bullet--;
-    else bullet=2;
+    else bullet=3;
 }
 
 //Spielerbewegung animiert
@@ -176,11 +178,12 @@ if (!shoot &amp;&amp; key_shoot) {
     }
     //Bullet 3: Laser
     else if bullet==3 {
-        laser=1;
-        if laser==1 instance_create(x,y,obj_bullet);
+        if laser==1 {
+            instance_create(x,y,obj_laser);
+            laser=0;
+        }
     }
 }
-if !key_shoot || bullet!=3 laser=0;
 
 //Dash
 if (dash&lt;dash_max &amp;&amp; !dash_cd &amp;&amp; key_dash) {
@@ -192,10 +195,6 @@ if (dash&lt;dash_max &amp;&amp; !dash_cd &amp;&amp; key_dash) {
   alarm[1]=10;
   if dash==3 alarm[2]=90;
 } 
-
-//Restart und schließen(zum Testen)
-if key_restart game_restart();
-if key_end game_end();
 
 //Death
 if hp&lt;=0 game_restart();

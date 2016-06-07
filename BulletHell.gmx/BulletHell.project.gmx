@@ -6,7 +6,6 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_bullet</sprite>
     <sprites name="Items">
       <sprites name="Misc">
         <sprite>sprites\spr_key_golden</sprite>
@@ -41,6 +40,11 @@
       <sprite>sprites\spr_enemy01</sprite>
     </sprites>
     <sprite>sprites\spr_craft</sprite>
+    <sprites name="Weapons">
+      <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_laser</sprite>
+      <sprite>sprites\spr_laser_end</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_01_16</background>
@@ -63,8 +67,10 @@
     <script>scripts\scr_save_game.gml</script>
     <script>scripts\scr_load_game.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\ft_info</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\obj_bullet</object>
     <objects name="Lifeforms">
       <object>objects\obj_player</object>
       <object>objects\obj_enemy01</object>
@@ -100,6 +106,11 @@
       <object>objects\item_parent</object>
     </objects>
     <object>objects\obj_craft</object>
+    <objects name="Weapons">
+      <object>objects\obj_bullet</object>
+      <object>objects\obj_laser</object>
+      <object>objects\obj_laser_messenger</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_01</room>
