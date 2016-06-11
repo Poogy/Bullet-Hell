@@ -31,7 +31,8 @@ hspeed=0;
 bullet=0;
 shoot=false;
 laser=1;
-hp=5;
+hpmax=5;
+hp=hpmax;
 
 dash=0;
 dash_max=3;
@@ -145,6 +146,22 @@ if (!dash_cd) {
     if key_down vspeed=3;
 }
 
+//Collisions
+if hspeed!=0{
+   if !place_free(x+hspeed,y){
+      if hspeed&gt;0 move_contact_solid(0,hspeed);
+      if hspeed&lt;0 move_contact_solid(180,-hspeed);
+      hspeed=0;
+   }
+}
+
+if vspeed!=0{
+   if !place_free(x+hspeed,y+vspeed){
+      if vspeed&gt;0 move_contact_solid(270,vspeed);
+      if vspeed&lt;0 move_contact_solid(90,-vspeed);
+      vspeed=0;
+   }
+}
 //Bullet wechseln
 if key_scroll_up {
     if bullet&lt;3 bullet++;
@@ -197,6 +214,9 @@ if (dash&lt;dash_max &amp;&amp; !dash_cd &amp;&amp; key_dash) {
   if dash==3 alarm[2]=90;
 } 
 
+//Hp
+//hpmax = hpmax + item_hp[armor[1,tier_helmet]] + item_hp[armor[0,tier_armor]];
+
 //Death
 if hp&lt;=0 game_restart();
 
@@ -205,7 +225,7 @@ if hp&lt;=0 game_restart();
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -222,11 +242,13 @@ if hp&lt;=0 game_restart();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Bullet type
+            <string>///Draw
 //draw_set_font(ft_info);
 draw_set_color(c_blue);
 draw_text(48,16,"Bullet Type:"+string(bullet));
-draw_self();
+//draw_healthbar(16,1040,128,1008,(hp/hpmax)*100,c_gray,c_maroon,c_green,0,true,true);
+//draw_text(144,1024,string(hp)+"/"+string(hpmax));
+//draw_self();
 </string>
           </argument>
         </arguments>

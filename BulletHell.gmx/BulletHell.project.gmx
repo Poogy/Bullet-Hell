@@ -14,6 +14,7 @@
       <sprites name="Materials">
         <sprite>sprites\spr_mat_leather</sprite>
         <sprite>sprites\spr_mat_iron</sprite>
+        <sprite>sprites\spr_mat_refined_iron</sprite>
         <sprite>sprites\spr_mat_blackrock</sprite>
       </sprites>
       <sprites name="Armor">
@@ -45,6 +46,9 @@
       <sprite>sprites\spr_laser</sprite>
       <sprite>sprites\spr_laser_end</sprite>
     </sprites>
+    <sprite>sprites\spr_collision</sprite>
+    <sprite>sprites\spr_door</sprite>
+    <sprite>sprites\spr_forge</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_01_16</background>
@@ -87,6 +91,7 @@
       <objects name="Materials">
         <object>objects\obj_mat_leather</object>
         <object>objects\obj_mat_iron</object>
+        <object>objects\obj_mat_refined_iron</object>
         <object>objects\obj_mat_blackrock</object>
       </objects>
       <objects name="Armor">
@@ -111,11 +116,14 @@
       <object>objects\obj_laser</object>
       <object>objects\obj_laser_messenger</object>
     </objects>
+    <object>objects\obj_collision</object>
+    <object>objects\obj_door</object>
+    <object>objects\obj_forge</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_01</room>
   </rooms>
-  <constants number="13">
+  <constants number="14">
     <constant name="MONEY_BAG_SMALL">0</constant>
     <constant name="KEY_GOLDEN">1</constant>
     <constant name="LEATHER">2</constant>
@@ -129,6 +137,7 @@
     <constant name="ARMOR_IRON">10</constant>
     <constant name="HELMET_BLACKROCK">11</constant>
     <constant name="ARMOR_BLACKROCK">12</constant>
+    <constant name="REFINED_IRON">13</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

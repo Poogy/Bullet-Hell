@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>var i;
 var list;
+var item;
 craft_show = false;
 
 scr_input();
@@ -85,18 +86,18 @@ if (key_craft){
           <argument>
             <kind>1</kind>
             <string>if (craft_show){ 
-    if (list==0){item = tier_helmet;}
-    if (list==1){item = tier_armor;} 
-    
-    //genügend Material vorhanden
-    if (n[ingredients[list,item]] &gt;= ingredients_n[list,item]){
-    //Falls das item noch erhalten werden darf (stacken oder 0 davon haben)
-            if (stackable[recipe[list,item]] == true) or (stackable[recipe[list,item]] == false &amp;&amp; n[recipe[list,item]] == 0){
-               scr_remove_item(ingredients[list,item], ingredients_n[list,item]); //Material vom Inventar entfernen
-               scr_pickup(recipe[list,item], recipe_n[list,item]); //Item erhalten
-            }
+   if (list==0){item = tier_helmet;}
+   if (list==1){item = tier_armor;} 
+        
+        //genügend Material vorhanden
+        if (n[ingredients[list,item]] &gt;= ingredients_n[list,item]){
+        //Falls das item noch erhalten werden darf (stacken oder 0 davon haben)
+                if (stackable[recipe[list,item]] == true) or (stackable[recipe[list,item]] == false &amp;&amp; n[recipe[list,item]] == 0){
+                   scr_remove_item(ingredients[list,item], ingredients_n[list,item]); //Material vom Inventar entfernen
+                   scr_pickup(recipe[list,item], recipe_n[list,item]); //Item erhalten
+                }
+        }
     }
-}
 </string>
           </argument>
         </arguments>

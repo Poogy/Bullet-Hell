@@ -46,6 +46,7 @@ item_name[HELMET_BLACKROCK]     = "Schwarzfels Helm";
 
 item_name[LEATHER]              = "Leder";
 item_name[IRON]                 = "Eisen";
+item_name[REFINED_IRON]         = "Eisenbarren";
 item_name[BLACKROCK]            = "Schwarzfels";
 
 //--| Misc
@@ -94,6 +95,7 @@ sprite[HELMET_BLACKROCK]     = spr_helmet_blackrock;
 
 sprite[LEATHER]              = spr_mat_leather;
 sprite[IRON]                 = spr_mat_iron;
+sprite[REFINED_IRON]         = spr_mat_refined_iron;
 sprite[BLACKROCK]            = spr_mat_blackrock;
 
 //--| Misc
@@ -142,6 +144,7 @@ object[HELMET_BLACKROCK]     = obj_helmet_blackrock;
 
 object[LEATHER]              = obj_mat_leather;
 object[IRON]                 = obj_mat_iron;
+object[REFINED_IRON]         = obj_mat_refined_iron;
 object[BLACKROCK]            = obj_mat_blackrock;
 
 //--| Misc
@@ -190,6 +193,7 @@ stackable[HELMET_BLACKROCK]     = false;
 
 stackable[LEATHER]              = true;
 stackable[IRON]                 = true;
+stackable[REFINED_IRON]         = true;
 stackable[BLACKROCK]            = true;
 
 //--| Misc
@@ -238,6 +242,7 @@ n[HELMET_BLACKROCK]     = 0;
 
 n[LEATHER]              = 0;
 n[IRON]                 = 0;
+n[REFINED_IRON]         = 0;
 n[BLACKROCK]            = 0;
 
 //--| Misc
@@ -285,6 +290,7 @@ script[HELMET_BLACKROCK]     = noone;
 
 script[LEATHER]              = noone;
 script[IRON]                 = noone;
+script[REFINED_IRON]         = noone;
 script[BLACKROCK]            = noone;
 
 //--| Misc
@@ -332,7 +338,8 @@ info_text[HELMET_BLACKROCK]     = "";
 //--| Materials
 
 info_text[LEATHER]              = "Wird für schwache Rüstungen verwendet";
-info_text[IRON]                 = "Wird für die zweiten Rüstungsteile verwendet";
+info_text[IRON]                 = "";
+info_text[REFINED_IRON]         = "Wird für die zweiten Rüstungsteile verwendet";
 info_text[BLACKROCK]            = "";
 
 //--| Misc
@@ -381,6 +388,7 @@ value[HELMET_BLACKROCK]     = 300;
 
 value[LEATHER]              = 20;
 value[IRON]                 = 30;
+value[REFINED_IRON]         = 35;
 value[BLACKROCK]            = 40;
 
 //--| Misc
@@ -429,6 +437,7 @@ type[HELMET_BLACKROCK]     = "eq";
 
 type[LEATHER]              = "mat";
 type[IRON]                 = "mat";
+type[REFINED_IRON]         = "mat";
 type[BLACKROCK]            = "mat";
 
 //--| Misc
@@ -477,60 +486,13 @@ item_hp[HELMET_BLACKROCK]     = 25;
 
 item_hp[LEATHER]              = 0;
 item_hp[IRON]                 = 0;
+item_hp[REFINED_IRON]         = 0;
 item_hp[BLACKROCK]            = 0;
 
 //--| Misc
 
 item_hp[MONEY_BAG_SMALL]      = 0;
 item_hp[KEY_GOLDEN]           = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Item drawn
-
-
-/////////////////////////////////////
-//------Array for draw event-------//
-/////////////////////////////////////
-
-//--| Armor
-
-draw[ARMOR_NONE]           = false;
-draw[ARMOR_LEATHER]        = false;
-draw[ARMOR_IRON]           = false;
-draw[ARMOR_BLACKROCK]      = false;
-draw[HELMET_NONE]          = false;
-draw[HELMET_LEATHER]       = false;
-draw[HELMET_IRON]          = false;
-draw[HELMET_BLACKROCK]     = false;
-
-//--| Materials
-
-draw[LEATHER]              = false;
-draw[IRON]                 = false;
-draw[BLACKROCK]            = false;
-
-//--| Misc
-
-draw[MONEY_BAG_SMALL]      = false;
-draw[KEY_GOLDEN]           = false;
 </string>
           </argument>
         </arguments>
@@ -573,9 +535,9 @@ globalvar type;
 globalvar tier_helmet;
 globalvar tier_armor;
 globalvar draw;
+globalvar armor;
 
 eq_show = false;
-j = 0;
 
 //Armor
 armor[0,0] = HELMET_NONE;
@@ -618,6 +580,10 @@ recipe_n[1,1]             = 1;
 recipe[1,2]               = ARMOR_BLACKROCK;
 recipe_n[1,2]             = 1;
 
+//Items - Recipies
+recipe[2,0]               = REFINED_IRON;
+recipe_n[2,0]             = 1;
+
 //----ingredients----
 //Helmets - ingredients
 ingredients[0,0]        = LEATHER;
@@ -634,6 +600,10 @@ ingredients[1,1]        = IRON;
 ingredients_n[1,1]      = 10;
 ingredients[1,2]        = BLACKROCK;
 ingredients_n[1,2]      = 10;
+
+//Items - ingredients
+ingredients[2,0]        = IRON;
+ingredients_n[2,0]      = 2;
 </string>
           </argument>
         </arguments>
@@ -717,7 +687,8 @@ for (i=0;i&lt;array_length_1d(n);i++){
 */
 items_mats[0]=LEATHER;
 items_mats[1]=IRON;
-items_mats[2]=BLACKROCK;
+items_mats[2]=REFINED_IRON;
+items_mats[3]=BLACKROCK;
 
 for (i=0;i&lt;array_length_1d(items_mats);i++){
         if (n[items_mats[i]] &gt; 0){
