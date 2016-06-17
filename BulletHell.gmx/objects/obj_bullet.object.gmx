@@ -25,37 +25,33 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//----Stats----
-bullet_00 = 5
-bullet_01 = 25;
-bullet_02 = 20;
-
+            <string>//-----DMG-----
 dmg=obj_stat.bullet[obj_stat.stat[3],1]; //Nimmt den dmg wert für die ausgewählte waffe
 //-------------
 hspeed=9;
 image_angle=obj_player.image_angle;
 
 if (obj_stat.stat[3]==0) {
-   if (obj_stat.bullet[0,0] &gt; 0){
-      direction=image_angle+random_range(90+bullet_00-bullet_00/obj_stat.bullet[0,0],90-bullet_00+bullet_00/obj_stat.bullet[0,0]);
+   if (obj_stat.bullet[obj_stat.stat[3],0] &gt; 0){
+      direction=image_angle+random_range(90+obj_player.bullet[obj_stat.stat[3]]-obj_player.bullet[obj_stat.stat[3]]/obj_stat.bullet[0,0],90-obj_player.bullet[obj_stat.stat[3]]+obj_player.bullet[obj_stat.stat[3]]/obj_stat.bullet[0,0]);
     }else{
-      direction=image_angle+random_range(90+bullet_00,90-bullet_00);
+      direction=image_angle+random_range(90+obj_player.bullet[obj_stat.stat[3]],90-obj_player.bullet[obj_stat.stat[3]]);
     }
 }
 else if (obj_stat.stat[3]==1) {
-     if (obj_stat.bullet[1,0] &gt; 0){
-        direction=image_angle+random_range(90+bullet_01-bullet_01/obj_stat.bullet[1,0],90-bullet_01+bullet_01/obj_stat.bullet[1,0]);
+     if (obj_stat.bullet[obj_stat.stat[3],0] &gt; 0){
+        direction=image_angle+random_range(90+obj_player.bullet[obj_stat.stat[3]]-obj_player.bullet[obj_stat.stat[3]]/obj_stat.bullet[1,0],90-obj_player.bullet[obj_stat.stat[3]]+obj_player.bullet[obj_stat.stat[3]]/obj_stat.bullet[1,0]);
     }else{
-        direction=image_angle+random_range(90+bullet_01,90-bullet_01);
+        direction=image_angle+random_range(90+obj_player.bullet[obj_stat.stat[3]],90-obj_player.bullet[obj_stat.stat[3]]);
     }
 }
 else if (obj_stat.stat[3]==2) {
     with (obj_player) {
         if distance_to_point(mouse_x,mouse_y)&lt;300 {
-           if (obj_stat.bullet[2,0] &gt; 0){
-              other.direction=image_angle+random_range(90+bullet_02-bullet_02/obj_stat.bullet[2,0],90-bullet_02+bullet_02/obj_stat.bullet[2,0]);
+           if (obj_stat.bullet[obj_stat.stat[3],0] &gt; 0){
+              other.direction=image_angle+random_range(90+obj_player.bullet[obj_stat.stat[3]]-obj_player.bullet[obj_stat.stat[3]]/obj_stat.bullet[2,0],90-obj_player.bullet[obj_stat.stat[3]]+obj_player.bullet[obj_stat.stat[3]]/obj_stat.bullet[2,0]);
             }else{
-              other.direction=image_angle+random_range(90+bullet_02,90-bullet_02);
+              other.direction=image_angle+random_range(90+obj_player.bullet[obj_stat.stat[3]],90-obj_player.bullet[obj_stat.stat[3]]);
             }
         }
         else {
