@@ -49,6 +49,11 @@
     <sprite>sprites\spr_collision</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_forge</sprite>
+    <sprite>sprites\spr_weapon_upgrade</sprite>
+    <sprite>sprites\spr_glow</sprite>
+    <sprite>sprites\spr_torch</sprite>
+    <sprite>sprites\spr_door_ext</sprite>
+    <sprite>sprites\spr_door_int</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_01_16</background>
@@ -82,6 +87,10 @@
     <objects name="Controller">
       <object>objects\obj_inventory</object>
       <object>objects\obj_pause</object>
+      <object>objects\obj_nightCycle</object>
+      <object>objects\obj_controller</object>
+      <object>objects\obj_roomTransition</object>
+      <object>objects\obj_stat</object>
     </objects>
     <objects name="Items">
       <objects name="Misc">
@@ -111,6 +120,7 @@
       <object>objects\item_parent</object>
     </objects>
     <object>objects\obj_craft</object>
+    <object>objects\obj_upgrade</object>
     <objects name="Weapons">
       <object>objects\obj_bullet</object>
       <object>objects\obj_laser</object>
@@ -119,9 +129,14 @@
     <object>objects\obj_collision</object>
     <object>objects\obj_door</object>
     <object>objects\obj_forge</object>
+    <object>objects\obj_weapon_upgrade</object>
+    <object>objects\obj_torch</object>
+    <object>objects\obj_door_ext</object>
+    <object>objects\obj_door_int</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_01</room>
+    <room>rooms\rm_skill</room>
   </rooms>
   <constants number="14">
     <constant name="MONEY_BAG_SMALL">0</constant>

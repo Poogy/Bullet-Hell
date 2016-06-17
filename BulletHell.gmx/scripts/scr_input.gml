@@ -11,5 +11,6 @@ key_dash        = mouse_check_button_pressed(mb_right);
 key_pause       = keyboard_check_pressed(vk_escape);
 key_eq          = keyboard_check_pressed(ord('V'));
 key_craft       = keyboard_check_pressed(ord('B'));
-key_use         = keyboard_check_pressed(ord('E'))
+key_use         = keyboard_check_pressed(ord('E'));
+key_stats       = keyboard_check_pressed(ord('C'));
 

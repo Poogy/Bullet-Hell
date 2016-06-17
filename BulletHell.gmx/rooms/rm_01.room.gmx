@@ -95,6 +95,17 @@
     <instance objName="obj_collision" x="1168" y="32" name="inst_041769C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_collision" x="1184" y="0" name="inst_E83419DC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_forge" x="1408" y="64" name="inst_D3A88C19" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_weapon_upgrade" x="1680" y="288" name="inst_5B7B309B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_upgrade" x="1680" y="224" name="inst_FAF3CA7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_nightCycle" x="16" y="0" name="inst_E72B0A75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_torch" x="1008" y="624" name="inst_A20303C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_controller" x="48" y="0" name="inst_13A97491" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_ext" x="1152" y="448" name="inst_DCB54905" locked="0" code="targetRoom = rm_skill;&#xA;target_x = 864;&#xA;target_y = 896;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="1184" y="416" name="inst_6C185C97" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="1200" y="448" name="inst_F7455411" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="1200" y="480" name="inst_19CC7038" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_collision" x="1200" y="512" name="inst_4BB808E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stat" x="64" y="0" name="inst_10B56B8E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_01_16" x="864" y="576" w="32" h="32" xo="128" yo="128" id="10000001" name="inst_291FAF8D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
