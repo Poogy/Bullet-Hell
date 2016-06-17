@@ -30,6 +30,10 @@
 vspeed=0;
 hspeed=0;
 
+bullet[0]=5;
+bullet[1]=25;
+bullet[2]=20;
+
 shoot=false;
 laser=1;
 
@@ -192,13 +196,11 @@ if (!shoot &amp;&amp; key_shoot) {
         alarm[0]=20;
         repeat 3 instance_create(x,y,obj_bullet);
     }
-    //Bullet 3: Laser
+    //Bullet 3: AOE
     else if obj_stat.stat[3]==3 {
         shoot=0;
-        if laser==1 {
-            instance_create(x,y,obj_laser);
-            laser=0;
-        }
+        alarm[0]=10;
+        instance_create(x,y,obj_bullet);
     }
 }
 
