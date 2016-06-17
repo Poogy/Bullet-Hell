@@ -85,6 +85,7 @@
       <object>objects\obj_enemy01</object>
     </objects>
     <objects name="Controller">
+      <object>objects\obj_spawner</object>
       <object>objects\obj_inventory</object>
       <object>objects\obj_pause</object>
       <object>objects\obj_nightCycle</object>
@@ -123,8 +124,6 @@
     <object>objects\obj_upgrade</object>
     <objects name="Weapons">
       <object>objects\obj_bullet</object>
-      <object>objects\obj_laser</object>
-      <object>objects\obj_laser_messenger</object>
     </objects>
     <object>objects\obj_collision</object>
     <object>objects\obj_door</object>
