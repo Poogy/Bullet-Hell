@@ -87,7 +87,8 @@ if (key_craft){
             <kind>1</kind>
             <string>if (craft_show){ 
    if (list==0){item = tier_helmet;}
-   if (list==1){item = tier_armor;} 
+   if (list==1){item = tier_armor;}
+   if (list==2){item = tier_armor;} 
         
         //genügend Material vorhanden
         if (n[ingredients[list,item]] &gt;= ingredients_n[list,item]){
@@ -122,7 +123,8 @@ if (key_craft){
             <kind>1</kind>
             <string>if (craft_show){
     if (list==0){item = tier_helmet;}
-    if (list==1){item = tier_armor;} 
+    if (list==1){item = tier_armor;}
+    if (list==2){item = tier_armor;} 
     
         draw_self();
         draw_set_color(c_white);

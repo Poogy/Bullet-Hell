@@ -56,8 +56,8 @@
     <instance objName="obj_money_bag_small" x="96" y="64" name="inst_5172E8D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_key_golden" x="160" y="64" name="inst_DFC6C39A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_pause" x="32" y="0" name="inst_FB888F47" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_craft" x="128" y="160" name="inst_D09F2EA2" locked="0" code="list = 0;&#xA;refine = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_craft" x="128" y="224" name="inst_8AFBC836" locked="0" code="list = 1;&#xA;refine = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_craft" x="128" y="160" name="inst_D09F2EA2" locked="0" code="list = 0;&#xA;refine = false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_craft" x="128" y="224" name="inst_8AFBC836" locked="0" code="list = 1;&#xA;refine = false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_armor_leather" x="384" y="160" name="inst_09AFBEDE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_armor_leather" x="480" y="160" name="inst_240A45C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_helmet_iron" x="288" y="448" name="inst_2DEF10AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -96,6 +96,8 @@
     <instance objName="obj_spawner" x="1792" y="832" name="inst_FB74D28A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="656" y="368" name="inst_BE0A0CB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="1600" y="432" name="inst_77F2BA6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_boots_iron" x="272" y="64" name="inst_C3084419" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_craft" x="128" y="288" name="inst_B3ECD09D" locked="0" code="list = 2;&#xA;refine = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tile_01_16" x="864" y="576" w="32" h="32" xo="128" yo="128" id="10000001" name="inst_291FAF8D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

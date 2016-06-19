@@ -41,6 +41,10 @@ item_name[HELMET_NONE]          = "Kein Helm";
 item_name[HELMET_LEATHER]       = "Leder Helm";
 item_name[HELMET_IRON]          = "Eisen Helm";
 item_name[HELMET_BLACKROCK]     = "Schwarzfels Helm";
+item_name[BOOTS_NONE]           = "Keine Schuhe";
+item_name[BOOTS_LEATHER]        = "Leder Schuhe";
+item_name[BOOTS_IRON]           = "Eisen Schuhe";
+item_name[BOOTS_BLACKROCK]      = "Schwarzfels Schuhe";
 
 //--| Materials
 
@@ -94,6 +98,10 @@ sprite[HELMET_NONE]          = spr_helmet_none;
 sprite[HELMET_LEATHER]       = spr_helmet_leather;
 sprite[HELMET_IRON]          = spr_helmet_iron;
 sprite[HELMET_BLACKROCK]     = spr_helmet_blackrock;
+sprite[BOOTS_NONE]           = spr_boots_none;
+sprite[BOOTS_LEATHER]        = spr_boots_leather;
+sprite[BOOTS_IRON]           = spr_boots_iron;
+sprite[BOOTS_BLACKROCK]      = spr_boots_blackrock;
 
 //--| Materials
 
@@ -147,6 +155,10 @@ object[HELMET_NONE]          = noone;
 object[HELMET_LEATHER]       = obj_helmet_leather;
 object[HELMET_IRON]          = obj_helmet_iron;
 object[HELMET_BLACKROCK]     = obj_helmet_blackrock;
+object[BOOTS_NONE]           = noone;
+object[BOOTS_LEATHER]        = obj_boots_leather;
+object[BOOTS_IRON]           = obj_boots_iron;
+object[BOOTS_BLACKROCK]      = obj_boots_blackrock;
 
 //--| Materials
 
@@ -200,6 +212,10 @@ stackable[HELMET_NONE]          = false;
 stackable[HELMET_LEATHER]       = false;
 stackable[HELMET_IRON]          = false;
 stackable[HELMET_BLACKROCK]     = false;
+stackable[BOOTS_NONE]           = false;
+stackable[BOOTS_LEATHER]        = false;
+stackable[BOOTS_IRON]           = false;
+stackable[BOOTS_BLACKROCK]      = false;
 
 //--| Materials
 
@@ -253,6 +269,10 @@ n[HELMET_NONE]          = 1;
 n[HELMET_LEATHER]       = 0;
 n[HELMET_IRON]          = 0;
 n[HELMET_BLACKROCK]     = 0;
+n[BOOTS_NONE]           = 1;
+n[BOOTS_LEATHER]        = 0;
+n[BOOTS_IRON]           = 0;
+n[BOOTS_BLACKROCK]      = 0;
 
 //--| Materials
 
@@ -305,6 +325,10 @@ script[HELMET_NONE]          = noone;
 script[HELMET_LEATHER]       = noone;
 script[HELMET_IRON]          = noone;
 script[HELMET_BLACKROCK]     = noone;
+script[BOOTS_NONE]           = noone;
+script[BOOTS_LEATHER]        = noone;
+script[BOOTS_IRON]           = noone;
+script[BOOTS_BLACKROCK]      = noone;
 
 //--| Materials
 
@@ -358,6 +382,10 @@ info_text[HELMET_NONE]          = "Kein Helm";
 info_text[HELMET_LEATHER]       = "Es macht kaum einen Unterschied ob man diesen Helm trägt oder nicht da er ja nichtmal wirklich ein Helm ist";
 info_text[HELMET_IRON]          = "Suckt immer noch ziemlich hart";
 info_text[HELMET_BLACKROCK]     = "";
+info_text[BOOTS_NONE]          = "Keine Schuhe";
+info_text[BOOTS_LEATHER]       = "";
+info_text[BOOTS_IRON]          = "";
+info_text[BOOTS_BLACKROCK]     = "";
 
 //--| Materials
 
@@ -411,6 +439,10 @@ value[HELMET_NONE]          = 0;
 value[HELMET_LEATHER]       = 150;
 value[HELMET_IRON]          = 200;
 value[HELMET_BLACKROCK]     = 300;
+value[BOOTS_NONE]           = 0;
+value[BOOTS_LEATHER]        = 150;
+value[BOOTS_IRON]           = 200;
+value[BOOTS_BLACKROCK]      = 300;
 
 //--| Materials
 
@@ -464,6 +496,10 @@ type[HELMET_NONE]          = "eq";
 type[HELMET_LEATHER]       = "eq";
 type[HELMET_IRON]          = "eq";
 type[HELMET_BLACKROCK]     = "eq";
+type[BOOTS_NONE]           = "eq";
+type[BOOTS_LEATHER]        = "eq";
+type[BOOTS_IRON]           = "eq";
+type[BOOTS_BLACKROCK]      = "eq";
 
 //--| Materials
 
@@ -515,8 +551,12 @@ item_hp[ARMOR_IRON]           = 45;
 item_hp[ARMOR_BLACKROCK]      = 65;
 item_hp[HELMET_NONE]          = 0;
 item_hp[HELMET_LEATHER]       = 10;
-item_hp[HELMET_LEATHER]       = 15;
+item_hp[HELMET_IRON]          = 15;
 item_hp[HELMET_BLACKROCK]     = 25;
+item_hp[BOOTS_NONE]           = 0;
+item_hp[BOOTS_LEATHER]        = 5;
+item_hp[BOOTS_IRON]           = 8;
+item_hp[BOOTS_BLACKROCK]      = 15;
 
 //--| Materials
 
@@ -574,6 +614,7 @@ globalvar item_hp;
 globalvar type;
 globalvar tier_helmet;
 globalvar tier_armor;
+globalvar tier_boots;
 globalvar draw;
 globalvar armor;
 
@@ -589,6 +630,11 @@ armor[1,0] = ARMOR_NONE;
 armor[1,1] = ARMOR_LEATHER;
 armor[1,2] = ARMOR_IRON;
 armor[1,3] = ARMOR_BLACKROCK;
+
+armor[2,0] = BOOTS_NONE;
+armor[2,1] = BOOTS_LEATHER;
+armor[2,2] = BOOTS_IRON;
+armor[2,3] = BOOTS_BLACKROCK;
 
 //----Recipes----
 /*
@@ -620,6 +666,14 @@ recipe_n[1,1]             = 1;
 recipe[1,2]               = ARMOR_BLACKROCK;
 recipe_n[1,2]             = 1;
 
+//Boots - Recipies
+recipe[2,0]               = BOOTS_LEATHER;
+recipe_n[2,0]             = 1;
+recipe[2,1]               = BOOTS_IRON;
+recipe_n[2,1]             = 1;
+recipe[2,2]               = BOOTS_BLACKROCK;
+recipe_n[2,2]             = 1;
+
 //Items - Recipies
 recipe[2,0]               = REFINED_IRON;
 recipe_n[2,0]             = 1;
@@ -640,6 +694,14 @@ ingredients[1,1]        = IRON;
 ingredients_n[1,1]      = 10;
 ingredients[1,2]        = BLACKROCK;
 ingredients_n[1,2]      = 10;
+
+//Armors - ingredients
+ingredients[2,0]        = LEATHER;
+ingredients_n[2,0]      = 5;
+ingredients[2,1]        = IRON;
+ingredients_n[2,1]      = 5;
+ingredients[2,2]        = BLACKROCK;
+ingredients_n[2,2]      = 5;
 
 //Items - ingredients
 ingredients[2,0]        = IRON;
@@ -690,8 +752,14 @@ else if (n[armor[1,2]] == 1){tier_armor = 2;}
 else if (n[armor[1,1]] == 1){tier_armor = 1;}
 else                        {tier_armor = 0;}
 
+//Boots[2]
+if (n[armor[2,3]] == 1)     {tier_boots = 3;}
+else if (n[armor[2,2]] == 1){tier_boots = 2;}
+else if (n[armor[2,1]] == 1){tier_boots = 1;}
+else                        {tier_boots = 0;}
+
 //----HP----
-obj_stat.stat[0] = item_hp[armor[1,tier_helmet]] + item_hp[armor[0,tier_armor]];
+obj_stat.stat[0] = item_hp[armor[1,tier_helmet]] + item_hp[armor[0,tier_armor]] + item_hp[armor[2,tier_boots]];
 </string>
           </argument>
         </arguments>
@@ -779,6 +847,7 @@ draw_text(48,48*4,"Use Item: "+string(item_name[items_use[obj_player.i]]));
 if (eq_show){
    draw_sprite(sprite[armor[0,tier_helmet]],0,48,48*5+48*0);
    draw_sprite(sprite[armor[1,tier_armor]],0,48,48*5+48*1);
+   draw_sprite(sprite[armor[2,tier_boots]],0,48,48*5+48*2);
 }
 </string>
           </argument>
