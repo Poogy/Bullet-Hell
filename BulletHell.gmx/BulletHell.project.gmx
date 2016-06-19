@@ -98,6 +98,7 @@
       <object>objects\obj_controller</object>
       <object>objects\obj_roomTransition</object>
       <object>objects\obj_stat</object>
+      <object>objects\obj_view</object>
     </objects>
     <objects name="Items">
       <objects name="Misc">
@@ -125,8 +126,8 @@
           <object>objects\obj_armor_blackrock</object>
           <object>objects\obj_boots_blackrock</object>
         </objects>
+        <object>objects\item_parent</object>
       </objects>
-      <object>objects\item_parent</object>
       <objects name="Use">
         <object>objects\obj_money_bag_small</object>
         <object>objects\obj_medic_kit_small</object>
