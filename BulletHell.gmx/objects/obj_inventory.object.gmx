@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>-999999999</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -51,8 +51,12 @@ item_name[BLACKROCK]            = "Schwarzfels";
 
 //--| Misc
 
-item_name[MONEY_BAG_SMALL]      = "Münzbeutel";
-item_name[KEY_GOLDEN]           = "Goldner Schlüssel";
+item_name[KEY_GOLDEN]           = "Goldner Schlussel";
+
+//--| Use
+
+item_name[MONEY_BAG_SMALL]      = "Munzbeutel";
+item_name[MEDIC_KIT_SMALL]      = "Kleines Medic Kit";
 </string>
           </argument>
         </arguments>
@@ -100,8 +104,12 @@ sprite[BLACKROCK]            = spr_mat_blackrock;
 
 //--| Misc
 
-sprite[MONEY_BAG_SMALL]      = spr_money_bag_small;
 sprite[KEY_GOLDEN]           = spr_key_golden;
+
+//--| Use
+
+sprite[MONEY_BAG_SMALL]      = spr_money_bag_small;
+sprite[MEDIC_KIT_SMALL]      = spr_medic_kit_small;
 </string>
           </argument>
         </arguments>
@@ -149,8 +157,12 @@ object[BLACKROCK]            = obj_mat_blackrock;
 
 //--| Misc
 
-object[MONEY_BAG_SMALL]      = obj_money_bag_small;
 object[KEY_GOLDEN]           = obj_key_golden;
+
+//--| Use
+
+object[MONEY_BAG_SMALL]      = obj_money_bag_small;
+object[MEDIC_KIT_SMALL]      = obj_medic_kit_small;
 </string>
           </argument>
         </arguments>
@@ -198,8 +210,12 @@ stackable[BLACKROCK]            = true;
 
 //--| Misc
 
-stackable[MONEY_BAG_SMALL]      = true;
 stackable[KEY_GOLDEN]           = true;
+
+//--| Use
+
+stackable[MONEY_BAG_SMALL]      = true;
+stackable[MEDIC_KIT_SMALL]      = true;
 </string>
           </argument>
         </arguments>
@@ -247,8 +263,12 @@ n[BLACKROCK]            = 0;
 
 //--| Misc
 
-n[MONEY_BAG_SMALL]      = 0;
 n[KEY_GOLDEN]           = 0;
+
+//--| Use
+
+n[MONEY_BAG_SMALL]      = 0;
+n[MEDIC_KIT_SMALL]      = 0;
 </string>
           </argument>
         </arguments>
@@ -295,8 +315,12 @@ script[BLACKROCK]            = noone;
 
 //--| Misc
 
-script[MONEY_BAG_SMALL]      = scr_open_small_money_bag;
 script[KEY_GOLDEN]           = noone;
+
+//--| Use
+
+script[MONEY_BAG_SMALL]      = scr_use_money_bag;
+script[MEDIC_KIT_SMALL]      = scr_use_medic_kit;
 </string>
           </argument>
         </arguments>
@@ -344,8 +368,12 @@ info_text[BLACKROCK]            = "";
 
 //--| Misc
 
-info_text[MONEY_BAG_SMALL]      = "[c=12632256]Ein paar Münzen[/c]";
 info_text[KEY_GOLDEN]           = "[c=12632256]Glitzert golden[/c]";
+
+//--| Use
+
+info_text[MONEY_BAG_SMALL]      = "[c=12632256]Ein paar Münzen[/c]";
+info_text[MEDIC_KIT_SMALL]      = "[c=12632256]Heilt ein kleines bisschen[/c]";
 </string>
           </argument>
         </arguments>
@@ -393,8 +421,12 @@ value[BLACKROCK]            = 40;
 
 //--| Misc
 
-value[MONEY_BAG_SMALL]      = 0;
 value[KEY_GOLDEN]           = 100;
+
+//--| Use
+
+value[MONEY_BAG_SMALL]      = 0;
+value[MEDIC_KIT_SMALL]      = 150;
 </string>
           </argument>
         </arguments>
@@ -442,8 +474,12 @@ type[BLACKROCK]            = "mat";
 
 //--| Misc
 
-type[MONEY_BAG_SMALL]      = "use";
 type[KEY_GOLDEN]           = "misc";
+
+//--| Use
+
+type[MONEY_BAG_SMALL]      = "use";
+type[MEDIC_KIT_SMALL]      = "use";
 </string>
           </argument>
         </arguments>
@@ -491,8 +527,12 @@ item_hp[BLACKROCK]            = 0;
 
 //--| Misc
 
-item_hp[MONEY_BAG_SMALL]      = 0;
 item_hp[KEY_GOLDEN]           = 0;
+
+//--| Use
+
+item_hp[MONEY_BAG_SMALL]      = 0;
+item_hp[MEDIC_KIT_SMALL]      = 0;
 </string>
           </argument>
         </arguments>
@@ -720,7 +760,9 @@ for (i=0;i&lt;array_length_1d(items_misc);i++){
 }
 
 //Use
+
 items_use[0]=MONEY_BAG_SMALL;
+items_use[1]=MEDIC_KIT_SMALL;
 
 for (i=0;i&lt;array_length_1d(items_use);i++){
         if (n[items_use[i]] &gt; 0){
@@ -732,7 +774,7 @@ for (i=0;i&lt;array_length_1d(items_use);i++){
 
         } 
 }
-
+draw_text(48,48*4,"Use Item: "+string(item_name[items_use[obj_player.i]]));
 //Eq
 if (eq_show){
    draw_sprite(sprite[armor[0,tier_helmet]],0,48,48*5+48*0);

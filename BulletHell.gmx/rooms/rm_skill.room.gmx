@@ -51,9 +51,11 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_door_int" x="848" y="928" name="inst_066C32FA" locked="0" code="targetRoom = rm_01;&#xA;target_x = 1168;&#xA;target_y = 524;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_door_int" x="848" y="928" name="inst_066C32FA" locked="0" code="/*&#xA;targetRoom = rm_01;&#xA;target_x = 1168;&#xA;target_y = 524;&#xA;*/&#xA;targetRoom = rm_01;&#xA;target_x = 1712;&#xA;target_y = 368;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_upgrade" x="64" y="64" name="inst_14EF69C7" locked="0" code="upgrade = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_upgrade" x="64" y="160" name="inst_00A487E1" locked="0" code="upgrade = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_upgrade" x="64" y="160" name="inst_00A487E1" locked="0" code="upgrade = 1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_upgrade" x="64" y="256" name="inst_33356D9E" locked="0" code="upgrade = 2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_upgrade" x="64" y="352" name="inst_48FE4C5A" locked="0" code="upgrade = 3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

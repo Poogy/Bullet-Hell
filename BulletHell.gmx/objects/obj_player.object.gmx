@@ -30,6 +30,8 @@
 vspeed=0;
 hspeed=0;
 
+i=0;
+
 bullet[0]=5;
 bullet[1]=25;
 bullet[2]=20;
@@ -165,14 +167,32 @@ if vspeed!=0{
       vspeed=0;
    }
 }
+
 //Bullet wechseln
+if (keyboard_check_pressed(ord('1')))obj_stat.stat[3]=0;
+if (keyboard_check_pressed(ord('2')))obj_stat.stat[3]=1;
+if (keyboard_check_pressed(ord('3')))obj_stat.stat[3]=2;
+if (keyboard_check_pressed(ord('4')))obj_stat.stat[3]=3;
+
+//---Use-Item---
+//wechseln
 if key_scroll_up {
-    if obj_stat.stat[3]&lt;3 obj_stat.stat[3]++;
-    else obj_stat.stat[3]=0;
+    if (i &lt; array_length_1d(obj_inventory.items_use)-1){
+        if n[obj_inventory.items_use[i]] &lt;= 0 i++;
+    }else i=0;
 }
 if key_scroll_down {
-    if obj_stat.stat[3]&gt;0 obj_stat.stat[3]--;
-    else obj_stat.stat[3]=3;
+    if (i &gt; 0){
+        if n[obj_inventory.items_use[i]] &lt;= 0 i--;
+    }else i=array_length_1d(obj_inventory.items_use)-1;
+}
+
+//verwenden
+if key_use_item{
+   if n[obj_inventory.items_use[i]] &gt; 0{
+      scr_remove_item(obj_inventory.items_use[i],1);
+      script_execute(script[obj_inventory.items_use[i]]);
+   }
 }
 
 //Spielerbewegung animiert
@@ -183,23 +203,23 @@ if (!shoot &amp;&amp; key_shoot) {
     shoot=true;
     //Bullet 0: Pistol
     if obj_stat.stat[3]==0 {
-        alarm[0]=10;
+        alarm[0]=obj_stat.bullet[0,6];
         instance_create(x,y,obj_bullet);
     }
     //Bullet 1: SMG
     else if obj_stat.stat[3]==1 {
-        alarm[0]=5;
+        alarm[0]=obj_stat.bullet[1,6];
         instance_create(x,y,obj_bullet);
     }
     //Bullet 2: "Heimer W"
     else if obj_stat.stat[3]==2 {
-        alarm[0]=20;
+        alarm[0]=obj_stat.bullet[2,6];
         repeat 3 instance_create(x,y,obj_bullet);
     }
     //Bullet 3: AOE
     else if obj_stat.stat[3]==3 {
         shoot=0;
-        alarm[0]=10;
+        alarm[0]=obj_stat.bullet[3,6];
         instance_create(x,y,obj_bullet);
     }
 }
@@ -214,18 +234,6 @@ if (dash&lt;dash_max &amp;&amp; !dash_cd &amp;&amp; key_dash) {
   alarm[1]=10;
   if dash==3 alarm[2]=90;
 } 
-
-//Stat screen
-if (key_stats){
-   draw_text(400,400,"HP:" + string(obj_stat.stat[0]))
-   draw_text(400,420,"ACC_00" + string(obj_stat.bullet[0,0]))
-   draw_text(400,440,"ACC_01" + string(obj_stat.bullet[1,0]))
-   draw_text(400,460,"ACC_02" + string(obj_stat.bullet[2,0]))
-   draw_text(400,480,"DMG_00" + string(obj_stat.bullet[0,1]))
-   draw_text(400,500,"DMG_01" + string(obj_stat.bullet[1,1]))
-   draw_text(400,520,"DMG_02" + string(obj_stat.bullet[2,1]))
-         
-}
 
 //Death
 if obj_stat.stat[1]&lt;=0 game_restart();
@@ -265,6 +273,40 @@ player_y = other.target_y;
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_weapon_upgrade">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>scr_input();
+
+if (other.useable) &amp;&amp; (key_use){
+    if !instance_exists(obj_roomTransition){
+       var tempRoomFade;
+       tempRoomFade = instance_create(x,y,obj_roomTransition);
+       tempRoomFade.tempTarget = other.targetRoom;
+    }
+    
+    player_x = other.target_x;
+    player_y = other.target_y;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
@@ -285,35 +327,6 @@ player_y = other.target_y;
             <string>///Room Transition
 x = player_x;
 y = player_y;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Draw
-//draw_set_font(ft_info);
-draw_set_color(c_blue);
-draw_text(48,16,"Bullet Type:"+string(obj_stat.stat[3]));
-draw_healthbar(16,1040,128,1008,(obj_stat.stat[1]/obj_stat.stat[0])*100,c_gray,c_maroon,c_green,0,true,true);
-draw_text(144,1024,string(obj_stat.stat[1])+"/"+string(obj_stat.stat[0]));
-//draw_self();
 </string>
           </argument>
         </arguments>

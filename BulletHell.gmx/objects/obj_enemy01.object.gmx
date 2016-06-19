@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>hp=6;
 dmg=1;
+xp=2;
 
 dmg_cd=false;
 shake=0;
@@ -67,6 +68,9 @@ if (scr_chance(1)) {
 if (scr_chance(1)) {
    instance_create(x+random_range(-7,7), y+random_range(-7,7),obj_mat_blackrock);
 }
+
+//XP
+obj_stat.bullet[obj_stat.stat[3],3]+=xp;
 </string>
           </argument>
         </arguments>

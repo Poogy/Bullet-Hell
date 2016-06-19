@@ -27,11 +27,17 @@
             <kind>1</kind>
             <string>//-----DMG-----
 dmg=obj_stat.bullet[obj_stat.stat[3],1]; //Nimmt den dmg wert für die ausgewählte waffe
+
 //-------------
 hspeed=9;
 image_angle=obj_player.image_angle;
 
-if (obj_stat.stat[3]==0) {
+image_xscale = image_xscale + image_xscale*obj_stat.bullet[obj_stat.stat[3],5];
+image_yscale = image_yscale + image_yscale*obj_stat.bullet[obj_stat.stat[3],5];
+
+//-------------
+
+if (obj_stat.stat[3]==0) { 
    if (obj_stat.bullet[obj_stat.stat[3],0] &gt; 0){
       direction=image_angle+random_range(90+obj_player.bullet[obj_stat.stat[3]]-obj_player.bullet[obj_stat.stat[3]]/obj_stat.bullet[0,0],90-obj_player.bullet[obj_stat.stat[3]]+obj_player.bullet[obj_stat.stat[3]]/obj_stat.bullet[0,0]);
     }else{

@@ -9,7 +9,6 @@
     <sprites name="Items">
       <sprites name="Misc">
         <sprite>sprites\spr_key_golden</sprite>
-        <sprite>sprites\spr_money_bag_small</sprite>
       </sprites>
       <sprites name="Materials">
         <sprite>sprites\spr_mat_leather</sprite>
@@ -34,6 +33,10 @@
           <sprite>sprites\spr_helmet_blackrock</sprite>
           <sprite>sprites\spr_armor_blackrock</sprite>
         </sprites>
+      </sprites>
+      <sprites name="Use">
+        <sprite>sprites\spr_medic_kit_small</sprite>
+        <sprite>sprites\spr_money_bag_small</sprite>
       </sprites>
     </sprites>
     <sprites name="Lifeforms">
@@ -68,9 +71,8 @@
       <script>scripts\scr_remove_item.gml</script>
     </scripts>
     <scripts name="Items">
-      <scripts name="Misc">
-        <script>scripts\scr_open_small_money_bag.gml</script>
-      </scripts>
+      <script>scripts\scr_use_money_bag.gml</script>
+      <script>scripts\scr_use_medic_kit.gml</script>
     </scripts>
     <script>scripts\scr_chance.gml</script>
     <script>scripts\scr_save_game.gml</script>
@@ -95,7 +97,6 @@
     </objects>
     <objects name="Items">
       <objects name="Misc">
-        <object>objects\obj_money_bag_small</object>
         <object>objects\obj_key_golden</object>
       </objects>
       <objects name="Materials">
@@ -119,6 +120,10 @@
         </objects>
       </objects>
       <object>objects\item_parent</object>
+      <objects name="Use">
+        <object>objects\obj_money_bag_small</object>
+        <object>objects\obj_medic_kit_small</object>
+      </objects>
     </objects>
     <object>objects\obj_craft</object>
     <object>objects\obj_upgrade</object>
@@ -137,7 +142,7 @@
     <room>rooms\rm_01</room>
     <room>rooms\rm_skill</room>
   </rooms>
-  <constants number="14">
+  <constants number="15">
     <constant name="MONEY_BAG_SMALL">0</constant>
     <constant name="KEY_GOLDEN">1</constant>
     <constant name="LEATHER">2</constant>
@@ -152,6 +157,7 @@
     <constant name="HELMET_BLACKROCK">11</constant>
     <constant name="ARMOR_BLACKROCK">12</constant>
     <constant name="REFINED_IRON">13</constant>
+    <constant name="MEDIC_KIT_SMALL">14</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

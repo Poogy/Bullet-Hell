@@ -50,16 +50,67 @@ scr_input();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (upgrade==0){ //DMG
-   if (obj_stat.stat[3] == 0 &amp;&amp; obj_stat.bullet[0,1] &lt; 10)     {obj_stat.bullet[0,1] += 1}
-   else if (obj_stat.stat[3] == 1 &amp;&amp; obj_stat.bullet[1,1] &lt; 10){obj_stat.bullet[1,1] += 1}
-   else if (obj_stat.stat[3] == 2 &amp;&amp; obj_stat.bullet[2,1] &lt; 10){obj_stat.bullet[2,1] += 1}
-}
-
-else if (upgrade==1){ //ACC
-   if (obj_stat.stat[3] == 0 &amp;&amp; obj_stat.bullet[0,0] &lt; 1)     {obj_stat.bullet[0,0] += 0.2}
-   else if (obj_stat.stat[3] == 1 &amp;&amp; obj_stat.bullet[1,0] &lt; 1){obj_stat.bullet[1,0] += 0.2}
-   else if (obj_stat.stat[3] == 2 &amp;&amp; obj_stat.bullet[2,0] &lt; 1){obj_stat.bullet[2,0] += 0.2}
+            <string>if (obj_stat.bullet[obj_stat.stat[3],4]&gt;0){
+          if (upgrade==0){ //Dmg
+               if (obj_stat.stat[3] == 0 &amp;&amp; obj_stat.bullet[0,1] &lt; 10){
+                      obj_stat.bullet[0,1] += 1;
+                      obj_stat.bullet[0,4] --;
+        } else if (obj_stat.stat[3] == 1 &amp;&amp; obj_stat.bullet[1,1] &lt; 10){
+                      obj_stat.bullet[1,1] += 1;
+                      obj_stat.bullet[1,4] --;
+        } else if (obj_stat.stat[3] == 2 &amp;&amp; obj_stat.bullet[2,1] &lt; 10){
+                      obj_stat.bullet[2,1] += 1;
+                      obj_stat.bullet[2,4] --;
+        } else if (obj_stat.stat[3] == 3 &amp;&amp; obj_stat.bullet[3,1] &lt; 10){
+                      obj_stat.bullet[3,1] += 1;
+                      obj_stat.bullet[3,4] --;
+        }
+    
+    }else if (upgrade==1){ //Acc
+               if (obj_stat.stat[3] == 0 &amp;&amp; obj_stat.bullet[0,0] &lt; 1){
+                      obj_stat.bullet[0,0] += 0.2;
+                      obj_stat.bullet[0,4] --;
+        } else if (obj_stat.stat[3] == 1 &amp;&amp; obj_stat.bullet[1,0] &lt; 1){
+                      obj_stat.bullet[1,0] += 0.2;
+                      obj_stat.bullet[1,4] --;
+        } else if (obj_stat.stat[3] == 2 &amp;&amp; obj_stat.bullet[2,0] &lt; 1){
+                      obj_stat.bullet[2,0] += 0.2;
+                      obj_stat.bullet[2,4] --;
+        } else if (obj_stat.stat[3] == 3 &amp;&amp; obj_stat.bullet[3,0] &lt; 1){
+                      obj_stat.bullet[3,0] += 0.2;
+                      obj_stat.bullet[3,4] --;
+        }
+    
+    }else if (upgrade==2){ //Scale
+               if (obj_stat.stat[3] == 0 &amp;&amp; obj_stat.bullet[0,5] &lt; 10){
+                      obj_stat.bullet[0,5] += 1;
+                      obj_stat.bullet[0,4] --;
+        } else if (obj_stat.stat[3] == 1 &amp;&amp; obj_stat.bullet[1,5] &lt; 10){
+                      obj_stat.bullet[1,5] += 1;
+                      obj_stat.bullet[1,4] --;
+        } else if (obj_stat.stat[3] == 2 &amp;&amp; obj_stat.bullet[2,5] &lt; 10){
+                      obj_stat.bullet[2,5] += 1;
+                      obj_stat.bullet[2,4] --;
+        } else if (obj_stat.stat[3] == 3 &amp;&amp; obj_stat.bullet[3,5] &lt; 10){
+                      obj_stat.bullet[3,5] += 1;
+                      obj_stat.bullet[3,4] --;
+        }
+        
+    }else if (upgrade==3){ //Atk spd
+               if (obj_stat.stat[3] == 0 &amp;&amp; obj_stat.bullet[0,6] &gt; 1){
+                      obj_stat.bullet[0,6] -= 1;
+                      obj_stat.bullet[0,4] --;
+        } else if (obj_stat.stat[3] == 1 &amp;&amp; obj_stat.bullet[1,6] &gt; 1){
+                      obj_stat.bullet[1,6] -= 1;
+                      obj_stat.bullet[1,4] --;
+        } else if (obj_stat.stat[3] == 2 &amp;&amp; obj_stat.bullet[2,6] &gt; 1){
+                      obj_stat.bullet[2,6] -= 1;
+                      obj_stat.bullet[2,4] --;
+        } else if (obj_stat.stat[3] == 3 &amp;&amp; obj_stat.bullet[3,6] &gt; 1){
+                      obj_stat.bullet[3,6] -= 1;
+                      obj_stat.bullet[3,4] --;
+        }
+    }
 }
 </string>
           </argument>
@@ -85,6 +136,8 @@ else if (upgrade==1){ //ACC
             <kind>1</kind>
             <string>if (upgrade==0){text = "Dmg"}
 else if (upgrade==1){text = "Acc"}
+else if (upgrade==2){text = "Scale"}
+else if (upgrade==3){text = "Atk spd"}
 
 draw_self();
 draw_set_color(c_white);

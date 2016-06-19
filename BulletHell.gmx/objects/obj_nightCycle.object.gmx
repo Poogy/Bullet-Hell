@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//Variables
 alpha = 0;
-dayLength = 5;
+dayLength = 20;
 nightLength = 5;
 alarm[0] = room_speed*dayLength;
 

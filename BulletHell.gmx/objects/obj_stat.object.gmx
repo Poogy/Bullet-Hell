@@ -26,19 +26,155 @@
           <argument>
             <kind>1</kind>
             <string>///Variables
+//---Single Variables---
+stats_show = false;
+money = 0;
+
 //---Stats---
 stat[0]=5; //maxhp
-stat[1]=stat[0]; //hp
+stat[1]=5; //hp
 stat[2]=3; //spd
 stat[3]=0; //current selected bullet
 
 bullet[0,0]=0; //Acc
 bullet[1,0]=0;
 bullet[2,0]=0;
+bullet[3,0]=0;
 
 bullet[0,1]=2; //DMG
 bullet[1,1]=2;
 bullet[2,1]=1;
+bullet[3,1]=1;
+
+bullet[0,2]=1; //LVL
+bullet[1,2]=1;
+bullet[2,2]=1;
+bullet[3,2]=1
+
+bullet[0,3]=0; //XP
+bullet[1,3]=0;
+bullet[2,3]=0;
+bullet[3,3]=0;
+
+bullet[0,4]=0; //SP
+bullet[1,4]=0;
+bullet[2,4]=0;
+bullet[3,4]=0;
+
+bullet[0,5]=0; //Scale
+bullet[1,5]=0;
+bullet[2,5]=0;
+bullet[3,5]=0;
+
+bullet[0,6]=10; //Atk spd
+bullet[1,6]=5;
+bullet[2,6]=20;
+bullet[3,6]=10;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Level-UP
+if bullet[stat[3],2] != 20{
+    if (bullet[stat[3],3]&gt;=10+10*(bullet[stat[3],2]*log10(bullet[stat[3],2]))){
+       bullet[stat[3],3]=0;
+       bullet[stat[3],2]++;
+       bullet[stat[3],4]++;
+    }
+}
+
+//Draw control
+scr_input();
+
+if (key_stats){
+   if (stats_show){
+      stats_show = false;
+   } else {
+      stats_show = true;
+   }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw
+if (stats_show){
+   draw_set_colour(c_white);
+   draw_text(600,580, "Money: " +string(money));
+   draw_text(600,600, "HP: "    +string(stat[1])+"/"+string(stat[0]));
+   draw_text(600,620, "Speed: " +string(stat[2]));
+   draw_text(600,640, "Bullet: "+string(stat[3]));
+   draw_text(600,680, "Acc_00: "+string(bullet[0,0]));
+   draw_text(740,680, "Acc_01: "+string(bullet[1,0]));
+   draw_text(880,680, "Acc_02: "+string(bullet[2,0]));
+   draw_text(1020,680,"Acc_03: "+string(bullet[3,0]));
+   draw_text(600,700, "Dmg_00: "+string(bullet[0,1]));
+   draw_text(740,700, "Dmg_01: "+string(bullet[1,1]));
+   draw_text(880,700, "Dmg_02: "+string(bullet[2,1]));
+   draw_text(1020,700,"Dmg_03: "+string(bullet[3,1]));
+   draw_text(600,720, "Scl_00: "+string(bullet[0,5]));
+   draw_text(740,720, "Scl_01: "+string(bullet[1,5]));
+   draw_text(880,720, "Scl_02: "+string(bullet[2,5]));
+   draw_text(1020,720,"Scl_03: "+string(bullet[3,5]));
+   draw_text(600,740, "LvL_00: "+string(bullet[0,2]));
+   draw_text(740,740, "LvL_01: "+string(bullet[1,2]));
+   draw_text(880,740, "LvL_02: "+string(bullet[2,2]));
+   draw_text(1020,740,"LvL_03: "+string(bullet[3,2]));
+   draw_text(600,760, "XP_00: " +string(bullet[0,3])+"/"+string(10+10*(bullet[0,2]*log10(bullet[0,2]))));
+   draw_text(740,760, "XP_01: " +string(bullet[1,3])+"/"+string(10+10*(bullet[1,2]*log10(bullet[1,2]))));
+   draw_text(880,760, "XP_02: " +string(bullet[2,3])+"/"+string(10+10*(bullet[2,2]*log10(bullet[2,2]))));
+   draw_text(1020,760,"XP_03: " +string(bullet[3,3])+"/"+string(10+10*(bullet[3,2]*log10(bullet[3,2]))));
+   draw_text(600,780, "SPD_00: "+string(bullet[0,6]));
+   draw_text(740,780, "SPD_01: "+string(bullet[1,6]));
+   draw_text(880,780, "SPD_02: "+string(bullet[2,6]));
+   draw_text(1020,780,"SPD_03: "+string(bullet[3,6]));
+}
+
+draw_set_color(c_blue);
+draw_text(48,16,"Bullet Type:"+string(obj_stat.stat[3]));
+
+if (room!=rm_skill){
+    draw_healthbar(16,1040,128,1008,(obj_stat.stat[1]/obj_stat.stat[0])*100,c_gray,c_maroon,c_green,0,true,true);
+    draw_text(144,1024,string(obj_stat.stat[1])+"/"+string(obj_stat.stat[0]));
+} else {
+    draw_text(48,80,"SP: "+string(obj_stat.bullet[obj_stat.stat[3],4]));
+}
 </string>
           </argument>
         </arguments>
