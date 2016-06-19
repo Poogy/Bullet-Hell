@@ -235,6 +235,19 @@ if (dash&lt;dash_max &amp;&amp; !dash_cd &amp;&amp; key_dash) {
   if dash==3 alarm[2]=90;
 } 
 
+if distance_to_object(obj_weapon_upgrade) &lt; 96 {
+   if (obj_stat.useable) &amp;&amp; (key_use){
+      if !instance_exists(obj_roomTransition){
+       var tempRoomFade;
+       tempRoomFade = instance_create(x,y,obj_roomTransition);
+       tempRoomFade.tempTarget = obj_weapon_upgrade.targetRoom;
+    }
+    
+    player_x = obj_weapon_upgrade.target_x;
+    player_y = obj_weapon_upgrade.target_y;
+    }
+}
+
 //Death
 if obj_stat.stat[1]&lt;=0 game_restart();
 
@@ -268,40 +281,6 @@ if obj_stat.stat[1]&lt;=0 game_restart();
 
 player_x = other.target_x;
 player_y = other.target_y;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_weapon_upgrade">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>scr_input();
-
-if (other.useable) &amp;&amp; (key_use){
-    if !instance_exists(obj_roomTransition){
-       var tempRoomFade;
-       tempRoomFade = instance_create(x,y,obj_roomTransition);
-       tempRoomFade.tempTarget = other.targetRoom;
-    }
-    
-    player_x = other.target_x;
-    player_y = other.target_y;
-}
 </string>
           </argument>
         </arguments>

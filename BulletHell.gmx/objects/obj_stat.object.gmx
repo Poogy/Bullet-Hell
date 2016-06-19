@@ -30,6 +30,8 @@
 stats_show = false;
 money = 0;
 
+useable = false; //Weapon upgrade
+
 //---Stats---
 stat[0]=5; //maxhp
 stat[1]=5; //hp
