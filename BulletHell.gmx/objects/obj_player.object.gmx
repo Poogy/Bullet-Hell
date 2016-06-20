@@ -39,9 +39,20 @@ bullet[2]=20;
 shoot=false;
 laser=1;
 
+//Boots bug beheben
+tier_boots = 0;
+
+//Dash
 dash=0;
 dash_max=3;
 dash_cd=false;
+dash_time=20;
+dash_spd=20;
+
+//---Initiate---
+instance_create(x,y,obj_dmg_info);
+instance_create(x,y,obj_cursor);
+instance_create(x,y,obj_view);
 </string>
           </argument>
         </arguments>
@@ -199,7 +210,7 @@ if key_use_item{
 image_angle=point_direction(x,y,mouse_x,mouse_y)-90;
 
 //Schießen
-if (!shoot &amp;&amp; key_shoot) {
+if (!shoot &amp;&amp; key_shoot &amp;&amp; room!=rm_skill &amp;&amp; room!=rm_forge) {
     shoot=true;
     //Bullet 0: Pistol
     if obj_stat.stat[3]==0 {
@@ -224,19 +235,44 @@ if (!shoot &amp;&amp; key_shoot) {
     }
 }
 
-//Dash
+//---Dash---
+//Stats
+if tier_boots == 0{
+   dash_max=3;
+   dash_time=18;
+   dash_spd=22;
+   obj_stat.stat[2]=3;
+} else if tier_boots == 1{
+   dash_max=3;
+   dash_time=16;
+   dash_spd=24;
+   obj_stat.stat[2]=3;
+} else if tier_boots == 2{
+   dash_max=4;
+   dash_time=14;
+   dash_spd=26;
+   obj_stat.stat[2]=4;
+} else if tier_boots == 3{
+   dash_max=4;
+   dash_time=12;
+   dash_spd=28;
+   obj_stat.stat[2]=4;
+}
+
+//Mechanic
 if (dash&lt;dash_max &amp;&amp; !dash_cd &amp;&amp; key_dash) {
   dash++;
   dash_cd=true;
   shoot=true;
-  alarm[0]=20;
-  move_towards_point(mouse_x,mouse_y,20);
-  alarm[1]=10;
-  if dash==3 alarm[2]=90;
-} 
-
-if distance_to_object(obj_weapon_upgrade) &lt; 96 {
-   if (obj_stat.useable) &amp;&amp; (key_use){
+  alarm[0]=dash_time;
+  move_towards_point(mouse_x,mouse_y,dash_spd);
+  alarm[1]=dash_time/2;
+  if dash==dash_max alarm[2]=dash_time*4.5;
+}
+//---Entrance---
+//Skill room entrance
+if distance_to_object(obj_weapon_upgrade) &lt; 64 {
+   if (obj_stat.useable_weapon_upgrade) &amp;&amp; (key_use){
       if !instance_exists(obj_roomTransition){
        var tempRoomFade;
        tempRoomFade = instance_create(x,y,obj_roomTransition);
@@ -245,6 +281,20 @@ if distance_to_object(obj_weapon_upgrade) &lt; 96 {
     
     player_x = obj_weapon_upgrade.target_x;
     player_y = obj_weapon_upgrade.target_y;
+    }
+}
+
+//Forge room entrance
+if distance_to_object(obj_forge) &lt; 64 {
+   if (obj_stat.useable_forge) &amp;&amp; (key_use){
+      if !instance_exists(obj_roomTransition){
+       var tempRoomFade;
+       tempRoomFade = instance_create(x,y,obj_roomTransition);
+       tempRoomFade.tempTarget = obj_forge.targetRoom;
+    }
+    
+    player_x = obj_forge.target_x;
+    player_y = obj_forge.target_y;
     }
 }
 

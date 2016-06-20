@@ -21,18 +21,22 @@
         <sprites name="NONE">
           <sprite>sprites\spr_helmet_none</sprite>
           <sprite>sprites\spr_armor_none</sprite>
+          <sprite>sprites\spr_boots_none</sprite>
         </sprites>
         <sprites name="Leather">
           <sprite>sprites\spr_helmet_leather</sprite>
           <sprite>sprites\spr_armor_leather</sprite>
+          <sprite>sprites\spr_boots_leather</sprite>
         </sprites>
         <sprites name="Iron">
           <sprite>sprites\spr_helmet_iron</sprite>
           <sprite>sprites\spr_armor_iron</sprite>
+          <sprite>sprites\spr_boots_iron</sprite>
         </sprites>
         <sprites name="BlackRock">
           <sprite>sprites\spr_helmet_blackrock</sprite>
           <sprite>sprites\spr_armor_blackrock</sprite>
+          <sprite>sprites\spr_boots_blackrock</sprite>
         </sprites>
       </sprites>
       <sprites name="Use">
@@ -44,12 +48,12 @@
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_enemy01</sprite>
     </sprites>
+    <sprite>sprites\spr_craft</sprite>
     <sprites name="Weapons">
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_laser</sprite>
       <sprite>sprites\spr_laser_end</sprite>
     </sprites>
-    <sprite>sprites\spr_craft</sprite>
     <sprite>sprites\spr_collision</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_forge</sprite>
@@ -97,12 +101,8 @@
       <object>objects\obj_controller</object>
       <object>objects\obj_roomTransition</object>
       <object>objects\obj_stat</object>
-<<<<<<< HEAD
-      <object>objects\obj_cursor</object>
-=======
       <object>objects\obj_view</object>
       <object>objects\obj_dmg_info</object>
->>>>>>> origin/master
     </objects>
     <objects name="Items">
       <objects name="Misc">
@@ -119,32 +119,36 @@
         <objects name="Leather">
           <object>objects\obj_helmet_leather</object>
           <object>objects\obj_armor_leather</object>
+          <object>objects\obj_boots_leather</object>
         </objects>
         <objects name="Iron">
           <object>objects\obj_helmet_iron</object>
           <object>objects\obj_armor_iron</object>
+          <object>objects\obj_boots_iron</object>
         </objects>
         <objects name="BlackRock">
           <object>objects\obj_helmet_blackrock</object>
           <object>objects\obj_armor_blackrock</object>
+          <object>objects\obj_boots_blackrock</object>
         </objects>
+        <object>objects\item_parent</object>
       </objects>
-      <object>objects\item_parent</object>
       <objects name="Use">
         <object>objects\obj_money_bag_small</object>
         <object>objects\obj_medic_kit_small</object>
       </objects>
     </objects>
+    <object>objects\obj_craft</object>
+    <object>objects\obj_upgrade</object>
     <objects name="Weapons">
       <object>objects\obj_bullet</object>
     </objects>
-    <object>objects\obj_craft</object>
-    <object>objects\obj_upgrade</object>
     <object>objects\obj_collision</object>
     <object>objects\obj_door</object>
     <object>objects\obj_forge</object>
     <object>objects\obj_weapon_upgrade</object>
     <object>objects\obj_torch</object>
+    <object>objects\obj_cursor</object>
     <object>objects\obj_door_ext</object>
     <object>objects\obj_door_int</object>
   </objects>
@@ -153,28 +157,12 @@
     <room>rooms\rm_skill</room>
     <room>rooms\rm_forge</room>
   </rooms>
-<<<<<<< HEAD
-  <constants number="15">
-=======
   <constants number="20">
->>>>>>> origin/master
     <constant name="MONEY_BAG_SMALL">0</constant>
     <constant name="KEY_GOLDEN">1</constant>
     <constant name="LEATHER">2</constant>
     <constant name="IRON">3</constant>
     <constant name="BLACKROCK">4</constant>
-<<<<<<< HEAD
-    <constant name="HELMET_NONE">5</constant>
-    <constant name="ARMOR_NONE">6</constant>
-    <constant name="HELMET_LEATHER">7</constant>
-    <constant name="ARMOR_LEATHER">8</constant>
-    <constant name="HELMET_IRON">9</constant>
-    <constant name="ARMOR_IRON">10</constant>
-    <constant name="HELMET_BLACKROCK">11</constant>
-    <constant name="ARMOR_BLACKROCK">12</constant>
-    <constant name="REFINED_IRON">13</constant>
-    <constant name="MEDIC_KIT_SMALL">14</constant>
-=======
     <constant name="REFINED_IRON">5</constant>
     <constant name="HELMET_NONE">6</constant>
     <constant name="ARMOR_NONE">7</constant>
@@ -190,7 +178,6 @@
     <constant name="BOOTS_BLACKROCK">18</constant>
     <constant name="MEDIC_KIT_SMALL">19</constant>
     <constant name="BATTERY_SMALL">20</constant>
->>>>>>> origin/master
   </constants>
   <help>
     <rtf>help.rtf</rtf>

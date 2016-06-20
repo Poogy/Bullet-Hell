@@ -55,18 +55,23 @@ shake=0;
             <kind>1</kind>
             <string>///Drop chances
 //Drop leather
-if (scr_chance(1)) {
+if (scr_chance(0.4)) {
    instance_create(x+random_range(-7,7), y+random_range(-7,7),obj_mat_leather);
 }
 
 //Drop iron
-if (scr_chance(1)) {
+if (scr_chance(0.3)) {
    instance_create(x+random_range(-7,7), y+random_range(-7,7),obj_mat_iron);
 }
 
 //Drop blackrock
-if (scr_chance(1)) {
+if (scr_chance(0.2)) {
    instance_create(x+random_range(-7,7), y+random_range(-7,7),obj_mat_blackrock);
+}
+
+//Drop Medic kit
+if (scr_chance(0.1)) {
+   instance_create(x+random_range(-7,7), y+random_range(-7,7),obj_medic_kit_small);
 }
 
 //XP

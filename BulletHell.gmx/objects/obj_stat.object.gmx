@@ -29,14 +29,18 @@
 //---Single Variables---
 stats_show = false;
 money = 0;
+crit = false;
 
-useable = false; //Weapon upgrade
+useable_weapon_upgrade = false; //Weapon upgrade
+useable_forge = false;
 
 //---Stats---
-stat[0]=5; //maxhp
-stat[1]=5; //hp
-stat[2]=3; //spd
-stat[3]=0; //current selected bullet
+stat[0]=5;      //maxhp
+stat[1]=5;      //hp
+stat[2]=3;      //spd
+stat[3]=0;      //current selected bullet
+stat[4]=100;    //Max Battery
+stat[5]=100;    //Battery
 
 bullet[0,0]=0; //Acc
 bullet[1,0]=0;
@@ -72,6 +76,16 @@ bullet[0,6]=10; //Atk spd
 bullet[1,6]=5;
 bullet[2,6]=20;
 bullet[3,6]=10;
+
+bullet[0,7]=0.2; //Crit chance
+bullet[1,7]=0.2;
+bullet[2,7]=0.2;
+bullet[3,7]=0.2;
+
+bullet[0,8]=1.5; //Crit multiplier
+bullet[1,8]=1.5;
+bullet[2,8]=1.5;
+bullet[3,8]=1.5;
 </string>
           </argument>
         </arguments>
@@ -174,6 +188,8 @@ draw_text(48,16,"Bullet Type:"+string(obj_stat.stat[3]));
 if (room!=rm_skill){
     draw_healthbar(16,1040,128,1008,(obj_stat.stat[1]/obj_stat.stat[0])*100,c_gray,c_maroon,c_green,0,true,true);
     draw_text(144,1024,string(obj_stat.stat[1])+"/"+string(obj_stat.stat[0]));
+    draw_healthbar(16,992,128,976,(obj_stat.stat[5]/obj_stat.stat[4])*100,c_gray,c_navy,c_aqua,0,true,true);
+    draw_text(144,984,string(obj_stat.stat[5])+"/"+string(obj_stat.stat[4]));
 } else {
     draw_text(48,80,"SP: "+string(obj_stat.bullet[obj_stat.stat[3],4]));
 }

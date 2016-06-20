@@ -27,8 +27,6 @@
             <kind>1</kind>
             <string>cost = BLACKROCK;
 count = 15;
-
-useable = false;
 </string>
           </argument>
         </arguments>
@@ -55,19 +53,12 @@ useable = false;
 
 if distance_to_object(obj_player) &lt; 96 {
    if (key_use){
-       if useable = false {
+       if obj_stat.useable_forge = false {
               if n[cost]&gt;=count {
                      n[cost] -= count;
-                     useable = true;
+                     obj_stat.useable_forge = true;
                      image_blend = make_colour_rgb(255, 255, 0);
-                     instance_create(x+250,y+32,obj_craft)
-                     obj_craft.list = 2;
-                     obj_craft.item = 0;
               }
-       }else{
-              //instance_create(x+250,y+32,obj_craft)
-              //obj_craft.list = 2;
-              //obj_craft.item = 0;
        }
    }
 }
@@ -94,7 +85,8 @@ if distance_to_object(obj_player) &lt; 96 {
           <argument>
             <kind>1</kind>
             <string>draw_self();
-if distance_to_object(obj_player) &lt; 96 &amp;&amp; useable = false{
+if (obj_stat.useable_forge)image_blend = make_colour_rgb(255, 255, 0);
+if distance_to_object(obj_player) &lt; 96 &amp;&amp; obj_stat.useable_forge = false{
     draw_set_color(c_lime);
     draw_rectangle(x-120,y+56,x-24,y+88,true);
     draw_text(x-112,y+64,string(item_name[cost])+": "+string(count));
