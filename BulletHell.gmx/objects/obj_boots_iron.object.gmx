@@ -11,6 +11,7 @@
     <event eventtype="4" ename="obj_player">
       <action>
         <libid>1</libid>
+        <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
