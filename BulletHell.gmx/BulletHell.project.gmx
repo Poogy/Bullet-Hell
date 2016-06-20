@@ -47,6 +47,7 @@
     <sprites name="Lifeforms">
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_enemy01</sprite>
+      <sprite>sprites\spr_enemy02</sprite>
     </sprites>
     <sprite>sprites\spr_craft</sprite>
     <sprites name="Weapons">
@@ -92,6 +93,7 @@
     <objects name="Lifeforms">
       <object>objects\obj_player</object>
       <object>objects\obj_enemy01</object>
+      <object>objects\obj_enemy02</object>
     </objects>
     <objects name="Controller">
       <object>objects\obj_spawner</object>
@@ -138,11 +140,11 @@
         <object>objects\obj_medic_kit_small</object>
       </objects>
     </objects>
-    <object>objects\obj_craft</object>
-    <object>objects\obj_upgrade</object>
     <objects name="Weapons">
       <object>objects\obj_bullet</object>
     </objects>
+    <object>objects\obj_craft</object>
+    <object>objects\obj_upgrade</object>
     <object>objects\obj_collision</object>
     <object>objects\obj_door</object>
     <object>objects\obj_forge</object>
