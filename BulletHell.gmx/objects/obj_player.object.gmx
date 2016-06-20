@@ -52,7 +52,6 @@ dash_spd=20;
 //---Initiate---
 instance_create(x,y,obj_dmg_info);
 instance_create(x,y,obj_cursor);
-instance_create(x,y,obj_view);
 </string>
           </argument>
         </arguments>
@@ -300,7 +299,6 @@ if distance_to_object(obj_forge) &lt; 64 {
 
 //Death
 if obj_stat.stat[1]&lt;=0 game_restart();
-
 </string>
           </argument>
         </arguments>
@@ -356,6 +354,12 @@ player_y = other.target_y;
             <string>///Room Transition
 x = player_x;
 y = player_y;
+
+instance_create(x,y,obj_dmg_info);
+obj_dmg_info.crit = false;
+obj_dmg_info.text = "SPAWNED";
+
+instance_create(x,y,obj_view);
 </string>
           </argument>
         </arguments>

@@ -110,6 +110,34 @@ scr_input();
                       obj_stat.bullet[3,6] -= 1;
                       obj_stat.bullet[3,4] --;
         }
+    }else if (upgrade==4){ //Crit chance
+               if (obj_stat.stat[3] == 0 &amp;&amp; obj_stat.bullet[0,7] &gt; 1){
+                      obj_stat.bullet[0,7] += 0.1;
+                      obj_stat.bullet[0,4] --;
+        } else if (obj_stat.stat[3] == 1 &amp;&amp; obj_stat.bullet[1,7] &gt; 1){
+                      obj_stat.bullet[1,7] += 0.1;
+                      obj_stat.bullet[1,4] --;
+        } else if (obj_stat.stat[3] == 2 &amp;&amp; obj_stat.bullet[2,7] &gt; 1){
+                      obj_stat.bullet[2,7] += 0.1;
+                      obj_stat.bullet[2,4] --;
+        } else if (obj_stat.stat[3] == 3 &amp;&amp; obj_stat.bullet[3,7] &gt; 1){
+                      obj_stat.bullet[3,7] += 0.1;
+                      obj_stat.bullet[3,4] --;
+        }
+    }else if (upgrade==5){ //Crit multiplier
+               if (obj_stat.stat[3] == 0 &amp;&amp; obj_stat.bullet[0,8] &gt; 1){
+                      obj_stat.bullet[0,8] += 0.5;
+                      obj_stat.bullet[0,4] --;
+        } else if (obj_stat.stat[3] == 1 &amp;&amp; obj_stat.bullet[1,8] &gt; 1){
+                      obj_stat.bullet[1,8] += 0.5;
+                      obj_stat.bullet[1,4] --;
+        } else if (obj_stat.stat[3] == 2 &amp;&amp; obj_stat.bullet[2,8] &gt; 1){
+                      obj_stat.bullet[2,8] += 0.5;
+                      obj_stat.bullet[2,4] --;
+        } else if (obj_stat.stat[3] == 3 &amp;&amp; obj_stat.bullet[3,8] &gt; 1){
+                      obj_stat.bullet[3,8] += 0.5;
+                      obj_stat.bullet[3,4] --;
+        }
     }
 }
 </string>
@@ -137,7 +165,9 @@ scr_input();
             <string>if (upgrade==0){text = "Dmg"}
 else if (upgrade==1){text = "Acc"}
 else if (upgrade==2){text = "Scale"}
-else if (upgrade==3){text = "Atk spd"}
+else if (upgrade==3){text = "Atk Spd"}
+else if (upgrade==4){text = "Crit Chance"}
+else if (upgrade==5){text = "Crit Multiplier"}
 
 draw_self();
 draw_set_color(c_white);

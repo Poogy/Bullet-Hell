@@ -29,7 +29,6 @@
 //---Single Variables---
 stats_show = false;
 money = 0;
-crit = false;
 
 useable_weapon_upgrade = false; //Weapon upgrade
 useable_forge = false;
@@ -180,6 +179,14 @@ if (stats_show){
    draw_text(740,780, "SPD_01: "+string(bullet[1,6]));
    draw_text(880,780, "SPD_02: "+string(bullet[2,6]));
    draw_text(1020,780,"SPD_03: "+string(bullet[3,6]));
+   draw_text(600,800, "CRC_00: "+string(bullet[0,7]));
+   draw_text(740,800, "CRC_01: "+string(bullet[1,7]));
+   draw_text(880,800, "CRC_02: "+string(bullet[2,7]));
+   draw_text(1020,800,"CRC_03: "+string(bullet[3,7]));
+   draw_text(600,820, "CRM_00: "+string(bullet[0,8]));
+   draw_text(740,820, "CRM_01: "+string(bullet[1,8]));
+   draw_text(880,820, "CRM_02: "+string(bullet[2,8]));
+   draw_text(1020,820,"CRM_03: "+string(bullet[3,8]));
 }
 
 draw_set_color(c_blue);
