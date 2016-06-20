@@ -26,14 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>//Moving view
-/*
+
 x+=(obj_player.x-x)/20;
 y+=(obj_player.y-y)/20;
-+/
-*/
+
 //Mouse View
+/*
 x=mean(obj_player.x,mouse_x);
 y=mean(obj_player.y,mouse_y);
+*/
 </string>
           </argument>
         </arguments>

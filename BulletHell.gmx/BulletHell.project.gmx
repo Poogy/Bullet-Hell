@@ -9,6 +9,7 @@
     <sprites name="Items">
       <sprites name="Misc">
         <sprite>sprites\spr_key_golden</sprite>
+        <sprite>sprites\spr_battery_small</sprite>
       </sprites>
       <sprites name="Materials">
         <sprite>sprites\spr_mat_leather</sprite>
@@ -77,6 +78,7 @@
     <scripts name="Items">
       <script>scripts\scr_use_money_bag.gml</script>
       <script>scripts\scr_use_medic_kit.gml</script>
+      <script>scripts\scr_use_battery.gml</script>
     </scripts>
     <script>scripts\scr_chance.gml</script>
     <script>scripts\scr_save_game.gml</script>
@@ -99,10 +101,12 @@
       <object>objects\obj_roomTransition</object>
       <object>objects\obj_stat</object>
       <object>objects\obj_view</object>
+      <object>objects\obj_dmg_info</object>
     </objects>
     <objects name="Items">
       <objects name="Misc">
         <object>objects\obj_key_golden</object>
+        <object>objects\obj_battery_small</object>
       </objects>
       <objects name="Materials">
         <object>objects\obj_mat_leather</object>
@@ -149,8 +153,9 @@
   <rooms name="rooms">
     <room>rooms\rm_01</room>
     <room>rooms\rm_skill</room>
+    <room>rooms\rm_forge</room>
   </rooms>
-  <constants number="19">
+  <constants number="20">
     <constant name="MONEY_BAG_SMALL">0</constant>
     <constant name="KEY_GOLDEN">1</constant>
     <constant name="LEATHER">2</constant>
@@ -170,6 +175,7 @@
     <constant name="ARMOR_BLACKROCK">16</constant>
     <constant name="BOOTS_BLACKROCK">18</constant>
     <constant name="MEDIC_KIT_SMALL">19</constant>
+    <constant name="BATTERY_SMALL">20</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

@@ -26,8 +26,12 @@
           <argument>
             <kind>1</kind>
             <string>//-----DMG-----
-dmg=obj_stat.bullet[obj_stat.stat[3],1]; //Nimmt den dmg wert für die ausgewählte waffe
-
+if (scr_chance(obj_stat.bullet[obj_stat.stat[3],7])){
+   obj_dmg_info.crit = true;
+   dmg=obj_stat.bullet[obj_stat.stat[3],1]*obj_stat.bullet[obj_stat.stat[3],8]; //Dmg + crit
+}else{
+   dmg=obj_stat.bullet[obj_stat.stat[3],1]; //Nimmt den dmg wert für die ausgewählte waffe
+}
 //-------------
 hspeed=9;
 image_angle=obj_player.image_angle;
@@ -84,6 +88,30 @@ else if (obj_stat.stat[3]==2) {
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_enemy01">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(x,y,obj_dmg_info);
+obj_dmg_info.text = dmg;
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="7" enumb="5">

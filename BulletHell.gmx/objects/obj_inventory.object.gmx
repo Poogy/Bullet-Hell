@@ -59,6 +59,7 @@ item_name[KEY_GOLDEN]           = "Goldner Schlussel";
 
 //--| Use
 
+item_name[BATTERY_SMALL]        = "Kleine Batterie";
 item_name[MONEY_BAG_SMALL]      = "Munzbeutel";
 item_name[MEDIC_KIT_SMALL]      = "Kleines Medic Kit";
 </string>
@@ -116,6 +117,7 @@ sprite[KEY_GOLDEN]           = spr_key_golden;
 
 //--| Use
 
+sprite[BATTERY_SMALL]        = spr_battery_small;
 sprite[MONEY_BAG_SMALL]      = spr_money_bag_small;
 sprite[MEDIC_KIT_SMALL]      = spr_medic_kit_small;
 </string>
@@ -173,6 +175,7 @@ object[KEY_GOLDEN]           = obj_key_golden;
 
 //--| Use
 
+object[BATTERY_SMALL]        = obj_battery_small;
 object[MONEY_BAG_SMALL]      = obj_money_bag_small;
 object[MEDIC_KIT_SMALL]      = obj_medic_kit_small;
 </string>
@@ -230,6 +233,7 @@ stackable[KEY_GOLDEN]           = true;
 
 //--| Use
 
+stackable[BATTERY_SMALL]        = true;
 stackable[MONEY_BAG_SMALL]      = true;
 stackable[MEDIC_KIT_SMALL]      = true;
 </string>
@@ -287,6 +291,7 @@ n[KEY_GOLDEN]           = 0;
 
 //--| Use
 
+n[BATTERY_SMALL]        = 0;
 n[MONEY_BAG_SMALL]      = 0;
 n[MEDIC_KIT_SMALL]      = 0;
 </string>
@@ -343,6 +348,7 @@ script[KEY_GOLDEN]           = noone;
 
 //--| Use
 
+script[BATTERY_SMALL]        = scr_use_battery;
 script[MONEY_BAG_SMALL]      = scr_use_money_bag;
 script[MEDIC_KIT_SMALL]      = scr_use_medic_kit;
 </string>
@@ -400,6 +406,7 @@ info_text[KEY_GOLDEN]           = "[c=12632256]Glitzert golden[/c]";
 
 //--| Use
 
+info_text[BATTERY_SMALL]        = "";
 info_text[MONEY_BAG_SMALL]      = "[c=12632256]Ein paar Münzen[/c]";
 info_text[MEDIC_KIT_SMALL]      = "[c=12632256]Heilt ein kleines bisschen[/c]";
 </string>
@@ -457,6 +464,7 @@ value[KEY_GOLDEN]           = 100;
 
 //--| Use
 
+value[BATTERY_SMALL]        = 50;
 value[MONEY_BAG_SMALL]      = 0;
 value[MEDIC_KIT_SMALL]      = 150;
 </string>
@@ -514,6 +522,7 @@ type[KEY_GOLDEN]           = "misc";
 
 //--| Use
 
+type[BATTERY_SMALL]        = "use";
 type[MONEY_BAG_SMALL]      = "use";
 type[MEDIC_KIT_SMALL]      = "use";
 </string>
@@ -571,6 +580,7 @@ item_hp[KEY_GOLDEN]           = 0;
 
 //--| Use
 
+item_hp[BATTERY_SMALL]        = 0;
 item_hp[MONEY_BAG_SMALL]      = 0;
 item_hp[MEDIC_KIT_SMALL]      = 0;
 </string>
@@ -675,8 +685,8 @@ recipe[2,2]               = BOOTS_BLACKROCK;
 recipe_n[2,2]             = 1;
 
 //Items - Recipies
-recipe[2,0]               = REFINED_IRON;
-recipe_n[2,0]             = 1;
+recipe[3,0]               = REFINED_IRON;
+recipe_n[3,0]             = 1;
 
 //----ingredients----
 //Helmets - ingredients
@@ -695,7 +705,7 @@ ingredients_n[1,1]      = 10;
 ingredients[1,2]        = BLACKROCK;
 ingredients_n[1,2]      = 10;
 
-//Armors - ingredients
+//Boots - ingredients
 ingredients[2,0]        = LEATHER;
 ingredients_n[2,0]      = 5;
 ingredients[2,1]        = IRON;
@@ -704,8 +714,8 @@ ingredients[2,2]        = BLACKROCK;
 ingredients_n[2,2]      = 5;
 
 //Items - ingredients
-ingredients[2,0]        = IRON;
-ingredients_n[2,0]      = 2;
+ingredients[3,0]        = IRON;
+ingredients_n[3,0]      = 2;
 </string>
           </argument>
         </arguments>
@@ -722,7 +732,7 @@ ingredients_n[2,0]      = 2;
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -831,6 +841,7 @@ for (i=0;i&lt;array_length_1d(items_misc);i++){
 
 items_use[0]=MONEY_BAG_SMALL;
 items_use[1]=MEDIC_KIT_SMALL;
+items_use[2]=BATTERY_SMALL;
 
 for (i=0;i&lt;array_length_1d(items_use);i++){
         if (n[items_use[i]] &gt; 0){
