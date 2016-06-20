@@ -43,12 +43,12 @@
       <sprite>sprites\spr_player</sprite>
       <sprite>sprites\spr_enemy01</sprite>
     </sprites>
-    <sprite>sprites\spr_craft</sprite>
     <sprites name="Weapons">
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_laser</sprite>
       <sprite>sprites\spr_laser_end</sprite>
     </sprites>
+    <sprite>sprites\spr_craft</sprite>
     <sprite>sprites\spr_collision</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_forge</sprite>
@@ -57,6 +57,7 @@
     <sprite>sprites\spr_torch</sprite>
     <sprite>sprites\spr_door_ext</sprite>
     <sprite>sprites\spr_door_int</sprite>
+    <sprite>sprites\spr_cursor</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_01_16</background>
@@ -94,6 +95,7 @@
       <object>objects\obj_controller</object>
       <object>objects\obj_roomTransition</object>
       <object>objects\obj_stat</object>
+      <object>objects\obj_cursor</object>
     </objects>
     <objects name="Items">
       <objects name="Misc">
@@ -125,11 +127,11 @@
         <object>objects\obj_medic_kit_small</object>
       </objects>
     </objects>
-    <object>objects\obj_craft</object>
-    <object>objects\obj_upgrade</object>
     <objects name="Weapons">
       <object>objects\obj_bullet</object>
     </objects>
+    <object>objects\obj_craft</object>
+    <object>objects\obj_upgrade</object>
     <object>objects\obj_collision</object>
     <object>objects\obj_door</object>
     <object>objects\obj_forge</object>
