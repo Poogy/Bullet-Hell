@@ -162,7 +162,7 @@ scr_input();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (upgrade==0){text = "Dmg"}
+            <string>     if (upgrade==0){text = "Dmg"}
 else if (upgrade==1){text = "Acc"}
 else if (upgrade==2){text = "Scale"}
 else if (upgrade==3){text = "Atk Spd"}

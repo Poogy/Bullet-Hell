@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-999999999</depth>
+  <depth>-99999999</depth>
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -1018,7 +1018,7 @@ for (i=0;i&lt;array_length_1d(items_bp);i++){
         } 
 }
 
-draw_text(48,48*4,"Use Item: "+string(item_name[items_use[obj_player.i]]));
+draw_text(48,48*5,"Use Item: "+string(item_name[items_use[obj_player.i]]));
 //Eq
 if (eq_show){
    draw_sprite(sprite[armor[0,tier_helmet]],0,48,48*5+48*0);
