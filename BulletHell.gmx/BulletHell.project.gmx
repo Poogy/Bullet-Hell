@@ -52,12 +52,12 @@
       <sprite>sprites\spr_enemy02</sprite>
       <sprite>sprites\spr_enemy03</sprite>
     </sprites>
-    <sprite>sprites\spr_craft</sprite>
     <sprites name="Weapons">
       <sprite>sprites\spr_bullet</sprite>
       <sprite>sprites\spr_laser</sprite>
       <sprite>sprites\spr_laser_end</sprite>
     </sprites>
+    <sprite>sprites\spr_craft</sprite>
     <sprite>sprites\spr_collision</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_forge</sprite>
@@ -67,6 +67,7 @@
     <sprite>sprites\spr_door_ext</sprite>
     <sprite>sprites\spr_door_int</sprite>
     <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_flashlight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_01_16</background>
@@ -157,6 +158,7 @@
     <object>objects\obj_cursor</object>
     <object>objects\obj_door_ext</object>
     <object>objects\obj_door_int</object>
+    <object>objects\obj_flashlight</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_01</room>
