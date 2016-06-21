@@ -181,7 +181,6 @@
     <object>objects\obj_forge</object>
     <object>objects\obj_weapon_upgrade</object>
     <object>objects\obj_torch</object>
-    <object>objects\obj_cursor</object>
     <object>objects\obj_door_ext</object>
     <object>objects\obj_door_int</object>
     <object>objects\obj_crafting</object>
