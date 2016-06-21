@@ -37,7 +37,7 @@ bullet[1]=25;
 bullet[2]=20;
 
 shoot=false;
-laser=1;
+flash=true;
 
 //Boots bug beheben
 tier_boots = 0;
@@ -205,6 +205,9 @@ if key_use_item{
    }
 }
 
+//Flashlight benutzen
+if key_flashlight &amp;&amp; flash flash=false;
+if key_flashlight &amp;&amp; !flash flash=true;
 //Spielerbewegung animiert
 image_angle=point_direction(x,y,mouse_x,mouse_y)-90;
 

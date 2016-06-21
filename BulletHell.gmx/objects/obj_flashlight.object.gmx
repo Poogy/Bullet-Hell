@@ -3,8 +3,8 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>-1200</depth>
-  <persistent>-1</persistent>
+  <depth>-20</depth>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,10 +25,62 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Initialize Variables
-fadeAlpha = 0;
-fadeState = 1;
-fadeSpeed = 0.05;
+            <string>surf=surface_create(1980,1080);
+surface_set_target(surf);
+surface_reset_target();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>surface_set_target(surf);
+draw_set_blend_mode(bm_subtract);
+draw_sprite_ext(spr_flashlight,0,x-view_xview,y-view_yview,1,1,point_direction(x,y,mouse_x,mouse_y),c_white,1);
+surface_reset_target();
+draw_set_blend_mode(bm_normal);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x=obj_player.x;
+y=obj_player.y;
+
+if keyboard_check_pressed(ord('F')) {instance_destroy(); obj_player.flash=true}
 </string>
           </argument>
         </arguments>
@@ -51,20 +103,7 @@ fadeSpeed = 0.05;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw Fade
-fadeAlpha = clamp(fadeAlpha + (fadeState * fadeSpeed),0,1);
-if (fadeAlpha == 1){
-   room_goto(tempTarget);
-   fadeState = -1;
-}
-
-if (fadeAlpha == 0) &amp;&amp; (fadeState == -1){
-   instance_destroy();
-}
-draw_set_color(c_black);
-draw_set_alpha(fadeAlpha);
-draw_rectangle(view_xview[0],view_yview[0],view_xview[0]+view_wview[0],view_yview[0]+view_hview[0],0);
-draw_set_alpha(1);
+            <string>draw_surface(view_xview,view_yview,surf);
 </string>
           </argument>
         </arguments>

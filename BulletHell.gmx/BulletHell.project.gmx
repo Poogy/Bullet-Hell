@@ -72,6 +72,7 @@
     <sprite>sprites\spr_door_ext</sprite>
     <sprite>sprites\spr_door_int</sprite>
     <sprite>sprites\spr_cursor</sprite>
+    <sprite>sprites\spr_flashlight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_01_16</background>
@@ -186,6 +187,7 @@
     <object>objects\obj_door_int</object>
     <object>objects\obj_crafting</object>
     <object>objects\obj_craft</object>
+    <object>objects\obj_flashlight</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_01</room>
