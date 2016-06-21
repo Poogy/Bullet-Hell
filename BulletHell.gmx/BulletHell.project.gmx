@@ -115,6 +115,8 @@
       <object>objects\obj_stat</object>
       <object>objects\obj_view</object>
       <object>objects\obj_dmg_info</object>
+      <object>objects\obj_cursor</object>
+      <object>objects\obj_flashlight</object>
     </objects>
     <objects name="Items">
       <objects name="Misc">
@@ -185,7 +187,6 @@
     <object>objects\obj_door_int</object>
     <object>objects\obj_crafting</object>
     <object>objects\obj_craft</object>
-    <object>objects\obj_flashlight</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_01</room>
