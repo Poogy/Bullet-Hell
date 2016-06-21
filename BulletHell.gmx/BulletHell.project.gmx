@@ -45,6 +45,11 @@
         <sprite>sprites\spr_medic_kit_small</sprite>
         <sprite>sprites\spr_money_bag_small</sprite>
       </sprites>
+      <sprites name="Blueprints">
+        <sprite>sprites\spr_blueprint_eq</sprite>
+        <sprite>sprites\spr_blueprint_item</sprite>
+        <sprite>sprites\spr_blueprint_button</sprite>
+      </sprites>
     </sprites>
     <sprites name="Lifeforms">
       <sprite>sprites\spr_player</sprite>
@@ -143,11 +148,33 @@
         <object>objects\obj_money_bag_small</object>
         <object>objects\obj_medic_kit_small</object>
       </objects>
+      <objects name="Blueprints">
+        <objects name="Armor">
+          <objects name="Leather">
+            <object>objects\obj_bp_armor_leather</object>
+            <object>objects\obj_bp_boots_leather</object>
+            <object>objects\obj_bp_helmet_leather</object>
+          </objects>
+          <objects name="Iron">
+            <object>objects\obj_bp_helmet_iron</object>
+            <object>objects\obj_bp_armor_iron</object>
+            <object>objects\obj_bp_boots_iron</object>
+          </objects>
+          <objects name="BlackRock">
+            <object>objects\obj_bp_armor_blackrock</object>
+            <object>objects\obj_bp_helmet_blackrock</object>
+            <object>objects\obj_bp_boots_blackrock</object>
+          </objects>
+        </objects>
+        <objects name="Materials">
+          <object>objects\obj_bp_mat_refined_iron</object>
+        </objects>
+      </objects>
     </objects>
     <objects name="Weapons">
       <object>objects\obj_bullet</object>
     </objects>
-    <object>objects\obj_craft</object>
+    <object>objects\obj_craft_backup</object>
     <object>objects\obj_upgrade</object>
     <object>objects\obj_collision</object>
     <object>objects\obj_door</object>
@@ -157,13 +184,15 @@
     <object>objects\obj_cursor</object>
     <object>objects\obj_door_ext</object>
     <object>objects\obj_door_int</object>
+    <object>objects\obj_crafting</object>
+    <object>objects\obj_craft</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_01</room>
     <room>rooms\rm_skill</room>
     <room>rooms\rm_forge</room>
   </rooms>
-  <constants number="20">
+  <constants number="30">
     <constant name="MONEY_BAG_SMALL">0</constant>
     <constant name="KEY_GOLDEN">1</constant>
     <constant name="LEATHER">2</constant>
@@ -184,6 +213,16 @@
     <constant name="BOOTS_BLACKROCK">18</constant>
     <constant name="MEDIC_KIT_SMALL">19</constant>
     <constant name="BATTERY_SMALL">20</constant>
+    <constant name="BLUEPRINT_HELMET_LEATHER">21</constant>
+    <constant name="BLUEPRINT_HELMET_IRON">22</constant>
+    <constant name="BLUEPRINT_HELMET_BLACKROCK">23</constant>
+    <constant name="BLUEPRINT_ARMOR_LEATHER">24</constant>
+    <constant name="BLUEPRINT_ARMOR_IRON">25</constant>
+    <constant name="BLUEPRINT_ARMOR_BLACKROCK">26</constant>
+    <constant name="BLUEPRINT_BOOTS_LEATHER">27</constant>
+    <constant name="BLUEPRINT_BOOTS_IRON">28</constant>
+    <constant name="BLUEPRINT_BOOTS_BLACKROCK">29</constant>
+    <constant name="BLUEPRINT_REFINED_IRON">30</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

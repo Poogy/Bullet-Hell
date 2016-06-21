@@ -25,44 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var i;
-var list;
-var item;
-craft_show = false;
-
-scr_input();
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Draw control
-scr_input();
-
-if (key_craft){
-   if (craft_show){
-      craft_show = false;
-   } else {
-      craft_show = true;
-   }
-}
+            <string>list = 0;
+item = 0;
 </string>
           </argument>
         </arguments>
@@ -85,20 +49,14 @@ if (key_craft){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (craft_show){ 
-   if (list==0){item = tier_helmet;}
-   if (list==1){item = tier_armor;}
-   if (list==2){item = tier_armor;} 
-        
-        //genügend Material vorhanden
-        if (n[ingredients[list,item]] &gt;= ingredients_n[list,item]){
-        //Falls das item noch erhalten werden darf (stacken oder 0 davon haben)
-                if (stackable[recipe[list,item]] == true) or (stackable[recipe[list,item]] == false &amp;&amp; n[recipe[list,item]] == 0){
-                   scr_remove_item(ingredients[list,item], ingredients_n[list,item]); //Material vom Inventar entfernen
-                   scr_pickup(recipe[list,item], recipe_n[list,item]); //Item erhalten
-                }
+            <string>//genügend Material vorhanden
+if (n[ingredients[list,item]] &gt;= ingredients_n[list,item]){
+//Falls das item noch erhalten werden darf (stacken oder 0 davon haben)
+        if (stackable[recipe[list,item]] == true) or (stackable[recipe[list,item]] == false &amp;&amp; n[recipe[list,item]] == 0){
+           scr_remove_item(ingredients[list,item], ingredients_n[list,item]); //Material vom Inventar entfernen
+           scr_pickup(recipe[list,item], recipe_n[list,item]); //Item erhalten
         }
-    }
+}
 </string>
           </argument>
         </arguments>
@@ -121,17 +79,9 @@ if (key_craft){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (craft_show){
-    if (list==0){item = tier_helmet;}
-    if (list==1){item = tier_armor;}
-    if (list==2){item = tier_armor;} 
-    
-        draw_self();
-        draw_set_color(c_white);
-        draw_sprite(sprite[recipe[list,item]],0,x+16,y+16);
-        draw_text(x+40,y+8,string(item_name[recipe[list,item]]) + "(" + string(recipe_n[list,item]) + ")");
-        draw_text(x+40,y+24,string(item_name[ingredients[list,item]]) + "(" + string(ingredients_n[list,item]) + ")");
-}
+            <string>draw_sprite_ext(sprite[recipe[list,item]],0,x-96,y,3,3,0,c_white,1);
+draw_text(x+16,y+16,recipe[list,item]);
+draw_self();
 </string>
           </argument>
         </arguments>
