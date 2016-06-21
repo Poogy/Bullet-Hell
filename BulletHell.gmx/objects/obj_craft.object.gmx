@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>list = 0;
-item = 0;
+            <string>list = 31999;
+item = 31999;
 </string>
           </argument>
         </arguments>
@@ -84,7 +84,9 @@ if n[recipe_blueprint[list,item]]&gt;0{
           <argument>
             <kind>1</kind>
             <string>draw_sprite_ext(sprite[recipe[list,item]],0,x-64,y,3,3,0,c_white,1);
-draw_text(x+16,y+16,recipe[list,item]);
+draw_text(x+16,y+16,string(recipe[list,item]));
+draw_sprite_ext(sprite[ingredients[list,item]],0,x+208,y,3,3,0,c_white,1);
+draw_text(x+264,y+18,string(ingredients_n[list,item]));
 
 draw_self();
 if n[recipe_blueprint[list,item]]&gt;0{ //Wenn man den Blueprint hat

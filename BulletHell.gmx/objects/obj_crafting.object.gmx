@@ -75,7 +75,7 @@ obj_craft.item = item;
             <kind>1</kind>
             <string>draw_self();
 if n[recipe_blueprint[list,item]]&gt;0{ //Wenn man den Blueprint hat
-   draw_text(x,y,string(n[recipe[list,item]]));
+   draw_text(x,y,string(n[recipe_blueprint[list,item]]));
    if !(n[ingredients[list,item]] &gt;= ingredients_n[list,item]){ //Wenn die Materialien nicht vorhanden sin
       image_blend = make_color_rgb(255, 0, 0);
    }else{ //Wenn man sie doch hat

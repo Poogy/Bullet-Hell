@@ -788,7 +788,11 @@ list={
 ingredients[list,recipe_number] = mats
 ingredients_n[list,recipe_number] = mats count
 */
-
+recipe[31999,31999]             = "";
+recipe_n[31999,31999]           = "";
+recipe_blueprint[31999,31999]   = "";
+ingredients[31999,31999]        = "";
+ingredients_n[31999,31999]      = "";
 //----Recipes----
 //Helmets[0] - Recipies
 recipe[0,0]               = HELMET_LEATHER;
@@ -910,6 +914,7 @@ else                        {tier_boots = 0;}
 
 //----HP----
 obj_stat.stat[0] = item_hp[armor[1,tier_helmet]] + item_hp[armor[0,tier_armor]] + item_hp[armor[2,tier_boots]];
+obj_stat.stat[1] = min(obj_stat.stat[0],obj_stat.stat[1]); //Anti-Overhealing
 </string>
           </argument>
         </arguments>

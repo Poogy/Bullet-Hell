@@ -138,6 +138,20 @@ scr_input();
                       obj_stat.bullet[3,8] += 0.5;
                       obj_stat.bullet[3,4] --;
         }
+    }else if (upgrade==6){ //Lifesteal
+               if (obj_stat.stat[3] == 0 &amp;&amp; obj_stat.bullet[0,9] &lt; 2){
+                      obj_stat.bullet[0,9] += 0.01;
+                      obj_stat.bullet[0,4] --;
+        } else if (obj_stat.stat[3] == 1 &amp;&amp; obj_stat.bullet[1,9] &lt; 2){
+                      obj_stat.bullet[1,9] += 0.01;
+                      obj_stat.bullet[1,4] --;
+        } else if (obj_stat.stat[3] == 2 &amp;&amp; obj_stat.bullet[2,9] &lt; 2){
+                      obj_stat.bullet[2,9] += 0.01;
+                      obj_stat.bullet[2,4] --;
+        } else if (obj_stat.stat[3] == 3 &amp;&amp; obj_stat.bullet[3,9] &lt; 2){
+                      obj_stat.bullet[3,9] += 0.01;
+                      obj_stat.bullet[3,4] --;
+        }
     }
 }
 </string>
@@ -168,6 +182,7 @@ else if (upgrade==2){text = "Scale"}
 else if (upgrade==3){text = "Atk Spd"}
 else if (upgrade==4){text = "Crit Chance"}
 else if (upgrade==5){text = "Crit Multiplier"}
+else if (upgrade==6){text = "Lifesteal"}
 
 draw_self();
 draw_set_color(c_white);

@@ -57,7 +57,8 @@
     <instance objName="obj_upgrade" x="64" y="256" name="inst_33356D9E" locked="0" code="upgrade = 2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_upgrade" x="64" y="352" name="inst_48FE4C5A" locked="0" code="upgrade = 3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_upgrade" x="64" y="448" name="inst_20FC0BC7" locked="0" code="upgrade = 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_upgrade" x="64" y="544" name="inst_59F481F2" locked="0" code="upgrade = 5;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_upgrade" x="64" y="544" name="inst_59F481F2" locked="0" code="upgrade = 5;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_upgrade" x="64" y="640" name="inst_2A3143F1" locked="0" code="upgrade = 6;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

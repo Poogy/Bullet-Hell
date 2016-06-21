@@ -32,6 +32,7 @@ if (scr_chance(obj_stat.bullet[obj_stat.stat[3],7])){
 }else{
    dmg=obj_stat.bullet[obj_stat.stat[3],1]; //Nimmt den dmg wert für die ausgewählte waffe
 }
+
 //-------------
 hspeed=9;
 image_angle=obj_player.image_angle;
@@ -109,6 +110,9 @@ else if (obj_stat.stat[3]==2) {
             <kind>1</kind>
             <string>instance_create(x,y,obj_dmg_info);
 obj_dmg_info.text = dmg;
+
+//--Lifesteal--
+obj_stat.stat[1] += dmg*obj_stat.bullet[obj_stat.stat[3],9];
 </string>
           </argument>
         </arguments>

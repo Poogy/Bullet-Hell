@@ -85,6 +85,11 @@ bullet[0,8]=1.5; //Crit multiplier
 bullet[1,8]=1.5;
 bullet[2,8]=1.5;
 bullet[3,8]=1.5;
+
+bullet[0,9]=0.01; //Lifesteal
+bullet[1,9]=0.01;
+bullet[2,9]=0.01;
+bullet[3,9]=0.01;
 </string>
           </argument>
         </arguments>
