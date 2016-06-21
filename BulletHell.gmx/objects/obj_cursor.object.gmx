@@ -3,7 +3,11 @@
   <spriteName>spr_cursor</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
+<<<<<<< HEAD
   <depth>-20000000</depth>
+=======
+  <depth>-999999999</depth>
+>>>>>>> origin/master
   <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>

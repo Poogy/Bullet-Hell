@@ -175,7 +175,6 @@
     <objects name="Weapons">
       <object>objects\obj_bullet</object>
     </objects>
-    <object>objects\obj_craft_backup</object>
     <object>objects\obj_upgrade</object>
     <object>objects\obj_collision</object>
     <object>objects\obj_door</object>

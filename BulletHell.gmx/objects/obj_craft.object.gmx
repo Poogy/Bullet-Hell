@@ -49,13 +49,17 @@ item = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//genügend Material vorhanden
-if (n[ingredients[list,item]] &gt;= ingredients_n[list,item]){
-//Falls das item noch erhalten werden darf (stacken oder 0 davon haben)
-        if (stackable[recipe[list,item]] == true) or (stackable[recipe[list,item]] == false &amp;&amp; n[recipe[list,item]] == 0){
-           scr_remove_item(ingredients[list,item], ingredients_n[list,item]); //Material vom Inventar entfernen
-           scr_pickup(recipe[list,item], recipe_n[list,item]); //Item erhalten
-        }
+            <string>//Wenn der Blueprint vorhanden ist
+if n[recipe_blueprint[list,item]]&gt;0{
+    //genügend Material vorhanden
+    if (n[ingredients[list,item]] &gt;= ingredients_n[list,item]){
+    //Falls das item noch erhalten werden darf (stacken oder 0 davon haben)
+            if (stackable[recipe[list,item]] == true) or (stackable[recipe[list,item]] == false &amp;&amp; n[recipe[list,item]] == 0){
+               scr_remove_item(ingredients[list,item], ingredients_n[list,item]); //Material vom Inventar entfernen
+               scr_remove_item(recipe_blueprint[list,item], 1) //Blueprint vom Inventar entfernen
+               scr_pickup(recipe[list,item], recipe_n[list,item]); //Item erhalten
+            }
+    }
 }
 </string>
           </argument>
@@ -79,9 +83,19 @@ if (n[ingredients[list,item]] &gt;= ingredients_n[list,item]){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(sprite[recipe[list,item]],0,x-96,y,3,3,0,c_white,1);
+            <string>draw_sprite_ext(sprite[recipe[list,item]],0,x-64,y,3,3,0,c_white,1);
 draw_text(x+16,y+16,recipe[list,item]);
+
 draw_self();
+if n[recipe_blueprint[list,item]]&gt;0{ //Wenn man den Blueprint hat
+   if !(n[ingredients[list,item]] &gt;= ingredients_n[list,item]){ //Wenn die Materialien nicht vorhanden sin
+      image_blend = make_color_rgb(255, 0, 0);
+   }else{ //Wenn man sie doch hat
+      image_blend = make_color_rgb(255, 255, 255);
+   }
+}else{ //Wenn man den Blueprint nicht hat
+   image_blend = make_color_rgb(0, 0, 0);
+}
 </string>
           </argument>
         </arguments>
