@@ -37,7 +37,7 @@ bullet[1]=25;
 bullet[2]=20;
 
 shoot=false;
-flash=true;
+laser=1;
 
 //Boots bug beheben
 tier_boots = 0;
@@ -204,9 +204,6 @@ if key_use_item{
       script_execute(script[obj_inventory.items_use[i]]);
    }
 }
-
-//Flashlight benutzen
-if key_flashlight &amp;&amp; flash {instance_create(x,y,obj_flashlight); flash=false;}
 
 //Spielerbewegung animiert
 image_angle=point_direction(x,y,mouse_x,mouse_y)-90;
