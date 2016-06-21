@@ -54,7 +54,7 @@
     <instance objName="obj_door_int" x="848" y="928" name="inst_066C32FA" locked="0" code="/*&#xA;targetRoom = rm_01;&#xA;target_x = 1168;&#xA;target_y = 524;&#xA;*/&#xA;targetRoom = rm_01;&#xA;target_x = 1584;&#xA;target_y = 128;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crafting" x="336" y="64" name="inst_4CAA56C2" locked="0" code="list = 0;&#xA;item = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crafting" x="496" y="64" name="inst_2A5F496B" locked="0" code="list = 0;&#xA;item = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_crafting" x="656" y="64" name="inst_1CB3D930" locked="0" code="list = 0;&#xA;item = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crafting" x="656" y="64" name="inst_1CB3D930" locked="0" code="list = 0;&#xA;item = 2;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_craft" x="400" y="464" name="inst_3DBFA901" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crafting" x="336" y="192" name="inst_5593C89C" locked="0" code="list = 1;&#xA;item = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crafting" x="496" y="192" name="inst_705B4CA2" locked="0" code="list = 1;&#xA;item = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -62,6 +62,12 @@
     <instance objName="obj_crafting" x="336" y="320" name="inst_54B1EB10" locked="0" code="list = 2;&#xA;item = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crafting" x="496" y="320" name="inst_2F7EEA44" locked="0" code="list = 2;&#xA;item = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_crafting" x="656" y="320" name="inst_C835D447" locked="0" code="list = 2;&#xA;item = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crafting" x="816" y="64" name="inst_F5325B81" locked="0" code="list = 3;&#xA;item = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crafting" x="976" y="64" name="inst_CB97CCBD" locked="0" code="list = 4;&#xA;item = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crafting" x="976" y="192" name="inst_EF980E21" locked="0" code="list = 4;&#xA;item = 2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crafting" x="976" y="320" name="inst_1E063294" locked="0" code="list = 4;&#xA;item = 4;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crafting" x="1136" y="64" name="inst_D078EF7B" locked="0" code="list = 4;&#xA;item = 1;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_crafting" x="1136" y="192" name="inst_60AC831C" locked="0" code="list = 4;&#xA;item = 3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

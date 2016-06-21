@@ -47,8 +47,21 @@
       </sprites>
       <sprites name="Blueprints">
         <sprite>sprites\spr_blueprint_eq</sprite>
+        <sprite>sprites\spr_blueprint_eq_button</sprite>
+        <sprite>sprites\spr_blueprint_upg</sprite>
+        <sprite>sprites\spr_blueprint_upg_button</sprite>
         <sprite>sprites\spr_blueprint_item</sprite>
-        <sprite>sprites\spr_blueprint_button</sprite>
+        <sprite>sprites\spr_blueprint_item_button</sprite>
+      </sprites>
+      <sprites name="Upgrades">
+        <sprites name="Dmg">
+          <sprite>sprites\spr_upg_dmg_1</sprite>
+          <sprite>sprites\spr_upg_dmg_2</sprite>
+          <sprite>sprites\spr_upg_dmg_3</sprite>
+          <sprite>sprites\spr_upg_dmg_4</sprite>
+          <sprite>sprites\spr_upg_dmg_5</sprite>
+          <sprite>sprites\spr_upg_dmg_6</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="Lifeforms">
@@ -145,7 +158,6 @@
           <object>objects\obj_armor_blackrock</object>
           <object>objects\obj_boots_blackrock</object>
         </objects>
-        <object>objects\item_parent</object>
       </objects>
       <objects name="Use">
         <object>objects\obj_money_bag_small</object>
@@ -172,7 +184,27 @@
         <objects name="Materials">
           <object>objects\obj_bp_mat_refined_iron</object>
         </objects>
+        <objects name="Upgrades">
+          <objects name="Dmg">
+            <object>objects\obj_bp_upg_dmg_2</object>
+            <object>objects\obj_bp_upg_dmg_3</object>
+            <object>objects\obj_bp_upg_dmg_4</object>
+            <object>objects\obj_bp_upg_dmg_5</object>
+            <object>objects\obj_bp_upg_dmg_6</object>
+          </objects>
+        </objects>
       </objects>
+      <objects name="Upgrades">
+        <objects name="Dmg">
+          <object>objects\obj_upg_dmg_1</object>
+          <object>objects\obj_upg_dmg_2</object>
+          <object>objects\obj_upg_dmg_3</object>
+          <object>objects\obj_upg_dmg_4</object>
+          <object>objects\obj_upg_dmg_5</object>
+          <object>objects\obj_upg_dmg_6</object>
+        </objects>
+      </objects>
+      <object>objects\item_parent</object>
     </objects>
     <objects name="Weapons">
       <object>objects\obj_bullet</object>
@@ -193,7 +225,7 @@
     <room>rooms\rm_skill</room>
     <room>rooms\rm_forge</room>
   </rooms>
-  <constants number="30">
+  <constants number="41">
     <constant name="MONEY_BAG_SMALL">0</constant>
     <constant name="KEY_GOLDEN">1</constant>
     <constant name="LEATHER">2</constant>
@@ -214,16 +246,27 @@
     <constant name="BOOTS_BLACKROCK">18</constant>
     <constant name="MEDIC_KIT_SMALL">19</constant>
     <constant name="BATTERY_SMALL">20</constant>
-    <constant name="BLUEPRINT_HELMET_LEATHER">21</constant>
-    <constant name="BLUEPRINT_HELMET_IRON">22</constant>
-    <constant name="BLUEPRINT_HELMET_BLACKROCK">23</constant>
-    <constant name="BLUEPRINT_ARMOR_LEATHER">24</constant>
-    <constant name="BLUEPRINT_ARMOR_IRON">25</constant>
-    <constant name="BLUEPRINT_ARMOR_BLACKROCK">26</constant>
-    <constant name="BLUEPRINT_BOOTS_LEATHER">27</constant>
-    <constant name="BLUEPRINT_BOOTS_IRON">28</constant>
-    <constant name="BLUEPRINT_BOOTS_BLACKROCK">29</constant>
-    <constant name="BLUEPRINT_REFINED_IRON">30</constant>
+    <constant name="BP_HELMET_LEATHER">21</constant>
+    <constant name="BP_HELMET_IRON">22</constant>
+    <constant name="BP_HELMET_BLACKROCK">23</constant>
+    <constant name="BP_ARMOR_LEATHER">24</constant>
+    <constant name="BP_ARMOR_IRON">25</constant>
+    <constant name="BP_ARMOR_BLACKROCK">26</constant>
+    <constant name="BP_BOOTS_LEATHER">27</constant>
+    <constant name="BP_BOOTS_IRON">28</constant>
+    <constant name="BP_BOOTS_BLACKROCK">29</constant>
+    <constant name="BP_REFINED_IRON">30</constant>
+    <constant name="UPG_DMG_1">31</constant>
+    <constant name="UPG_DMG_2">32</constant>
+    <constant name="UPG_DMG_3">33</constant>
+    <constant name="UPG_DMG_4">34</constant>
+    <constant name="UPG_DMG_5">35</constant>
+    <constant name="UPG_DMG_6">36</constant>
+    <constant name="BP_UPG_DMG_2">37</constant>
+    <constant name="BP_UPG_DMG_3">38</constant>
+    <constant name="BP_UPG_DMG_4">39</constant>
+    <constant name="BP_UPG_DMG_5">40</constant>
+    <constant name="BP_UPG_DMG_6">41</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

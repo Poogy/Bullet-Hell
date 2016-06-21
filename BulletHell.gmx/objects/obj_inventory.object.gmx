@@ -59,16 +59,30 @@ item_name[KEY_GOLDEN]           = "Goldner Schlussel";
 
 //--| Blueprints
 
-item_name[BLUEPRINT_ARMOR_LEATHER]        = "Leder Rustung Blueprint";
-item_name[BLUEPRINT_ARMOR_IRON]           = "Eisen Rustung Blueprint";
-item_name[BLUEPRINT_ARMOR_BLACKROCK]      = "Schwazfels Rustung Blueprint";
-item_name[BLUEPRINT_HELMET_LEATHER]       = "Leder Helm Blueprint";
-item_name[BLUEPRINT_HELMET_IRON]          = "Eisen Helm Blueprint";
-item_name[BLUEPRINT_HELMET_BLACKROCK]     = "Schwarzfels Helm Blueprint";
-item_name[BLUEPRINT_BOOTS_LEATHER]        = "Leder Schuhe Blueprint";
-item_name[BLUEPRINT_BOOTS_IRON]           = "Eisen Schuhe Blueprint";
-item_name[BLUEPRINT_BOOTS_BLACKROCK]      = "Schwarzfels Schuhe Blueprint";
-item_name[BLUEPRINT_REFINED_IRON]         = "Eisenbarren Blueprint";
+item_name[BP_ARMOR_LEATHER]        = "Leder Rustung Blueprint";
+item_name[BP_ARMOR_IRON]           = "Eisen Rustung Blueprint";
+item_name[BP_ARMOR_BLACKROCK]      = "Schwazfels Rustung Blueprint";
+item_name[BP_HELMET_LEATHER]       = "Leder Helm Blueprint";
+item_name[BP_HELMET_IRON]          = "Eisen Helm Blueprint";
+item_name[BP_HELMET_BLACKROCK]     = "Schwarzfels Helm Blueprint";
+item_name[BP_BOOTS_LEATHER]        = "Leder Schuhe Blueprint";
+item_name[BP_BOOTS_IRON]           = "Eisen Schuhe Blueprint";
+item_name[BP_BOOTS_BLACKROCK]      = "Schwarzfels Schuhe Blueprint";
+item_name[BP_REFINED_IRON]         = "Eisenbarren Blueprint";
+item_name[BP_UPG_DMG_2]            = "Damage Upgrade 2 Blueprint";
+item_name[BP_UPG_DMG_3]            = "Damage Upgrade 3 Blueprint";
+item_name[BP_UPG_DMG_4]            = "Damage Upgrade 4 Blueprint";
+item_name[BP_UPG_DMG_5]            = "Damage Upgrade 5 Blueprint";
+item_name[BP_UPG_DMG_6]            = "Damage Upgrade 6 Blueprint";
+
+//--| Upgrades
+
+item_name[UPG_DMG_1]            = "Damage Upgrade 1";
+item_name[UPG_DMG_2]            = "Damage Upgrade 2";
+item_name[UPG_DMG_3]            = "Damage Upgrade 3";
+item_name[UPG_DMG_4]            = "Damage Upgrade 4";
+item_name[UPG_DMG_5]            = "Damage Upgrade 5";
+item_name[UPG_DMG_6]            = "Damage Upgrade 6";
 
 //--| Use
 
@@ -130,16 +144,30 @@ sprite[KEY_GOLDEN]           = spr_key_golden;
 
 //--| Blueprints
 
-sprite[BLUEPRINT_ARMOR_LEATHER]        = spr_blueprint_eq;
-sprite[BLUEPRINT_ARMOR_IRON]           = spr_blueprint_eq;
-sprite[BLUEPRINT_ARMOR_BLACKROCK]      = spr_blueprint_eq;
-sprite[BLUEPRINT_HELMET_LEATHER]       = spr_blueprint_eq;
-sprite[BLUEPRINT_HELMET_IRON]          = spr_blueprint_eq;
-sprite[BLUEPRINT_HELMET_BLACKROCK]     = spr_blueprint_eq;
-sprite[BLUEPRINT_BOOTS_LEATHER]        = spr_blueprint_eq;
-sprite[BLUEPRINT_BOOTS_IRON]           = spr_blueprint_eq;
-sprite[BLUEPRINT_BOOTS_BLACKROCK]      = spr_blueprint_eq;
-sprite[BLUEPRINT_REFINED_IRON]         = spr_blueprint_item;
+sprite[BP_ARMOR_LEATHER]        = spr_blueprint_eq;
+sprite[BP_ARMOR_IRON]           = spr_blueprint_eq;
+sprite[BP_ARMOR_BLACKROCK]      = spr_blueprint_eq;
+sprite[BP_HELMET_LEATHER]       = spr_blueprint_eq;
+sprite[BP_HELMET_IRON]          = spr_blueprint_eq;
+sprite[BP_HELMET_BLACKROCK]     = spr_blueprint_eq;
+sprite[BP_BOOTS_LEATHER]        = spr_blueprint_eq;
+sprite[BP_BOOTS_IRON]           = spr_blueprint_eq;
+sprite[BP_BOOTS_BLACKROCK]      = spr_blueprint_eq;
+sprite[BP_REFINED_IRON]         = spr_blueprint_item;
+sprite[BP_UPG_DMG_2]            = spr_blueprint_upg;
+sprite[BP_UPG_DMG_3]            = spr_blueprint_upg;
+sprite[BP_UPG_DMG_4]            = spr_blueprint_upg;
+sprite[BP_UPG_DMG_5]            = spr_blueprint_upg;
+sprite[BP_UPG_DMG_6]            = spr_blueprint_upg;
+
+//--| Upgrades
+
+sprite[UPG_DMG_1]            = "spr_upg_dmg_1";
+sprite[UPG_DMG_2]            = "spr_upg_dmg_2";
+sprite[UPG_DMG_3]            = "spr_upg_dmg_3";
+sprite[UPG_DMG_4]            = "spr_upg_dmg_4";
+sprite[UPG_DMG_5]            = "spr_upg_dmg_5";
+sprite[UPG_DMG_6]            = "spr_upg_dmg_6";
 
 //--| Use
 
@@ -201,16 +229,30 @@ object[KEY_GOLDEN]           = obj_key_golden;
 
 //--| Blueprints
 
-object[BLUEPRINT_ARMOR_LEATHER]        = obj_bp_armor_leather;
-object[BLUEPRINT_ARMOR_IRON]           = obj_bp_armor_iron;
-object[BLUEPRINT_ARMOR_BLACKROCK]      = obj_bp_armor_blackrock;
-object[BLUEPRINT_HELMET_LEATHER]       = obj_bp_helmet_leather;
-object[BLUEPRINT_HELMET_IRON]          = obj_bp_helmet_iron;
-object[BLUEPRINT_HELMET_BLACKROCK]     = obj_bp_helmet_blackrock;
-object[BLUEPRINT_BOOTS_LEATHER]        = obj_bp_boots_leather;
-object[BLUEPRINT_BOOTS_IRON]           = obj_bp_boots_iron;
-object[BLUEPRINT_BOOTS_BLACKROCK]      = obj_bp_boots_blackrock;
-object[BLUEPRINT_REFINED_IRON]         = obj_bp_mat_refined_iron;
+object[BP_ARMOR_LEATHER]        = obj_bp_armor_leather;
+object[BP_ARMOR_IRON]           = obj_bp_armor_iron;
+object[BP_ARMOR_BLACKROCK]      = obj_bp_armor_blackrock;
+object[BP_HELMET_LEATHER]       = obj_bp_helmet_leather;
+object[BP_HELMET_IRON]          = obj_bp_helmet_iron;
+object[BP_HELMET_BLACKROCK]     = obj_bp_helmet_blackrock;
+object[BP_BOOTS_LEATHER]        = obj_bp_boots_leather;
+object[BP_BOOTS_IRON]           = obj_bp_boots_iron;
+object[BP_BOOTS_BLACKROCK]      = obj_bp_boots_blackrock;
+object[BP_REFINED_IRON]         = obj_bp_mat_refined_iron;
+object[BP_UPG_DMG_2]            = obj_bp_upg_dmg_2;
+object[BP_UPG_DMG_3]            = obj_bp_upg_dmg_3;
+object[BP_UPG_DMG_4]            = obj_bp_upg_dmg_4;
+object[BP_UPG_DMG_5]            = obj_bp_upg_dmg_5;
+object[BP_UPG_DMG_6]            = obj_bp_upg_dmg_6;
+
+//--| Upgrades
+
+object[UPG_DMG_1]            = "obj_upg_dmg_1";
+object[UPG_DMG_2]            = "obj_upg_dmg_2";
+object[UPG_DMG_3]            = "obj_upg_dmg_3";
+object[UPG_DMG_4]            = "obj_upg_dmg_4";
+object[UPG_DMG_5]            = "obj_upg_dmg_5";
+object[UPG_DMG_6]            = "obj_upg_dmg_6";
 
 //--| Use
 
@@ -272,16 +314,30 @@ stackable[KEY_GOLDEN]           = true;
 
 //--| Blueprints
 
-stackable[BLUEPRINT_ARMOR_LEATHER]        = true;
-stackable[BLUEPRINT_ARMOR_IRON]           = true;
-stackable[BLUEPRINT_ARMOR_BLACKROCK]      = true;
-stackable[BLUEPRINT_HELMET_LEATHER]       = true;
-stackable[BLUEPRINT_HELMET_IRON]          = true;
-stackable[BLUEPRINT_HELMET_BLACKROCK]     = true;
-stackable[BLUEPRINT_BOOTS_LEATHER]        = true;
-stackable[BLUEPRINT_BOOTS_IRON]           = true;
-stackable[BLUEPRINT_BOOTS_BLACKROCK]      = true;
-stackable[BLUEPRINT_REFINED_IRON]         = true;
+stackable[BP_ARMOR_LEATHER]        = true;
+stackable[BP_ARMOR_IRON]           = true;
+stackable[BP_ARMOR_BLACKROCK]      = true;
+stackable[BP_HELMET_LEATHER]       = true;
+stackable[BP_HELMET_IRON]          = true;
+stackable[BP_HELMET_BLACKROCK]     = true;
+stackable[BP_BOOTS_LEATHER]        = true;
+stackable[BP_BOOTS_IRON]           = true;
+stackable[BP_BOOTS_BLACKROCK]      = true;
+stackable[BP_REFINED_IRON]         = true;
+stackable[BP_UPG_DMG_2]            = true;
+stackable[BP_UPG_DMG_3]            = true;
+stackable[BP_UPG_DMG_4]            = true;
+stackable[BP_UPG_DMG_5]            = true;
+stackable[BP_UPG_DMG_6]            = true;
+
+//--| Upgrades
+
+stackable[UPG_DMG_1]            = true;
+stackable[UPG_DMG_2]            = true;
+stackable[UPG_DMG_3]            = true;
+stackable[UPG_DMG_4]            = true;
+stackable[UPG_DMG_5]            = true;
+stackable[UPG_DMG_6]            = true;
 
 //--| Use
 
@@ -343,16 +399,30 @@ n[KEY_GOLDEN]           = 0;
 
 //--| Blueprints
 
-n[BLUEPRINT_ARMOR_LEATHER]        = 0;
-n[BLUEPRINT_ARMOR_IRON]           = 0;
-n[BLUEPRINT_ARMOR_BLACKROCK]      = 0;
-n[BLUEPRINT_HELMET_LEATHER]       = 0;
-n[BLUEPRINT_HELMET_IRON]          = 0;
-n[BLUEPRINT_HELMET_BLACKROCK]     = 0;
-n[BLUEPRINT_BOOTS_LEATHER]        = 0;
-n[BLUEPRINT_BOOTS_IRON]           = 0;
-n[BLUEPRINT_BOOTS_BLACKROCK]      = 0;
-n[BLUEPRINT_REFINED_IRON]         = 0;
+n[BP_ARMOR_LEATHER]        = 0;
+n[BP_ARMOR_IRON]           = 0;
+n[BP_ARMOR_BLACKROCK]      = 0;
+n[BP_HELMET_LEATHER]       = 0;
+n[BP_HELMET_IRON]          = 0;
+n[BP_HELMET_BLACKROCK]     = 0;
+n[BP_BOOTS_LEATHER]        = 0;
+n[BP_BOOTS_IRON]           = 0;
+n[BP_BOOTS_BLACKROCK]      = 0;
+n[BP_REFINED_IRON]         = 0;
+n[BP_UPG_DMG_2]            = 0;
+n[BP_UPG_DMG_3]            = 0;
+n[BP_UPG_DMG_4]            = 0;
+n[BP_UPG_DMG_5]            = 0;
+n[BP_UPG_DMG_6]            = 0;
+
+//--| Upgrades
+
+n[UPG_DMG_1]            = 0;
+n[UPG_DMG_2]            = 0;
+n[UPG_DMG_3]            = 0;
+n[UPG_DMG_4]            = 0;
+n[UPG_DMG_5]            = 0;
+n[UPG_DMG_6]            = 0;
 
 //--| Use
 
@@ -413,16 +483,30 @@ script[KEY_GOLDEN]           = noone;
 
 //--| Blueprints
 
-script[BLUEPRINT_ARMOR_LEATHER]        = noone;
-script[BLUEPRINT_ARMOR_IRON]           = noone;
-script[BLUEPRINT_ARMOR_BLACKROCK]      = noone;
-script[BLUEPRINT_HELMET_LEATHER]       = noone;
-script[BLUEPRINT_HELMET_IRON]          = noone;
-script[BLUEPRINT_HELMET_BLACKROCK]     = noone;
-script[BLUEPRINT_BOOTS_LEATHER]        = noone;
-script[BLUEPRINT_BOOTS_IRON]           = noone;
-script[BLUEPRINT_BOOTS_BLACKROCK]      = noone;
-script[BLUEPRINT_REFINED_IRON]         = noone;
+script[BP_ARMOR_LEATHER]        = noone;
+script[BP_ARMOR_IRON]           = noone;
+script[BP_ARMOR_BLACKROCK]      = noone;
+script[BP_HELMET_LEATHER]       = noone;
+script[BP_HELMET_IRON]          = noone;
+script[BP_HELMET_BLACKROCK]     = noone;
+script[BP_BOOTS_LEATHER]        = noone;
+script[BP_BOOTS_IRON]           = noone;
+script[BP_BOOTS_BLACKROCK]      = noone;
+script[BP_REFINED_IRON]         = noone;
+script[BP_UPG_DMG_2]            = noone;
+script[BP_UPG_DMG_3]            = noone;
+script[BP_UPG_DMG_4]            = noone;
+script[BP_UPG_DMG_5]            = noone;
+script[BP_UPG_DMG_6]            = noone;
+
+//--| Upgrades
+
+script[UPG_DMG_1]            = noone;
+script[UPG_DMG_2]            = noone;
+script[UPG_DMG_3]            = noone;
+script[UPG_DMG_4]            = noone;
+script[UPG_DMG_5]            = noone;
+script[UPG_DMG_6]            = noone;
 
 //--| Use
 
@@ -484,16 +568,30 @@ info_text[KEY_GOLDEN]           = "[c=12632256]Glitzert golden[/c]";
 
 //--| Blueprints
 
-info_text[BLUEPRINT_ARMOR_LEATHER]        = "";
-info_text[BLUEPRINT_ARMOR_IRON]           = "";
-info_text[BLUEPRINT_ARMOR_BLACKROCK]      = "";
-info_text[BLUEPRINT_HELMET_LEATHER]       = "";
-info_text[BLUEPRINT_HELMET_IRON]          = "";
-info_text[BLUEPRINT_HELMET_BLACKROCK]     = "";
-info_text[BLUEPRINT_BOOTS_LEATHER]        = "";
-info_text[BLUEPRINT_BOOTS_IRON]           = "";
-info_text[BLUEPRINT_BOOTS_BLACKROCK]      = "";
-info_text[BLUEPRINT_REFINED_IRON]         = "";
+info_text[BP_ARMOR_LEATHER]        = "";
+info_text[BP_ARMOR_IRON]           = "";
+info_text[BP_ARMOR_BLACKROCK]      = "";
+info_text[BP_HELMET_LEATHER]       = "";
+info_text[BP_HELMET_IRON]          = "";
+info_text[BP_HELMET_BLACKROCK]     = "";
+info_text[BP_BOOTS_LEATHER]        = "";
+info_text[BP_BOOTS_IRON]           = "";
+info_text[BP_BOOTS_BLACKROCK]      = "";
+info_text[BP_REFINED_IRON]         = "";
+info_text[BP_UPG_DMG_2]            = "";
+info_text[BP_UPG_DMG_3]            = "";
+info_text[BP_UPG_DMG_4]            = "";
+info_text[BP_UPG_DMG_5]            = "";
+info_text[BP_UPG_DMG_6]            = "";
+
+//--| Upgrades
+
+info_text[UPG_DMG_1]            = "";
+info_text[UPG_DMG_2]            = "";
+info_text[UPG_DMG_3]            = "";
+info_text[UPG_DMG_4]            = "";
+info_text[UPG_DMG_5]            = "";
+info_text[UPG_DMG_6]            = "";
 
 //--| Use
 
@@ -555,93 +653,36 @@ value[KEY_GOLDEN]           = 100;
 
 //--| Blueprints
 
-value[BLUEPRINT_ARMOR_LEATHER]        = 100;
-value[BLUEPRINT_ARMOR_IRON]           = 100;
-value[BLUEPRINT_ARMOR_BLACKROCK]      = 100;
-value[BLUEPRINT_HELMET_LEATHER]       = 100;
-value[BLUEPRINT_HELMET_IRON]          = 100;
-value[BLUEPRINT_HELMET_BLACKROCK]     = 100;
-value[BLUEPRINT_BOOTS_LEATHER]        = 100;
-value[BLUEPRINT_BOOTS_IRON]           = 100;
-value[BLUEPRINT_BOOTS_BLACKROCK]      = 100;
-value[BLUEPRINT_REFINED_IRON]         = 100;
+value[BP_ARMOR_LEATHER]        = 100;
+value[BP_ARMOR_IRON]           = 100;
+value[BP_ARMOR_BLACKROCK]      = 100;
+value[BP_HELMET_LEATHER]       = 100;
+value[BP_HELMET_IRON]          = 100;
+value[BP_HELMET_BLACKROCK]     = 100;
+value[BP_BOOTS_LEATHER]        = 100;
+value[BP_BOOTS_IRON]           = 100;
+value[BP_BOOTS_BLACKROCK]      = 100;
+value[BP_REFINED_IRON]         = 100;
+value[BP_UPG_DMG_2]            = 100;
+value[BP_UPG_DMG_3]            = 100;
+value[BP_UPG_DMG_4]            = 100;
+value[BP_UPG_DMG_5]            = 100;
+value[BP_UPG_DMG_6]            = 100;
+
+//--| Upgrades
+
+value[UPG_DMG_1]            = 200;
+value[UPG_DMG_2]            = 500;
+value[UPG_DMG_3]            = 1000;
+value[UPG_DMG_4]            = 5000;
+value[UPG_DMG_5]            = 20000;
+value[UPG_DMG_6]            = 200000;
 
 //--| Use
 
 value[BATTERY_SMALL]        = 50;
 value[MONEY_BAG_SMALL]      = 0;
 value[MEDIC_KIT_SMALL]      = 150;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Category
-
-
-//////////////////////////////////
-//-------Array for types-------///
-//////////////////////////////////
-
-//--| Armor
-
-type[ARMOR_NONE]           = "eq";
-type[ARMOR_LEATHER]        = "eq";
-type[ARMOR_IRON]           = "eq";
-type[ARMOR_BLACKROCK]      = "eq";
-type[HELMET_NONE]          = "eq";
-type[HELMET_LEATHER]       = "eq";
-type[HELMET_IRON]          = "eq";
-type[HELMET_BLACKROCK]     = "eq";
-type[BOOTS_NONE]           = "eq";
-type[BOOTS_LEATHER]        = "eq";
-type[BOOTS_IRON]           = "eq";
-type[BOOTS_BLACKROCK]      = "eq";
-
-//--| Materials
-
-type[LEATHER]              = "mat";
-type[IRON]                 = "mat";
-type[REFINED_IRON]         = "mat";
-type[BLACKROCK]            = "mat";
-
-//--| Misc
-
-type[KEY_GOLDEN]           = "misc";
-
-//--| Blueprints
-
-type[BLUEPRINT_ARMOR_LEATHER]        = "bp";
-type[BLUEPRINT_ARMOR_IRON]           = "bp";
-type[BLUEPRINT_ARMOR_BLACKROCK]      = "bp";
-type[BLUEPRINT_HELMET_LEATHER]       = "bp";
-type[BLUEPRINT_HELMET_IRON]          = "bp";
-type[BLUEPRINT_HELMET_BLACKROCK]     = "bp";
-type[BLUEPRINT_BOOTS_LEATHER]        = "bp";
-type[BLUEPRINT_BOOTS_IRON]           = "bp";
-type[BLUEPRINT_BOOTS_BLACKROCK]      = "bp";
-type[BLUEPRINT_REFINED_IRON]         = "bp";
-
-//--| Use
-
-type[BATTERY_SMALL]        = "use";
-type[MONEY_BAG_SMALL]      = "use";
-type[MEDIC_KIT_SMALL]      = "use";
 </string>
           </argument>
         </arguments>
@@ -697,16 +738,30 @@ item_hp[KEY_GOLDEN]           = 0;
 
 //--| Blueprints
 
-item_hp[BLUEPRINT_ARMOR_LEATHER]        = 0;
-item_hp[BLUEPRINT_ARMOR_IRON]           = 0;
-item_hp[BLUEPRINT_ARMOR_BLACKROCK]      = 0;
-item_hp[BLUEPRINT_HELMET_LEATHER]       = 0;
-item_hp[BLUEPRINT_HELMET_IRON]          = 0;
-item_hp[BLUEPRINT_HELMET_BLACKROCK]     = 0;
-item_hp[BLUEPRINT_BOOTS_LEATHER]        = 0;
-item_hp[BLUEPRINT_BOOTS_IRON]           = 0;
-item_hp[BLUEPRINT_BOOTS_BLACKROCK]      = 0;
-item_hp[BLUEPRINT_REFINED_IRON]         = 0;
+item_hp[BP_ARMOR_LEATHER]        = 0;
+item_hp[BP_ARMOR_IRON]           = 0;
+item_hp[BP_ARMOR_BLACKROCK]      = 0;
+item_hp[BP_HELMET_LEATHER]       = 0;
+item_hp[BP_HELMET_IRON]          = 0;
+item_hp[BP_HELMET_BLACKROCK]     = 0;
+item_hp[BP_BOOTS_LEATHER]        = 0;
+item_hp[BP_BOOTS_IRON]           = 0;
+item_hp[BP_BOOTS_BLACKROCK]      = 0;
+item_hp[BP_REFINED_IRON]         = 0;
+item_hp[BP_UPG_DMG_2]            = 0;
+item_hp[BP_UPG_DMG_3]            = 0;
+item_hp[BP_UPG_DMG_4]            = 0;
+item_hp[BP_UPG_DMG_5]            = 0;
+item_hp[BP_UPG_DMG_6]            = 0;
+
+//--| Upgrades
+
+item_hp[UPG_DMG_1]            = 0;
+item_hp[UPG_DMG_2]            = 0;
+item_hp[UPG_DMG_3]            = 0;
+item_hp[UPG_DMG_4]            = 0;
+item_hp[UPG_DMG_5]            = 0;
+item_hp[UPG_DMG_6]            = 0;
 
 //--| Use
 
@@ -797,40 +852,57 @@ ingredients_n[31999,31999]      = "";
 //Helmets[0] - Recipies
 recipe[0,0]               = HELMET_LEATHER;
 recipe_n[0,0]             = 1;
-recipe_blueprint[0,0]     = BLUEPRINT_HELMET_LEATHER;
+recipe_blueprint[0,0]     = BP_HELMET_LEATHER;
 recipe[0,1]               = HELMET_IRON;
 recipe_n[0,1]             = 1;
-recipe_blueprint[0,1]     = BLUEPRINT_HELMET_IRON;
+recipe_blueprint[0,1]     = BP_HELMET_IRON;
 recipe[0,2]               = HELMET_BLACKROCK;
 recipe_n[0,2]             = 1;
-recipe_blueprint[0,2]     = BLUEPRINT_HELMET_BLACKROCK;
+recipe_blueprint[0,2]     = BP_HELMET_BLACKROCK;
 
 //Armors[1] - Recipies
 recipe[1,0]               = ARMOR_LEATHER;
 recipe_n[1,0]             = 1;
-recipe_blueprint[1,0]     = BLUEPRINT_ARMOR_LEATHER;
+recipe_blueprint[1,0]     = BP_ARMOR_LEATHER;
 recipe[1,1]               = ARMOR_IRON;
 recipe_n[1,1]             = 1;
-recipe_blueprint[1,1]     = BLUEPRINT_ARMOR_IRON;
+recipe_blueprint[1,1]     = BP_ARMOR_IRON;
 recipe[1,2]               = ARMOR_BLACKROCK;
 recipe_n[1,2]             = 1;
-recipe_blueprint[1,2]     = BLUEPRINT_ARMOR_BLACKROCK;
+recipe_blueprint[1,2]     = BP_ARMOR_BLACKROCK;
 
 //Boots[2] - Recipies
 recipe[2,0]               = BOOTS_LEATHER;
 recipe_n[2,0]             = 1;
-recipe_blueprint[2,0]     = BLUEPRINT_BOOTS_LEATHER;
+recipe_blueprint[2,0]     = BP_BOOTS_LEATHER;
 recipe[2,1]               = BOOTS_IRON;
 recipe_n[2,1]             = 1;
-recipe_blueprint[2,1]     = BLUEPRINT_BOOTS_IRON;
+recipe_blueprint[2,1]     = BP_BOOTS_IRON;
 recipe[2,2]               = BOOTS_BLACKROCK;
 recipe_n[2,2]             = 1;
-recipe_blueprint[2,2]     = BLUEPRINT_BOOTS_BLACKROCK;
+recipe_blueprint[2,2]     = BP_BOOTS_BLACKROCK;
 
 //Items[3] - Recipies
 recipe[3,0]               = REFINED_IRON;
 recipe_n[3,0]             = 1;
-recipe_blueprint[3,0]     = BLUEPRINT_REFINED_IRON;
+recipe_blueprint[3,0]     = BP_REFINED_IRON;
+
+//Upgrades[4] - Recipies
+recipe[4,0]               = UPG_DMG_2;
+recipe_n[4,0]             = 1;
+recipe_blueprint[4,0]     = BP_UPG_DMG_2;
+recipe[4,1]               = UPG_DMG_3;
+recipe_n[4,1]             = 1;
+recipe_blueprint[4,1]     = BP_UPG_DMG_3;
+recipe[4,2]               = UPG_DMG_4;
+recipe_n[4,2]             = 1;
+recipe_blueprint[4,2]     = BP_UPG_DMG_4;
+recipe[4,3]               = UPG_DMG_5;
+recipe_n[4,3]             = 1;
+recipe_blueprint[4,3]     = BP_UPG_DMG_5;
+recipe[4,4]               = UPG_DMG_6;
+recipe_n[4,4]             = 1;
+recipe_blueprint[4,4]     = BP_UPG_DMG_6;
 
 //----ingredients----
 //Helmets[0] - ingredients
@@ -860,6 +932,18 @@ ingredients_n[2,2]      = 5;
 //Items[3] - ingredients
 ingredients[3,0]        = IRON;
 ingredients_n[3,0]      = 2;
+
+//Upgrades[4] - ingredients
+ingredients[4,0]        = UPG_DMG_1;
+ingredients_n[4,0]      = 3;
+ingredients[4,1]        = UPG_DMG_2;
+ingredients_n[4,1]      = 3;
+ingredients[4,2]        = UPG_DMG_3;
+ingredients_n[4,2]      = 3;
+ingredients[4,3]        = UPG_DMG_4;
+ingredients_n[4,3]      = 3;
+ingredients[4,4]        = UPG_DMG_5;
+ingredients_n[4,4]      = 3;
 </string>
           </argument>
         </arguments>
@@ -1001,16 +1085,21 @@ for (i=0;i&lt;array_length_1d(items_use);i++){
 
 //Blueprints
 
-items_bp[0]=BLUEPRINT_ARMOR_LEATHER;
-items_bp[1]=BLUEPRINT_ARMOR_IRON;
-items_bp[2]=BLUEPRINT_ARMOR_BLACKROCK;
-items_bp[3]=BLUEPRINT_HELMET_LEATHER;
-items_bp[4]=BLUEPRINT_HELMET_IRON;
-items_bp[5]=BLUEPRINT_HELMET_BLACKROCK;
-items_bp[6]=BLUEPRINT_BOOTS_LEATHER;
-items_bp[7]=BLUEPRINT_BOOTS_IRON;
-items_bp[8]=BLUEPRINT_BOOTS_BLACKROCK;
-items_bp[9]=BLUEPRINT_REFINED_IRON;
+items_bp[0]=BP_ARMOR_LEATHER;
+items_bp[1]=BP_ARMOR_IRON;
+items_bp[2]=BP_ARMOR_BLACKROCK;
+items_bp[3]=BP_HELMET_LEATHER;
+items_bp[4]=BP_HELMET_IRON;
+items_bp[5]=BP_HELMET_BLACKROCK;
+items_bp[6]=BP_BOOTS_LEATHER;
+items_bp[7]=BP_BOOTS_IRON;
+items_bp[8]=BP_BOOTS_BLACKROCK;
+items_bp[9]=BP_REFINED_IRON;
+items_bp[10]=BP_UPG_DMG_2;
+items_bp[11]=BP_UPG_DMG_3;
+items_bp[12]=BP_UPG_DMG_4;
+items_bp[13]=BP_UPG_DMG_5;
+items_bp[14]=BP_UPG_DMG_6;
 
 for (i=0;i&lt;array_length_1d(items_bp);i++){
         if (n[items_bp[i]] &gt; 0){
