@@ -57,6 +57,19 @@ item_name[BLACKROCK]            = "Schwarzfels";
 
 item_name[KEY_GOLDEN]           = "Goldner Schlussel";
 
+//--| Blueprints
+
+item_name[BLUEPRINT_ARMOR_LEATHER]        = "Leder Rustung Blueprint";
+item_name[BLUEPRINT_ARMOR_IRON]           = "Eisen Rustung Blueprint";
+item_name[BLUEPRINT_ARMOR_BLACKROCK]      = "Schwazfels Rustung Blueprint";
+item_name[BLUEPRINT_HELMET_LEATHER]       = "Leder Helm Blueprint";
+item_name[BLUEPRINT_HELMET_IRON]          = "Eisen Helm Blueprint";
+item_name[BLUEPRINT_HELMET_BLACKROCK]     = "Schwarzfels Helm Blueprint";
+item_name[BLUEPRINT_BOOTS_LEATHER]        = "Leder Schuhe Blueprint";
+item_name[BLUEPRINT_BOOTS_IRON]           = "Eisen Schuhe Blueprint";
+item_name[BLUEPRINT_BOOTS_BLACKROCK]      = "Schwarzfels Schuhe Blueprint";
+item_name[BLUEPRINT_REFINED_IRON]         = "Eisenbarren Blueprint";
+
 //--| Use
 
 item_name[BATTERY_SMALL]        = "Kleine Batterie";
@@ -114,6 +127,19 @@ sprite[BLACKROCK]            = spr_mat_blackrock;
 //--| Misc
 
 sprite[KEY_GOLDEN]           = spr_key_golden;
+
+//--| Blueprints
+
+sprite[BLUEPRINT_ARMOR_LEATHER]        = spr_blueprint_eq;
+sprite[BLUEPRINT_ARMOR_IRON]           = spr_blueprint_eq;
+sprite[BLUEPRINT_ARMOR_BLACKROCK]      = spr_blueprint_eq;
+sprite[BLUEPRINT_HELMET_LEATHER]       = spr_blueprint_eq;
+sprite[BLUEPRINT_HELMET_IRON]          = spr_blueprint_eq;
+sprite[BLUEPRINT_HELMET_BLACKROCK]     = spr_blueprint_eq;
+sprite[BLUEPRINT_BOOTS_LEATHER]        = spr_blueprint_eq;
+sprite[BLUEPRINT_BOOTS_IRON]           = spr_blueprint_eq;
+sprite[BLUEPRINT_BOOTS_BLACKROCK]      = spr_blueprint_eq;
+sprite[BLUEPRINT_REFINED_IRON]         = spr_blueprint_item;
 
 //--| Use
 
@@ -173,6 +199,19 @@ object[BLACKROCK]            = obj_mat_blackrock;
 
 object[KEY_GOLDEN]           = obj_key_golden;
 
+//--| Blueprints
+
+object[BLUEPRINT_ARMOR_LEATHER]        = obj_bp_armor_leather;
+object[BLUEPRINT_ARMOR_IRON]           = obj_bp_armor_iron;
+object[BLUEPRINT_ARMOR_BLACKROCK]      = obj_bp_armor_blackrock;
+object[BLUEPRINT_HELMET_LEATHER]       = obj_bp_helmet_leather;
+object[BLUEPRINT_HELMET_IRON]          = obj_bp_helmet_iron;
+object[BLUEPRINT_HELMET_BLACKROCK]     = obj_bp_helmet_blackrock;
+object[BLUEPRINT_BOOTS_LEATHER]        = obj_bp_boots_leather;
+object[BLUEPRINT_BOOTS_IRON]           = obj_bp_boots_iron;
+object[BLUEPRINT_BOOTS_BLACKROCK]      = obj_bp_boots_blackrock;
+object[BLUEPRINT_REFINED_IRON]         = obj_bp_mat_refined_iron;
+
 //--| Use
 
 object[BATTERY_SMALL]        = obj_battery_small;
@@ -230,6 +269,19 @@ stackable[BLACKROCK]            = true;
 //--| Misc
 
 stackable[KEY_GOLDEN]           = true;
+
+//--| Blueprints
+
+stackable[BLUEPRINT_ARMOR_LEATHER]        = true;
+stackable[BLUEPRINT_ARMOR_IRON]           = true;
+stackable[BLUEPRINT_ARMOR_BLACKROCK]      = true;
+stackable[BLUEPRINT_HELMET_LEATHER]       = true;
+stackable[BLUEPRINT_HELMET_IRON]          = true;
+stackable[BLUEPRINT_HELMET_BLACKROCK]     = true;
+stackable[BLUEPRINT_BOOTS_LEATHER]        = true;
+stackable[BLUEPRINT_BOOTS_IRON]           = true;
+stackable[BLUEPRINT_BOOTS_BLACKROCK]      = true;
+stackable[BLUEPRINT_REFINED_IRON]         = true;
 
 //--| Use
 
@@ -289,6 +341,19 @@ n[BLACKROCK]            = 0;
 
 n[KEY_GOLDEN]           = 0;
 
+//--| Blueprints
+
+n[BLUEPRINT_ARMOR_LEATHER]        = 0;
+n[BLUEPRINT_ARMOR_IRON]           = 0;
+n[BLUEPRINT_ARMOR_BLACKROCK]      = 0;
+n[BLUEPRINT_HELMET_LEATHER]       = 0;
+n[BLUEPRINT_HELMET_IRON]          = 0;
+n[BLUEPRINT_HELMET_BLACKROCK]     = 0;
+n[BLUEPRINT_BOOTS_LEATHER]        = 0;
+n[BLUEPRINT_BOOTS_IRON]           = 0;
+n[BLUEPRINT_BOOTS_BLACKROCK]      = 0;
+n[BLUEPRINT_REFINED_IRON]         = 0;
+
 //--| Use
 
 n[BATTERY_SMALL]        = 0;
@@ -345,6 +410,19 @@ script[BLACKROCK]            = noone;
 //--| Misc
 
 script[KEY_GOLDEN]           = noone;
+
+//--| Blueprints
+
+script[BLUEPRINT_ARMOR_LEATHER]        = noone;
+script[BLUEPRINT_ARMOR_IRON]           = noone;
+script[BLUEPRINT_ARMOR_BLACKROCK]      = noone;
+script[BLUEPRINT_HELMET_LEATHER]       = noone;
+script[BLUEPRINT_HELMET_IRON]          = noone;
+script[BLUEPRINT_HELMET_BLACKROCK]     = noone;
+script[BLUEPRINT_BOOTS_LEATHER]        = noone;
+script[BLUEPRINT_BOOTS_IRON]           = noone;
+script[BLUEPRINT_BOOTS_BLACKROCK]      = noone;
+script[BLUEPRINT_REFINED_IRON]         = noone;
 
 //--| Use
 
@@ -404,6 +482,19 @@ info_text[BLACKROCK]            = "";
 
 info_text[KEY_GOLDEN]           = "[c=12632256]Glitzert golden[/c]";
 
+//--| Blueprints
+
+info_text[BLUEPRINT_ARMOR_LEATHER]        = "";
+info_text[BLUEPRINT_ARMOR_IRON]           = "";
+info_text[BLUEPRINT_ARMOR_BLACKROCK]      = "";
+info_text[BLUEPRINT_HELMET_LEATHER]       = "";
+info_text[BLUEPRINT_HELMET_IRON]          = "";
+info_text[BLUEPRINT_HELMET_BLACKROCK]     = "";
+info_text[BLUEPRINT_BOOTS_LEATHER]        = "";
+info_text[BLUEPRINT_BOOTS_IRON]           = "";
+info_text[BLUEPRINT_BOOTS_BLACKROCK]      = "";
+info_text[BLUEPRINT_REFINED_IRON]         = "";
+
 //--| Use
 
 info_text[BATTERY_SMALL]        = "";
@@ -461,6 +552,19 @@ value[BLACKROCK]            = 40;
 //--| Misc
 
 value[KEY_GOLDEN]           = 100;
+
+//--| Blueprints
+
+value[BLUEPRINT_ARMOR_LEATHER]        = 100;
+value[BLUEPRINT_ARMOR_IRON]           = 100;
+value[BLUEPRINT_ARMOR_BLACKROCK]      = 100;
+value[BLUEPRINT_HELMET_LEATHER]       = 100;
+value[BLUEPRINT_HELMET_IRON]          = 100;
+value[BLUEPRINT_HELMET_BLACKROCK]     = 100;
+value[BLUEPRINT_BOOTS_LEATHER]        = 100;
+value[BLUEPRINT_BOOTS_IRON]           = 100;
+value[BLUEPRINT_BOOTS_BLACKROCK]      = 100;
+value[BLUEPRINT_REFINED_IRON]         = 100;
 
 //--| Use
 
@@ -520,6 +624,19 @@ type[BLACKROCK]            = "mat";
 
 type[KEY_GOLDEN]           = "misc";
 
+//--| Blueprints
+
+type[BLUEPRINT_ARMOR_LEATHER]        = "bp";
+type[BLUEPRINT_ARMOR_IRON]           = "bp";
+type[BLUEPRINT_ARMOR_BLACKROCK]      = "bp";
+type[BLUEPRINT_HELMET_LEATHER]       = "bp";
+type[BLUEPRINT_HELMET_IRON]          = "bp";
+type[BLUEPRINT_HELMET_BLACKROCK]     = "bp";
+type[BLUEPRINT_BOOTS_LEATHER]        = "bp";
+type[BLUEPRINT_BOOTS_IRON]           = "bp";
+type[BLUEPRINT_BOOTS_BLACKROCK]      = "bp";
+type[BLUEPRINT_REFINED_IRON]         = "bp";
+
 //--| Use
 
 type[BATTERY_SMALL]        = "use";
@@ -578,6 +695,19 @@ item_hp[BLACKROCK]            = 0;
 
 item_hp[KEY_GOLDEN]           = 0;
 
+//--| Blueprints
+
+item_hp[BLUEPRINT_ARMOR_LEATHER]        = 0;
+item_hp[BLUEPRINT_ARMOR_IRON]           = 0;
+item_hp[BLUEPRINT_ARMOR_BLACKROCK]      = 0;
+item_hp[BLUEPRINT_HELMET_LEATHER]       = 0;
+item_hp[BLUEPRINT_HELMET_IRON]          = 0;
+item_hp[BLUEPRINT_HELMET_BLACKROCK]     = 0;
+item_hp[BLUEPRINT_BOOTS_LEATHER]        = 0;
+item_hp[BLUEPRINT_BOOTS_IRON]           = 0;
+item_hp[BLUEPRINT_BOOTS_BLACKROCK]      = 0;
+item_hp[BLUEPRINT_REFINED_IRON]         = 0;
+
 //--| Use
 
 item_hp[BATTERY_SMALL]        = 0;
@@ -606,9 +736,9 @@ item_hp[MEDIC_KIT_SMALL]      = 0;
             <string>///Variables and recipes
 
 //----Variables----
-globalvar recipe_list;
 globalvar recipe;
 globalvar recipe_n;
+globalvar recipe_blueprint;
 globalvar ingredients;
 globalvar ingredients_n;
 
@@ -660,36 +790,46 @@ ingredients_n[list,recipe_number] = mats count
 */
 
 //----Recipes----
-//Helmets - Recipies
+//Helmets[0] - Recipies
 recipe[0,0]               = HELMET_LEATHER;
 recipe_n[0,0]             = 1;
+recipe_blueprint[0,0]     = BLUEPRINT_HELMET_LEATHER;
 recipe[0,1]               = HELMET_IRON;
 recipe_n[0,1]             = 1;
+recipe_blueprint[0,1]     = BLUEPRINT_HELMET_IRON;
 recipe[0,2]               = HELMET_BLACKROCK;
 recipe_n[0,2]             = 1;
+recipe_blueprint[0,2]     = BLUEPRINT_HELMET_BLACKROCK;
 
-//Armors - Recipies
+//Armors[1] - Recipies
 recipe[1,0]               = ARMOR_LEATHER;
 recipe_n[1,0]             = 1;
+recipe_blueprint[1,0]     = BLUEPRINT_ARMOR_LEATHER;
 recipe[1,1]               = ARMOR_IRON;
 recipe_n[1,1]             = 1;
+recipe_blueprint[1,1]     = BLUEPRINT_ARMOR_IRON;
 recipe[1,2]               = ARMOR_BLACKROCK;
 recipe_n[1,2]             = 1;
+recipe_blueprint[1,2]     = BLUEPRINT_ARMOR_BLACKROCK;
 
-//Boots - Recipies
+//Boots[2] - Recipies
 recipe[2,0]               = BOOTS_LEATHER;
 recipe_n[2,0]             = 1;
+recipe_blueprint[2,0]     = BLUEPRINT_BOOTS_LEATHER;
 recipe[2,1]               = BOOTS_IRON;
 recipe_n[2,1]             = 1;
+recipe_blueprint[2,1]     = BLUEPRINT_BOOTS_IRON;
 recipe[2,2]               = BOOTS_BLACKROCK;
 recipe_n[2,2]             = 1;
+recipe_blueprint[2,2]     = BLUEPRINT_BOOTS_BLACKROCK;
 
-//Items - Recipies
+//Items[3] - Recipies
 recipe[3,0]               = REFINED_IRON;
 recipe_n[3,0]             = 1;
+recipe_blueprint[3,0]     = BLUEPRINT_REFINED_IRON;
 
 //----ingredients----
-//Helmets - ingredients
+//Helmets[0] - ingredients
 ingredients[0,0]        = LEATHER;
 ingredients_n[0,0]      = 5;
 ingredients[0,1]        = IRON;
@@ -697,7 +837,7 @@ ingredients_n[0,1]      = 5;
 ingredients[0,2]        = BLACKROCK;
 ingredients_n[0,2]      = 5;
 
-//Armors - ingredients
+//Armors[1] - ingredients
 ingredients[1,0]        = LEATHER;
 ingredients_n[1,0]      = 10;
 ingredients[1,1]        = IRON;
@@ -705,7 +845,7 @@ ingredients_n[1,1]      = 10;
 ingredients[1,2]        = BLACKROCK;
 ingredients_n[1,2]      = 10;
 
-//Boots - ingredients
+//Boots[2] - ingredients
 ingredients[2,0]        = LEATHER;
 ingredients_n[2,0]      = 5;
 ingredients[2,1]        = IRON;
@@ -713,7 +853,7 @@ ingredients_n[2,1]      = 5;
 ingredients[2,2]        = BLACKROCK;
 ingredients_n[2,2]      = 5;
 
-//Items - ingredients
+//Items[3] - ingredients
 ingredients[3,0]        = IRON;
 ingredients_n[3,0]      = 2;
 </string>
@@ -853,6 +993,31 @@ for (i=0;i&lt;array_length_1d(items_use);i++){
 
         } 
 }
+
+//Blueprints
+
+items_bp[0]=BLUEPRINT_ARMOR_LEATHER;
+items_bp[1]=BLUEPRINT_ARMOR_IRON;
+items_bp[2]=BLUEPRINT_ARMOR_BLACKROCK;
+items_bp[3]=BLUEPRINT_HELMET_LEATHER;
+items_bp[4]=BLUEPRINT_HELMET_IRON;
+items_bp[5]=BLUEPRINT_HELMET_BLACKROCK;
+items_bp[6]=BLUEPRINT_BOOTS_LEATHER;
+items_bp[7]=BLUEPRINT_BOOTS_IRON;
+items_bp[8]=BLUEPRINT_BOOTS_BLACKROCK;
+items_bp[9]=BLUEPRINT_REFINED_IRON;
+
+for (i=0;i&lt;array_length_1d(items_bp);i++){
+        if (n[items_bp[i]] &gt; 0){
+           draw_sprite(sprite[items_bp[i]],0,48+48*i,48*4);
+              if (stackable[items_bp[i]] == true){
+                 draw_set_color(c_white);
+                 draw_text(64+48*i,48*4,string(n[items_bp[i]]));
+           }
+
+        } 
+}
+
 draw_text(48,48*4,"Use Item: "+string(item_name[items_use[obj_player.i]]));
 //Eq
 if (eq_show){
