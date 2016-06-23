@@ -86,6 +86,7 @@
     <sprite>sprites\spr_door_int</sprite>
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_flashlight</sprite>
+    <sprite>sprites\spr_slot</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_01_16</background>
@@ -214,7 +215,6 @@
     <object>objects\obj_door</object>
     <object>objects\obj_forge</object>
     <object>objects\obj_weapon_upgrade</object>
-    <object>objects\obj_cursor</object>
     <object>objects\obj_door_ext</object>
     <object>objects\obj_door_int</object>
     <object>objects\obj_crafting</object>

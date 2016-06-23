@@ -113,11 +113,14 @@ bullet[3,9]=0.01;
           <argument>
             <kind>1</kind>
             <string>///Level-UP
+lvl_constant = 10+10*(power(bullet[stat[3],2],3/2));
+
 if bullet[stat[3],2] != 20{
-    if (bullet[stat[3],3]&gt;=10+10*(bullet[stat[3],2]*log10(bullet[stat[3],2]))){
-       bullet[stat[3],3]=0;
-       bullet[stat[3],2]++;
-       bullet[stat[3],4]++;
+    //old system - if (bullet[stat[3],3]&gt;=10+10*(bullet[stat[3],2]*log10(bullet[stat[3],2]))){
+    if (bullet[stat[3],3]&gt;=lvl_constant){
+       bullet[stat[3],3]=0; //XP reset
+       bullet[stat[3],2]++; //Level-UP
+       bullet[stat[3],4]++; //SP++
     }
 }
 
@@ -176,10 +179,10 @@ if (stats_show){
    draw_text(740,740, "LvL_01: "+string(bullet[1,2]));
    draw_text(880,740, "LvL_02: "+string(bullet[2,2]));
    draw_text(1020,740,"LvL_03: "+string(bullet[3,2]));
-   draw_text(600,760, "XP_00: " +string(bullet[0,3])+"/"+string(10+10*(bullet[0,2]*log10(bullet[0,2]))));
-   draw_text(740,760, "XP_01: " +string(bullet[1,3])+"/"+string(10+10*(bullet[1,2]*log10(bullet[1,2]))));
-   draw_text(880,760, "XP_02: " +string(bullet[2,3])+"/"+string(10+10*(bullet[2,2]*log10(bullet[2,2]))));
-   draw_text(1020,760,"XP_03: " +string(bullet[3,3])+"/"+string(10+10*(bullet[3,2]*log10(bullet[3,2]))));
+   draw_text(600,760, "XP_00: " +string(bullet[0,3])+"/"+string(10+10*(power(bullet[0,2],3/2))));
+   draw_text(740,760, "XP_01: " +string(bullet[1,3])+"/"+string(10+10*(power(bullet[1,2],3/2))));
+   draw_text(880,760, "XP_02: " +string(bullet[2,3])+"/"+string(10+10*(power(bullet[2,2],3/2))));
+   draw_text(1020,760,"XP_03: " +string(bullet[3,3])+"/"+string(10+10*(power(bullet[3,2],3/2))));
    draw_text(600,780, "SPD_00: "+string(bullet[0,6]));
    draw_text(740,780, "SPD_01: "+string(bullet[1,6]));
    draw_text(880,780, "SPD_02: "+string(bullet[2,6]));
@@ -194,14 +197,37 @@ if (stats_show){
    draw_text(1020,820,"CRM_03: "+string(bullet[3,8]));
 }
 
-draw_set_color(c_blue);
-draw_text(48,16,"Bullet Type:"+string(obj_stat.stat[3]));
+draw_sprite(spr_slot,0,1712,976);
+draw_text(1712,992,string(obj_stat.stat[3]));
+
+for (j=0;j&lt;2;j++){
+    for (i=1;i&lt;5;i++){
+        draw_sprite_ext(spr_slot,0,1712+32*i,976+32*j,1,1,0,c_white,0.5);
+    }
+}
+
+if obj_stat.bullet[obj_stat.stat[3],2] &gt;= 3  draw_sprite(spr_slot,0,1712+32,976);
+if obj_stat.bullet[obj_stat.stat[3],2] &gt;= 5  draw_sprite(spr_slot,0,1712+32*2,976);
+if obj_stat.bullet[obj_stat.stat[3],2] &gt;= 8  draw_sprite(spr_slot,0,1712+32*3,976);
+if obj_stat.bullet[obj_stat.stat[3],2] &gt;= 11 draw_sprite(spr_slot,0,1712+32*4,976);
+if obj_stat.bullet[obj_stat.stat[3],2] &gt;= 13 draw_sprite(spr_slot,0,1712+32*5,976);
+if obj_stat.bullet[obj_stat.stat[3],2] &gt;= 15 draw_sprite(spr_slot,0,1712+32*6,976);
+if obj_stat.bullet[obj_stat.stat[3],2] &gt;= 18 draw_sprite(spr_slot,0,1712+32*7,976);
+if obj_stat.bullet[obj_stat.stat[3],2] &gt;= 20 draw_sprite(spr_slot,0,1712+32*8,976);
 
 if (room!=rm_skill){
+//Health
     draw_healthbar(16,1040,128,1008,(obj_stat.stat[1]/obj_stat.stat[0])*100,c_gray,c_maroon,c_green,0,true,true);
     draw_text(144,1024,string(obj_stat.stat[1])+"/"+string(obj_stat.stat[0]));
+//Battery
     draw_healthbar(16,992,128,976,(obj_stat.stat[5]/obj_stat.stat[4])*100,c_gray,c_navy,c_aqua,0,true,true);
     draw_text(144,984,string(obj_stat.stat[5])+"/"+string(obj_stat.stat[4]));
+//EXP
+    draw_healthbar(144,1088,1696,1072,(obj_stat.bullet[obj_stat.stat[3],3]/lvl_constant)*100,c_gray,c_yellow,c_lime,0,true,true);
+    draw_set_halign(fa_center);
+    draw_text(920,1056,"EXP: "+string(obj_stat.bullet[obj_stat.stat[3],3])+"/"+string(lvl_constant));
+    draw_set_halign(fa_left);
+    draw_text(88,1064,"LVL: "+string(obj_stat.bullet[obj_stat.stat[3],2]));
 } else {
     draw_text(48,80,"SP: "+string(obj_stat.bullet[obj_stat.stat[3],4]));
 }

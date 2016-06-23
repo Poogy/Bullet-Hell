@@ -1111,8 +1111,20 @@ for (i=0;i&lt;array_length_1d(items_bp);i++){
 
         } 
 }
+if obj_player.i==array_length_1d(items_use)-1 i_next=/*obj_player.i=*/0 else i_next=obj_player.i++; 
+if obj_player.i==0 i_prev=/*obj_player.i=*/array_length_1d(items_use) else i_prev=obj_player.i--; 
 
-draw_text(48,48*5,"Use Item: "+string(item_name[items_use[obj_player.i]]));
+draw_set_halign(fa_center);                                              //Use Draw
+//draw_text(680+96,580,string(item_name[items_use[i_next]]));
+draw_sprite(sprite[items_use[i_next]],0,920+96,820);
+
+draw_text(920,820+32,string(item_name[items_use[obj_player.i]]));
+draw_sprite(sprite[items_use[obj_player.i]],0,920,820);
+
+//draw_text(680-128,580,string(item_name[items_use[i_prev]]));
+draw_sprite(sprite[items_use[i_prev]],0,920-112,820);
+draw_set_halign(fa_left);                                                //Use Draw-end
+
 //Eq
 if (eq_show){
    draw_sprite(sprite[armor[0,tier_helmet]],0,48,48*5+48*0);

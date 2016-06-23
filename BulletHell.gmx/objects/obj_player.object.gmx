@@ -51,7 +51,6 @@ dash_spd=20;
 
 //---Initiate---
 instance_create(x,y,obj_dmg_info);
-instance_create(x,y,obj_cursor);
 </string>
           </argument>
         </arguments>
@@ -363,6 +362,7 @@ obj_dmg_info.crit = false;
 obj_dmg_info.text = "SPAWNED";
 
 instance_create(x,y,obj_view);
+instance_create(x,y,obj_cursor);
 </string>
           </argument>
         </arguments>
