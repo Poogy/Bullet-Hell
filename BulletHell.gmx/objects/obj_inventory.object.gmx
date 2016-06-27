@@ -1037,17 +1037,23 @@ obj_stat.stat[1] = min(obj_stat.stat[0],obj_stat.stat[1]); //Anti-Overhealing
     items_mats[0]=LEATHER;
     items_mats[1]=IRON;
     items_mats[2]=REFINED_IRON;
-    items_mats[11]=BLACKROCK;
+    items_mats[3]=BLACKROCK;
     
 //Misc
 
-    items_misc[11]=KEY_GOLDEN;
+    items_misc[0]=KEY_GOLDEN;
+    items_misc[1]=UPG_DMG_1;
+    items_misc[2]=UPG_DMG_2;
+    items_misc[3]=UPG_DMG_3;
+    items_misc[4]=UPG_DMG_4;
+    items_misc[5]=UPG_DMG_5;
+    items_misc[6]=UPG_DMG_6;
     
 //Use
 
     items_use[0]=MONEY_BAG_SMALL;
     items_use[1]=MEDIC_KIT_SMALL;
-    items_use[11]=BATTERY_SMALL;
+    items_use[2]=BATTERY_SMALL;
     
 //Blueprints
 
@@ -1097,12 +1103,12 @@ if (eq_show){
 //Mats
     
     for (i=0;i&lt;array_length_1d(items_mats);i++){ 
-            if i &gt;= 10 { mats_y = 7.5; mats_x = 0; }else{ mats_y = 6.5; mats_x++; }
+            if i &gt;= 10 mats_y = 7.5 else mats_y = 6.5;
             if (n[items_mats[i]] &gt; 0){
-               draw_sprite(sprite[items_mats[i]],0,itembox_start_x+x_offset+48*mats_x,48*mats_y);
+               draw_sprite(sprite[items_mats[i]],0,itembox_start_x+x_offset+48*i,48*mats_y);
                   if (stackable[items_mats[i]] == true){
                      draw_set_color(c_white);
-                     draw_text(itembox_start_x+x_offset*2+48*mats_x,48*mats_y,string(n[items_mats[i]]));
+                     draw_text(itembox_start_x+x_offset*2+48*i,48*mats_y,string(n[items_mats[i]]));
                }
     
             }
@@ -1111,12 +1117,12 @@ if (eq_show){
 //Misc
     
     for (i=0;i&lt;array_length_1d(items_misc);i++){
-            if i &gt;= 10 { misc_y = 9.5; misc_x = 0; }else{ misc_y = 8.5; misc_x++; }
+            if i &gt;= 10 misc_y = 9.5 else misc_y = 8.5;
             if (n[items_misc[i]] &gt; 0){
-               draw_sprite(sprite[items_misc[i]],0,itembox_start_x+x_offset+48*misc_x,48*misc_y);
+               draw_sprite(sprite[items_misc[i]],0,itembox_start_x+x_offset+48*i,48*misc_y);
                   if (stackable[items_misc[i]] == true){
                      draw_set_color(c_white);
-                     draw_text(itembox_start_x+x_offset*2+48*misc_x,48*misc_y,string(n[items_misc[i]]));
+                     draw_text(itembox_start_x+x_offset*2+48*i,48*misc_y,string(n[items_misc[i]]));
                }
     
             } 
@@ -1125,12 +1131,12 @@ if (eq_show){
 //Use
     
     for (i=0;i&lt;array_length_1d(items_use);i++){
-            if i &gt;= 10 { use_y = 11.5; use_x = 0; }else{ use_y = 10.5; use_x++; }                                   
+            if i &gt;= 10 use_y = 11.5 else use_y = 10.5;                                   
             if (n[items_use[i]] &gt; 0){
-               draw_sprite(sprite[items_use[i]],0,itembox_start_x+x_offset+48*use_x,48*use_y);
+               draw_sprite(sprite[items_use[i]],0,itembox_start_x+x_offset+48*i,48*use_y);
                   if (stackable[items_use[i]] == true){
                      draw_set_color(c_white);
-                     draw_text(itembox_start_x+x_offset*2+48*use_x,48*use_y,string(n[items_use[i]]));
+                     draw_text(itembox_start_x+x_offset*2+48*i,48*use_y,string(n[items_use[i]]));
                }
     
             } 
@@ -1139,12 +1145,12 @@ if (eq_show){
 //Blueprints
     
     for (i=0;i&lt;array_length_1d(items_bp);i++){
-            if i &gt;= 10 { bp_y = 13.5; bp_x = 0; }else{ bp_y = 12.5; bp_x++; }
+            if i &gt;= 10 bp_y = 13.5 else bp_y = 12.5;
             if (n[items_bp[i]] &gt; 0){
-               draw_sprite(sprite[items_bp[i]],0,itembox_start_x+x_offset+48*bp_x,48*bp_y);
+               draw_sprite(sprite[items_bp[i]],0,itembox_start_x+x_offset+48*i,48*bp_y);
                   if (stackable[items_bp[i]] == true){
                      draw_set_color(c_white);
-                     draw_text(itembox_start_x+x_offset*2+48*bp_x,48*bp_y,string(n[items_bp[i]]));
+                     draw_text(itembox_start_x+x_offset*2+48*i,48*bp_y,string(n[items_bp[i]]));
                }
     
             } 
