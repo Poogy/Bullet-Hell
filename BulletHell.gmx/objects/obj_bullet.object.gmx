@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//-----DMG-----
+            <string>//---Effect---
+if (obj_stat.reflective){
+   image_blend = make_colour_rgb(0, 0, 255);
+}
+
+//-----DMG-----
 if (scr_chance(obj_stat.bullet[obj_stat.stat[3],7])){
    obj_dmg_info.crit = true;
    dmg=obj_stat.bullet[obj_stat.stat[3],1]*obj_stat.bullet[obj_stat.stat[3],8]; //Dmg + crit
@@ -78,17 +83,28 @@ else if (obj_stat.stat[3]==2) {
     <event eventtype="4" ename="obj_collision">
       <action>
         <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (obj_stat.reflective){
+   direction = -direction;
+} else {
+   instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_enemy01">

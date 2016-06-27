@@ -162,12 +162,12 @@ sprite[BP_UPG_DMG_6]            = spr_blueprint_upg;
 
 //--| Upgrades
 
-sprite[UPG_DMG_1]            = "spr_upg_dmg_1";
-sprite[UPG_DMG_2]            = "spr_upg_dmg_2";
-sprite[UPG_DMG_3]            = "spr_upg_dmg_3";
-sprite[UPG_DMG_4]            = "spr_upg_dmg_4";
-sprite[UPG_DMG_5]            = "spr_upg_dmg_5";
-sprite[UPG_DMG_6]            = "spr_upg_dmg_6";
+sprite[UPG_DMG_1]            = spr_upg_dmg_1;
+sprite[UPG_DMG_2]            = spr_upg_dmg_2;
+sprite[UPG_DMG_3]            = spr_upg_dmg_3;
+sprite[UPG_DMG_4]            = spr_upg_dmg_4;
+sprite[UPG_DMG_5]            = spr_upg_dmg_5;
+sprite[UPG_DMG_6]            = spr_upg_dmg_6;
 
 //--| Use
 
@@ -815,6 +815,15 @@ globalvar armor;
 
 eq_show = false;
 
+//Inventory
+itembox_start_x = 300;
+x_offset = 16;
+
+mats_x = 0;
+misc_x = 0;
+use_x  = 0;
+bp_x   = 0;
+
 //Armor
 armor[0,0] = HELMET_NONE;
 armor[0,1] = HELMET_LEATHER;
@@ -997,7 +1006,7 @@ else if (n[armor[2,1]] == 1){tier_boots = 1;}
 else                        {tier_boots = 0;}
 
 //----HP----
-obj_stat.stat[0] = item_hp[armor[1,tier_helmet]] + item_hp[armor[0,tier_armor]] + item_hp[armor[2,tier_boots]];
+obj_stat.stat[0] = item_hp[armor[0,tier_helmet]] + item_hp[armor[1,tier_armor]] + item_hp[armor[2,tier_boots]];
 obj_stat.stat[1] = min(obj_stat.stat[0],obj_stat.stat[1]); //Anti-Overhealing
 </string>
           </argument>
@@ -1022,7 +1031,141 @@ obj_stat.stat[1] = min(obj_stat.stat[0],obj_stat.stat[1]); //Anti-Overhealing
           <argument>
             <kind>1</kind>
             <string>///Draw the inventory
+//--Arrays--
 //Mats
+
+    items_mats[0]=LEATHER;
+    items_mats[1]=IRON;
+    items_mats[2]=REFINED_IRON;
+    items_mats[11]=BLACKROCK;
+    
+//Misc
+
+    items_misc[11]=KEY_GOLDEN;
+    
+//Use
+
+    items_use[0]=MONEY_BAG_SMALL;
+    items_use[1]=MEDIC_KIT_SMALL;
+    items_use[11]=BATTERY_SMALL;
+    
+//Blueprints
+
+    items_bp[0]=BP_ARMOR_LEATHER;
+    items_bp[1]=BP_ARMOR_IRON;
+    items_bp[2]=BP_ARMOR_BLACKROCK;
+    items_bp[3]=BP_HELMET_LEATHER;
+    items_bp[4]=BP_HELMET_IRON;
+    items_bp[5]=BP_HELMET_BLACKROCK;
+    items_bp[6]=BP_BOOTS_LEATHER;
+    items_bp[7]=BP_BOOTS_IRON;
+    items_bp[8]=BP_BOOTS_BLACKROCK;
+    items_bp[9]=BP_REFINED_IRON;
+    items_bp[10]=BP_UPG_DMG_2;
+    items_bp[11]=BP_UPG_DMG_3;
+    items_bp[12]=BP_UPG_DMG_4;
+    items_bp[13]=BP_UPG_DMG_5;
+    items_bp[14]=BP_UPG_DMG_6;
+
+//--Draw the inventory--   
+
+if (eq_show){
+//Box
+   draw_rectangle(224,296,828,680,true);
+   draw_line(itembox_start_x,296,itembox_start_x,680); //Eq/Item abgrenzung
+   draw_line(itembox_start_x,392,828,392);
+   draw_line(itembox_start_x,488,828,488);
+   draw_line(itembox_start_x,584,828,584);
+   
+//Eq
+   draw_sprite(sprite[armor[0,tier_helmet]],0,240,48*6.5);
+   draw_sprite(sprite[armor[1,tier_armor]],0,240,48*7.5);
+   draw_sprite(sprite[armor[2,tier_boots]],0,240,48*8.5);
+   
+   draw_text(272,48*6.5,item_hp[armor[0,tier_helmet]]);
+   draw_text(272,48*7.5,item_hp[armor[1,tier_armor]]);
+   draw_text(272,48*8.5,item_hp[armor[2,tier_boots]]);
+   if (obj_stat.stat[0] &gt; 9){
+      draw_line(270,48*9.5-4,294,48*9.5-4)
+   } else {
+      draw_line(270,48*9.5-4,283,48*9.5-4)
+   }
+   draw_text(272,48*9.5,obj_stat.stat[0]);
+
+//--Items--
+
+//Mats
+    
+    for (i=0;i&lt;array_length_1d(items_mats);i++){ 
+            if i &gt;= 10 { mats_y = 7.5; mats_x = 0; }else{ mats_y = 6.5; mats_x++; }
+            if (n[items_mats[i]] &gt; 0){
+               draw_sprite(sprite[items_mats[i]],0,itembox_start_x+x_offset+48*mats_x,48*mats_y);
+                  if (stackable[items_mats[i]] == true){
+                     draw_set_color(c_white);
+                     draw_text(itembox_start_x+x_offset*2+48*mats_x,48*mats_y,string(n[items_mats[i]]));
+               }
+    
+            }
+    }
+
+//Misc
+    
+    for (i=0;i&lt;array_length_1d(items_misc);i++){
+            if i &gt;= 10 { misc_y = 9.5; misc_x = 0; }else{ misc_y = 8.5; misc_x++; }
+            if (n[items_misc[i]] &gt; 0){
+               draw_sprite(sprite[items_misc[i]],0,itembox_start_x+x_offset+48*misc_x,48*misc_y);
+                  if (stackable[items_misc[i]] == true){
+                     draw_set_color(c_white);
+                     draw_text(itembox_start_x+x_offset*2+48*misc_x,48*misc_y,string(n[items_misc[i]]));
+               }
+    
+            } 
+    }
+
+//Use
+    
+    for (i=0;i&lt;array_length_1d(items_use);i++){
+            if i &gt;= 10 { use_y = 11.5; use_x = 0; }else{ use_y = 10.5; use_x++; }                                   
+            if (n[items_use[i]] &gt; 0){
+               draw_sprite(sprite[items_use[i]],0,itembox_start_x+x_offset+48*use_x,48*use_y);
+                  if (stackable[items_use[i]] == true){
+                     draw_set_color(c_white);
+                     draw_text(itembox_start_x+x_offset*2+48*use_x,48*use_y,string(n[items_use[i]]));
+               }
+    
+            } 
+    }
+
+//Blueprints
+    
+    for (i=0;i&lt;array_length_1d(items_bp);i++){
+            if i &gt;= 10 { bp_y = 13.5; bp_x = 0; }else{ bp_y = 12.5; bp_x++; }
+            if (n[items_bp[i]] &gt; 0){
+               draw_sprite(sprite[items_bp[i]],0,itembox_start_x+x_offset+48*bp_x,48*bp_y);
+                  if (stackable[items_bp[i]] == true){
+                     draw_set_color(c_white);
+                     draw_text(itembox_start_x+x_offset*2+48*bp_x,48*bp_y,string(n[items_bp[i]]));
+               }
+    
+            } 
+    }
+} //eq_show end
+
+if obj_player.i==array_length_1d(items_use)-1 i_next=/*obj_player.i=*/0 else i_next=obj_player.i++; 
+if obj_player.i==0 i_prev=/*obj_player.i=*/array_length_1d(items_use) else i_prev=obj_player.i--; 
+
+draw_set_halign(fa_center);                                 //Use Draw
+//draw_text(680+96,580,string(item_name[items_use[i_next]]));
+draw_sprite(sprite[items_use[i_next]],0,920+96,820);
+
+draw_text(920,820+32,string(item_name[items_use[obj_player.i]]));
+draw_sprite(sprite[items_use[obj_player.i]],0,920,820);
+
+//draw_text(680-128,580,string(item_name[items_use[i_prev]]));
+draw_sprite(sprite[items_use[i_prev]],0,920-112,820);
+draw_set_halign(fa_left);  
+                                                            //Use Draw-end
+                                                            
 /*Gute Array version
 for (i=0;i&lt;array_length_1d(n);i++){
         if (n[i] &gt; 0) &amp;&amp; (type[i] == "mat"){
@@ -1034,103 +1177,7 @@ for (i=0;i&lt;array_length_1d(n);i++){
 
         } 
 }
-*/
-items_mats[0]=LEATHER;
-items_mats[1]=IRON;
-items_mats[2]=REFINED_IRON;
-items_mats[3]=BLACKROCK;
-
-for (i=0;i&lt;array_length_1d(items_mats);i++){
-        if (n[items_mats[i]] &gt; 0){
-           draw_sprite(sprite[items_mats[i]],0,48+48*i,48*1);
-              if (stackable[items_mats[i]] == true){
-                 draw_set_color(c_white);
-                 draw_text(64+48*i,48*1,string(n[items_mats[i]]));
-           }
-
-        } 
-}
-
-//Misc
-
-items_misc[0]=KEY_GOLDEN;
-
-for (i=0;i&lt;array_length_1d(items_misc);i++){
-        if (n[items_misc[i]] &gt; 0){
-           draw_sprite(sprite[items_misc[i]],0,48+48*i,48*2);
-              if (stackable[items_misc[i]] == true){
-                 draw_set_color(c_white);
-                 draw_text(64+48*i,48*2,string(n[items_misc[i]]));
-           }
-
-        } 
-}
-
-//Use
-
-items_use[0]=MONEY_BAG_SMALL;
-items_use[1]=MEDIC_KIT_SMALL;
-items_use[2]=BATTERY_SMALL;
-
-for (i=0;i&lt;array_length_1d(items_use);i++){
-        if (n[items_use[i]] &gt; 0){
-           draw_sprite(sprite[items_use[i]],0,48+48*i,48*3);
-              if (stackable[items_use[i]] == true){
-                 draw_set_color(c_white);
-                 draw_text(64+48*i,48*3,string(n[items_use[i]]));
-           }
-
-        } 
-}
-
-//Blueprints
-
-items_bp[0]=BP_ARMOR_LEATHER;
-items_bp[1]=BP_ARMOR_IRON;
-items_bp[2]=BP_ARMOR_BLACKROCK;
-items_bp[3]=BP_HELMET_LEATHER;
-items_bp[4]=BP_HELMET_IRON;
-items_bp[5]=BP_HELMET_BLACKROCK;
-items_bp[6]=BP_BOOTS_LEATHER;
-items_bp[7]=BP_BOOTS_IRON;
-items_bp[8]=BP_BOOTS_BLACKROCK;
-items_bp[9]=BP_REFINED_IRON;
-items_bp[10]=BP_UPG_DMG_2;
-items_bp[11]=BP_UPG_DMG_3;
-items_bp[12]=BP_UPG_DMG_4;
-items_bp[13]=BP_UPG_DMG_5;
-items_bp[14]=BP_UPG_DMG_6;
-
-for (i=0;i&lt;array_length_1d(items_bp);i++){
-        if (n[items_bp[i]] &gt; 0){
-           draw_sprite(sprite[items_bp[i]],0,48+48*i,48*4);
-              if (stackable[items_bp[i]] == true){
-                 draw_set_color(c_white);
-                 draw_text(64+48*i,48*4,string(n[items_bp[i]]));
-           }
-
-        } 
-}
-if obj_player.i==array_length_1d(items_use)-1 i_next=/*obj_player.i=*/0 else i_next=obj_player.i++; 
-if obj_player.i==0 i_prev=/*obj_player.i=*/array_length_1d(items_use) else i_prev=obj_player.i--; 
-
-draw_set_halign(fa_center);                                              //Use Draw
-//draw_text(680+96,580,string(item_name[items_use[i_next]]));
-draw_sprite(sprite[items_use[i_next]],0,920+96,820);
-
-draw_text(920,820+32,string(item_name[items_use[obj_player.i]]));
-draw_sprite(sprite[items_use[obj_player.i]],0,920,820);
-
-//draw_text(680-128,580,string(item_name[items_use[i_prev]]));
-draw_sprite(sprite[items_use[i_prev]],0,920-112,820);
-draw_set_halign(fa_left);                                                //Use Draw-end
-
-//Eq
-if (eq_show){
-   draw_sprite(sprite[armor[0,tier_helmet]],0,48,48*5+48*0);
-   draw_sprite(sprite[armor[1,tier_armor]],0,48,48*5+48*1);
-   draw_sprite(sprite[armor[2,tier_boots]],0,48,48*5+48*2);
-}
+*/                                                            
 </string>
           </argument>
         </arguments>

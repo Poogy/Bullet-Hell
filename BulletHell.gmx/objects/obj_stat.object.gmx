@@ -33,6 +33,8 @@ money = 0;
 useable_weapon_upgrade = false; //Weapon upgrade
 useable_forge = false;
 
+reflective = false;
+
 //---Stats---
 stat[0]=5;      //maxhp
 stat[1]=5;      //hp

@@ -203,10 +203,12 @@ if key_use_item{
       script_execute(script[obj_inventory.items_use[i]]);
    }
 }
+//--------------
 
 //Flashlight benutzen
 if key_flashlight &amp;&amp; flash flash=false;
 if key_flashlight &amp;&amp; !flash flash=true;
+
 //Spielerbewegung animiert
 image_angle=point_direction(x,y,mouse_x,mouse_y)-90;
 

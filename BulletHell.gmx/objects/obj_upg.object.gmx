@@ -8,54 +8,6 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>text = "";
-crit = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//Floating
-y-=3;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -73,14 +25,17 @@ y-=3;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (crit){
-   draw_set_color(c_purple);
-} else {
-   draw_set_color(c_yellow);
-}
+            <string>upg[0]=UPG_DMG_1;
+upg[1]=UPG_DMG_2;
+upg[2]=UPG_DMG_3;
+upg[3]=UPG_DMG_4;
+upg[4]=UPG_DMG_5;
+upg[5]=UPG_DMG_6;
 
-draw_text(x,y,string(text));
-draw_set_color(c_white);
+for (i=0;i&lt;array_length_1d(upg);i++){
+    draw_sprite_ext(sprite[upg[i]],0,x+64,y+96+64*i,2,2,0,c_white,1);
+    draw_text(x+88,y+112+64*i,n[upg[i]]);
+}
 </string>
           </argument>
         </arguments>

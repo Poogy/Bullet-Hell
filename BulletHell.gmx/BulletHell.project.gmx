@@ -131,6 +131,7 @@
       <object>objects\obj_dmg_info</object>
       <object>objects\obj_cursor</object>
       <object>objects\obj_flashlight</object>
+      <object>objects\obj_upg</object>
     </objects>
     <objects name="Items">
       <objects name="Misc">
@@ -224,6 +225,7 @@
     <room>rooms\rm_01</room>
     <room>rooms\rm_skill</room>
     <room>rooms\rm_forge</room>
+    <room>rooms\rm_upg</room>
   </rooms>
   <constants number="41">
     <constant name="MONEY_BAG_SMALL">0</constant>
