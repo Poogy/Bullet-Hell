@@ -194,6 +194,261 @@ sprite[MEDIC_KIT_SMALL]      = spr_medic_kit_small;
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Item Icon Sprites
+
+
+//////////////////////////////////
+//-----Array for item icons-----//
+//////////////////////////////////
+
+//--| Armor
+
+sprite_icon[ARMOR_NONE]           = spr_armor_none;
+sprite_icon[ARMOR_LEATHER]        = spr_armor_leather;
+sprite_icon[ARMOR_IRON]           = spr_armor_iron;
+sprite_icon[ARMOR_BLACKROCK]      = spr_armor_blackrock;
+sprite_icon[HELMET_NONE]          = spr_helmet_none;
+sprite_icon[HELMET_LEATHER]       = spr_helmet_leather;
+sprite_icon[HELMET_IRON]          = spr_helmet_iron;
+sprite_icon[HELMET_BLACKROCK]     = spr_helmet_blackrock;
+sprite_icon[BOOTS_NONE]           = spr_boots_none;
+sprite_icon[BOOTS_LEATHER]        = spr_boots_leather;
+sprite_icon[BOOTS_IRON]           = spr_boots_iron;
+sprite_icon[BOOTS_BLACKROCK]      = spr_boots_blackrock;
+
+//--| Materials
+
+sprite_icon[LEATHER]              = spr_mat_leather;
+sprite_icon[IRON]                 = spr_mat_iron;
+sprite_icon[REFINED_IRON]         = spr_mat_refined_iron;
+sprite_icon[BLACKROCK]            = spr_mat_blackrock;
+
+//--| Misc
+
+sprite_icon[KEY_GOLDEN]           = spr_key_golden;
+
+//--| Blueprints
+
+sprite_icon[BP_ARMOR_LEATHER]        = spr_blueprint_eq;
+sprite_icon[BP_ARMOR_IRON]           = spr_blueprint_eq;
+sprite_icon[BP_ARMOR_BLACKROCK]      = spr_blueprint_eq;
+sprite_icon[BP_HELMET_LEATHER]       = spr_blueprint_eq;
+sprite_icon[BP_HELMET_IRON]          = spr_blueprint_eq;
+sprite_icon[BP_HELMET_BLACKROCK]     = spr_blueprint_eq;
+sprite_icon[BP_BOOTS_LEATHER]        = spr_blueprint_eq;
+sprite_icon[BP_BOOTS_IRON]           = spr_blueprint_eq;
+sprite_icon[BP_BOOTS_BLACKROCK]      = spr_blueprint_eq;
+sprite_icon[BP_REFINED_IRON]         = spr_blueprint_item;
+sprite_icon[BP_UPG_DMG_2]            = spr_blueprint_upg;
+sprite_icon[BP_UPG_DMG_3]            = spr_blueprint_upg;
+sprite_icon[BP_UPG_DMG_4]            = spr_blueprint_upg;
+sprite_icon[BP_UPG_DMG_5]            = spr_blueprint_upg;
+sprite_icon[BP_UPG_DMG_6]            = spr_blueprint_upg;
+
+//--| Upgrades
+
+sprite_icon[UPG_DMG_1]            = spr_upg_dmg_icon;
+sprite_icon[UPG_DMG_2]            = spr_upg_dmg_icon;
+sprite_icon[UPG_DMG_3]            = spr_upg_dmg_icon;
+sprite_icon[UPG_DMG_4]            = spr_upg_dmg_icon;
+sprite_icon[UPG_DMG_5]            = spr_upg_dmg_icon;
+sprite_icon[UPG_DMG_6]            = spr_upg_dmg_icon;
+
+//--| Use
+
+sprite_icon[BATTERY_SMALL]        = spr_battery_small;
+sprite_icon[MONEY_BAG_SMALL]      = spr_money_bag_small;
+sprite_icon[MEDIC_KIT_SMALL]      = spr_medic_kit_small;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Item Slot Sprites
+
+
+//////////////////////////////////
+//-----Array for item Slots-----//
+//////////////////////////////////
+
+//--| Armor
+
+sprite_slot[ARMOR_NONE]           = spr_armor_none;
+sprite_slot[ARMOR_LEATHER]        = spr_armor_leather;
+sprite_slot[ARMOR_IRON]           = spr_armor_iron;
+sprite_slot[ARMOR_BLACKROCK]      = spr_armor_blackrock;
+sprite_slot[HELMET_NONE]          = spr_helmet_none;
+sprite_slot[HELMET_LEATHER]       = spr_helmet_leather;
+sprite_slot[HELMET_IRON]          = spr_helmet_iron;
+sprite_slot[HELMET_BLACKROCK]     = spr_helmet_blackrock;
+sprite_slot[BOOTS_NONE]           = spr_boots_none;
+sprite_slot[BOOTS_LEATHER]        = spr_boots_leather;
+sprite_slot[BOOTS_IRON]           = spr_boots_iron;
+sprite_slot[BOOTS_BLACKROCK]      = spr_boots_blackrock;
+
+//--| Materials
+
+sprite_slot[LEATHER]              = spr_mat_leather;
+sprite_slot[IRON]                 = spr_mat_iron;
+sprite_slot[REFINED_IRON]         = spr_mat_refined_iron;
+sprite_slot[BLACKROCK]            = spr_mat_blackrock;
+
+//--| Misc
+
+sprite_slot[KEY_GOLDEN]           = spr_key_golden;
+
+//--| Blueprints
+
+sprite_slot[BP_ARMOR_LEATHER]        = spr_blueprint_eq;
+sprite_slot[BP_ARMOR_IRON]           = spr_blueprint_eq;
+sprite_slot[BP_ARMOR_BLACKROCK]      = spr_blueprint_eq;
+sprite_slot[BP_HELMET_LEATHER]       = spr_blueprint_eq;
+sprite_slot[BP_HELMET_IRON]          = spr_blueprint_eq;
+sprite_slot[BP_HELMET_BLACKROCK]     = spr_blueprint_eq;
+sprite_slot[BP_BOOTS_LEATHER]        = spr_blueprint_eq;
+sprite_slot[BP_BOOTS_IRON]           = spr_blueprint_eq;
+sprite_slot[BP_BOOTS_BLACKROCK]      = spr_blueprint_eq;
+sprite_slot[BP_REFINED_IRON]         = spr_blueprint_item;
+sprite_slot[BP_UPG_DMG_2]            = spr_blueprint_upg;
+sprite_slot[BP_UPG_DMG_3]            = spr_blueprint_upg;
+sprite_slot[BP_UPG_DMG_4]            = spr_blueprint_upg;
+sprite_slot[BP_UPG_DMG_5]            = spr_blueprint_upg;
+sprite_slot[BP_UPG_DMG_6]            = spr_blueprint_upg;
+
+//--| Upgrades
+
+sprite_slot[UPG_DMG_1]            = spr_slot_upg_dmg;
+sprite_slot[UPG_DMG_2]            = spr_slot_upg_dmg;
+sprite_slot[UPG_DMG_3]            = spr_slot_upg_dmg;
+sprite_slot[UPG_DMG_4]            = spr_slot_upg_dmg;
+sprite_slot[UPG_DMG_5]            = spr_slot_upg_dmg;
+sprite_slot[UPG_DMG_6]            = spr_slot_upg_dmg;
+
+//--| Use
+
+sprite_slot[BATTERY_SMALL]        = spr_battery_small;
+sprite_slot[MONEY_BAG_SMALL]      = spr_money_bag_small;
+sprite_slot[MEDIC_KIT_SMALL]      = spr_medic_kit_small;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Item Icon Sprite Subimages
+
+
+/////////////////////////////////////
+//----Array for item subimages-----//
+/////////////////////////////////////
+
+//--| Armor
+
+sprite_sub[ARMOR_NONE]           = 0;
+sprite_sub[ARMOR_LEATHER]        = 0;
+sprite_sub[ARMOR_IRON]           = 0;
+sprite_sub[ARMOR_BLACKROCK]      = 0;
+sprite_sub[HELMET_NONE]          = 0;
+sprite_sub[HELMET_LEATHER]       = 0;
+sprite_sub[HELMET_IRON]          = 0;
+sprite_sub[HELMET_BLACKROCK]     = 0;
+sprite_sub[BOOTS_NONE]           = 0;
+sprite_sub[BOOTS_LEATHER]        = 0;
+sprite_sub[BOOTS_IRON]           = 0;
+sprite_sub[BOOTS_BLACKROCK]      = 0;
+
+//--| Materials
+
+sprite_sub[LEATHER]              = 0;
+sprite_sub[IRON]                 = 0;
+sprite_sub[REFINED_IRON]         = 0;
+sprite_sub[BLACKROCK]            = 0;
+
+//--| Misc
+
+sprite_sub[KEY_GOLDEN]           = 0;
+
+//--| Blueprints
+
+sprite_sub[BP_ARMOR_LEATHER]        = 0;
+sprite_sub[BP_ARMOR_IRON]           = 0;
+sprite_sub[BP_ARMOR_BLACKROCK]      = 0;
+sprite_sub[BP_HELMET_LEATHER]       = 0;
+sprite_sub[BP_HELMET_IRON]          = 0;
+sprite_sub[BP_HELMET_BLACKROCK]     = 0;
+sprite_sub[BP_BOOTS_LEATHER]        = 0;
+sprite_sub[BP_BOOTS_IRON]           = 0;
+sprite_sub[BP_BOOTS_BLACKROCK]      = 0;
+sprite_sub[BP_REFINED_IRON]         = 0;
+sprite_sub[BP_UPG_DMG_2]            = 0;
+sprite_sub[BP_UPG_DMG_3]            = 0;
+sprite_sub[BP_UPG_DMG_4]            = 0;
+sprite_sub[BP_UPG_DMG_5]            = 0;
+sprite_sub[BP_UPG_DMG_6]            = 0;
+
+//--| Upgrades
+
+sprite_sub[UPG_DMG_1]            = 0;
+sprite_sub[UPG_DMG_2]            = 1;
+sprite_sub[UPG_DMG_3]            = 2;
+sprite_sub[UPG_DMG_4]            = 3;
+sprite_sub[UPG_DMG_5]            = 4;
+sprite_sub[UPG_DMG_6]            = 5;
+
+//--| Use
+
+sprite_sub[BATTERY_SMALL]        = 0;
+sprite_sub[MONEY_BAG_SMALL]      = 0;
+sprite_sub[MEDIC_KIT_SMALL]      = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Item Objects
 
 
@@ -799,6 +1054,9 @@ globalvar ingredients_n;
 
 globalvar item_name;
 globalvar sprite;
+globalvar sprite_icon;
+globalvar sprite_sub;
+globalvar sprite_slot;
 globalvar object;
 globalvar stackable;
 globalvar n;

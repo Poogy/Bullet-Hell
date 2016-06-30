@@ -61,6 +61,7 @@
           <sprite>sprites\spr_upg_dmg_4</sprite>
           <sprite>sprites\spr_upg_dmg_5</sprite>
           <sprite>sprites\spr_upg_dmg_6</sprite>
+          <sprite>sprites\spr_upg_dmg_icon</sprite>
         </sprites>
       </sprites>
     </sprites>
@@ -87,6 +88,7 @@
     <sprite>sprites\spr_cursor</sprite>
     <sprite>sprites\spr_flashlight</sprite>
     <sprite>sprites\spr_slot</sprite>
+    <sprite>sprites\spr_slot_upg_dmg</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\tile_01_16</background>

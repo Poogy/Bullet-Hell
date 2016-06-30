@@ -55,41 +55,16 @@ upg_stat[UPG_DMG_6]=0.30;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (n[upg_index]&gt;0 &amp;&amp; obj_stat.upg_dmg[obj_stat.stat[3],0]==noone) {
-   n[upg_index]--;
-            if (obj_stat.upg_dmg[obj_stat.stat[3],0]==noone &amp;&amp; obj_stat.bullet[obj_stat.stat[3],2] &gt;= obj_stat.lvl_req[0]){
-        obj_stat.upg_dmg[obj_stat.stat[3],0]="dmg";
-        obj_stat.dmg_upgraded += upg_stat[upg_index];
-        obj_stat.spr_slot_0 = sprite[upg_index];
-     } else if (obj_stat.upg_dmg[obj_stat.stat[3],1]==noone &amp;&amp; obj_stat.bullet[obj_stat.stat[3],2] &gt;= obj_stat.lvl_req[1]){
-        obj_stat.upg_dmg[obj_stat.stat[3],1]="dmg";
-        obj_stat.dmg_upgraded += upg_stat[upg_index];
-        obj_stat.spr_slot_1 = sprite[upg_index];
-     } else if (obj_stat.upg_dmg[obj_stat.stat[3],2]==noone &amp;&amp; obj_stat.bullet[obj_stat.stat[3],2] &gt;= obj_stat.lvl_req[2]){
-        obj_stat.upg_dmg[obj_stat.stat[3],2]="dmg";
-        obj_stat.dmg_upgraded += upg_stat[upg_index];
-        obj_stat.spr_slot_2 = sprite[upg_index];
-     } else if (obj_stat.upg_dmg[obj_stat.stat[3],3]==noone &amp;&amp; obj_stat.bullet[obj_stat.stat[3],2] &gt;= obj_stat.lvl_req[3]){
-        obj_stat.upg_dmg[obj_stat.stat[3],3]="dmg";
-        obj_stat.dmg_upgraded += upg_stat[upg_index];
-        obj_stat.spr_slot_3 = sprite[upg_index];
-     } else if (obj_stat.upg_dmg[obj_stat.stat[3],4]==noone &amp;&amp; obj_stat.bullet[obj_stat.stat[3],2] &gt;= obj_stat.lvl_req[4]){
-        obj_stat.upg_dmg[obj_stat.stat[3],4]="dmg";
-        obj_stat.dmg_upgraded += upg_stat[upg_index];
-        obj_stat.spr_slot_4 = sprite[upg_index];
-     } else if (obj_stat.upg_dmg[obj_stat.stat[3],5]==noone &amp;&amp; obj_stat.bullet[obj_stat.stat[3],2] &gt;= obj_stat.lvl_req[5]){
-        obj_stat.upg_dmg[obj_stat.stat[3],5]="dmg";
-        obj_stat.dmg_upgraded += upg_stat[upg_index];
-        obj_stat.spr_slot_5 = sprite[upg_index];
-     } else if (obj_stat.upg_dmg[obj_stat.stat[3],6]==noone &amp;&amp; obj_stat.bullet[obj_stat.stat[3],2] &gt;= obj_stat.lvl_req[6]){
-        obj_stat.upg_dmg[obj_stat.stat[3],6]="dmg";
-        obj_stat.dmg_upgraded += upg_stat[upg_index];
-        obj_stat.spr_slot_6 = sprite[upg_index];
-     } else if (obj_stat.upg_dmg[obj_stat.stat[3],7]==noone &amp;&amp; obj_stat.bullet[obj_stat.stat[3],2] &gt;= obj_stat.lvl_req[7]){
-        obj_stat.upg_dmg[obj_stat.stat[3],7]="dmg";
-        obj_stat.dmg_upgraded += upg_stat[upg_index];
-        obj_stat.spr_slot_7 = sprite[upg_index];
-     }
+            <string>if (n[upg_index]&gt;0 &amp;&amp; obj_stat.upg_dmg[obj_stat.stat[3],array_length_1d(obj_stat.upg_dmg)-1]==noone) {
+    for(i=0;i&lt;array_length_1d(obj_stat.upg_dmg);i++){
+       if (obj_stat.upg_dmg[obj_stat.stat[3],i]==noone &amp;&amp; obj_stat.bullet[obj_stat.stat[3],2] &gt;= obj_stat.lvl_req[i]){
+          obj_stat.upg_dmg[obj_stat.stat[3],i]="dmg";
+          obj_stat.dmg_upgraded += upg_stat[upg_index];
+          obj_stat.slot_spr[i]=sprite_slot[upg_index];
+          obj_stat.slot_sub[i]=sprite_sub[upg_index];
+          n[upg_index]--;
+      }
+   }
 }
 </string>
           </argument>
@@ -113,9 +88,11 @@ upg_stat[UPG_DMG_6]=0.30;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = sprite[upg_index];
+            <string>sprite_index = sprite_icon[upg_index];
+image_index = sprite_sub[upg_index];
 draw_self();
-draw_text(x+16,y,n[upg_index]);
+
+draw_text(x+36,y+8,n[upg_index]);
 </string>
           </argument>
         </arguments>

@@ -38,14 +38,23 @@ dmg_upgraded = 0;
 reflective = false;
 
 //---Slots---
-spr_slot_0 = spr_slot;
-spr_slot_1 = spr_slot;
-spr_slot_2 = spr_slot;
-spr_slot_3 = spr_slot;
-spr_slot_4 = spr_slot;
-spr_slot_5 = spr_slot;
-spr_slot_6 = spr_slot;
-spr_slot_7 = spr_slot;
+slot_spr[0] = spr_slot;
+slot_spr[1] = spr_slot;
+slot_spr[2] = spr_slot;
+slot_spr[3] = spr_slot;
+slot_spr[4] = spr_slot;
+slot_spr[5] = spr_slot;
+slot_spr[6] = spr_slot;
+slot_spr[7] = spr_slot;
+
+slot_sub[0]=0;
+slot_sub[1]=0;
+slot_sub[2]=0;
+slot_sub[3]=0;
+slot_sub[4]=0;
+slot_sub[5]=0;
+slot_sub[6]=0;
+slot_sub[7]=0;
 
 lvl_req[0]=3;
 lvl_req[1]=5;
@@ -265,15 +274,9 @@ for (j=0;j&lt;2;j++){
         draw_sprite_ext(spr_slot,0,1712+32*i,976+32*j,1,1,0,c_white,0.5);
     }
 }
-
-if obj_stat.bullet[obj_stat.stat[3],2] &gt;= lvl_req[0]  draw_sprite(spr_slot_0,0,1712+32,976);
-if obj_stat.bullet[obj_stat.stat[3],2] &gt;= lvl_req[1]  draw_sprite(spr_slot_1,0,1712+32*2,976);
-if obj_stat.bullet[obj_stat.stat[3],2] &gt;= lvl_req[2]  draw_sprite(spr_slot_2,0,1712+32*3,976);
-if obj_stat.bullet[obj_stat.stat[3],2] &gt;= lvl_req[3] draw_sprite(spr_slot_3,0,1712+32*4,976);
-if obj_stat.bullet[obj_stat.stat[3],2] &gt;= lvl_req[4] draw_sprite(spr_slot_4,0,1712+32*5,976);
-if obj_stat.bullet[obj_stat.stat[3],2] &gt;= lvl_req[5] draw_sprite(spr_slot_5,0,1712+32*6,976);
-if obj_stat.bullet[obj_stat.stat[3],2] &gt;= lvl_req[6] draw_sprite(spr_slot_6,0,1712+32*7,976);
-if obj_stat.bullet[obj_stat.stat[3],2] &gt;= lvl_req[7] draw_sprite(spr_slot_7,0,1712+32*8,976);
+for(i=0;i&lt;array_length_1d(lvl_req);i++){
+   if obj_stat.bullet[obj_stat.stat[3],2] &gt;= lvl_req[i] draw_sprite(slot_spr[i],slot_sub[i],1712+32*(i+1),976);
+}
 
 if (room!=rm_skill){
 //Health
