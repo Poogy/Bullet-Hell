@@ -213,7 +213,7 @@ if key_flashlight &amp;&amp; !flash flash=true;
 image_angle=point_direction(x,y,mouse_x,mouse_y)-90;
 
 //Schießen
-if (!shoot &amp;&amp; key_shoot &amp;&amp; room!=rm_skill &amp;&amp; room!=rm_forge) {
+if (!shoot &amp;&amp; key_shoot &amp;&amp; room!=rm_skill &amp;&amp; room!=rm_forge &amp;&amp; room!=rm_upg) {
     shoot=true;
     //Bullet 0: Pistol
     if obj_stat.stat[3]==0 {

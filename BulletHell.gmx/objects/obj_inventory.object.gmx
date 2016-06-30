@@ -417,7 +417,7 @@ n[BP_UPG_DMG_6]            = 0;
 
 //--| Upgrades
 
-n[UPG_DMG_1]            = 0;
+n[UPG_DMG_1]            = 10;
 n[UPG_DMG_2]            = 0;
 n[UPG_DMG_3]            = 0;
 n[UPG_DMG_4]            = 0;
