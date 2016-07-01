@@ -98,7 +98,7 @@ else if (obj_stat.stat[3]==2) {
           <argument>
             <kind>1</kind>
             <string>if (obj_stat.reflective){
-   direction = -direction;
+   direction += 135;
 } else {
    instance_destroy();
 }

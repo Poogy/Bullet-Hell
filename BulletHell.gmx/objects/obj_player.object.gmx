@@ -230,11 +230,9 @@ if (!shoot &amp;&amp; key_shoot &amp;&amp; room!=rm_skill &amp;&amp; room!=rm_fo
         alarm[0]=obj_stat.bullet[2,6];
         repeat 3 instance_create(x,y,obj_bullet);
     }
-    //Bullet 3: AOE
+    //Bullet 3: Boomerang
     else if obj_stat.stat[3]==3 {
-        shoot=0;
-        alarm[0]=obj_stat.bullet[3,6];
-        instance_create(x,y,obj_bullet);
+        instance_create(x,y,obj_boomerang);
     }
 }
 

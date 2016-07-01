@@ -31,6 +31,7 @@ xp=2;
 spd=2;
 
 dmg_cd=false;
+bmrg_hit=false;
 shake=0;
 </string>
           </argument>
@@ -82,6 +83,57 @@ obj_stat.bullet[obj_stat.stat[3],3]+=xp;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with obj_boomerang root=false;
+
+spd=7;
+alarm[2]=room_speed*1.5;
+move_towards_point(random_range(x-180,x+180),random_range(y-180,y+180),spd);
+if place_meeting(x,y,obj_enemy01) || place_meeting(x,y,obj_enemy02) || place_meeting(x,y,obj_enemy03) with other instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
@@ -126,6 +178,12 @@ obj_stat.bullet[obj_stat.stat[3],3]+=xp;
 //Movement
 image_angle=point_direction(x,y,obj_player.x,obj_player.y)-90;
 move_towards_point(obj_player.x,obj_player.y,spd);
+
+//Boomerang will let you fly awaaaaaaaaaaaay
+if bmrg_hit==true {
+    spd=0;
+    alarm[1]=room_speed;
+}
 
 //Camera shaking(if player got hit)
 view_xview+=random_range(-shake,shake);

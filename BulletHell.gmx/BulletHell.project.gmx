@@ -71,12 +71,11 @@
       <sprite>sprites\spr_enemy02</sprite>
       <sprite>sprites\spr_enemy03</sprite>
     </sprites>
-    <sprite>sprites\spr_craft</sprite>
     <sprites name="Weapons">
       <sprite>sprites\spr_bullet</sprite>
-      <sprite>sprites\spr_laser</sprite>
-      <sprite>sprites\spr_laser_end</sprite>
+      <sprite>sprites\spr_boomerang</sprite>
     </sprites>
+    <sprite>sprites\spr_craft</sprite>
     <sprite>sprites\spr_collision</sprite>
     <sprite>sprites\spr_door</sprite>
     <sprite>sprites\spr_forge</sprite>
@@ -211,6 +210,7 @@
       <object>objects\item_parent</object>
     </objects>
     <objects name="Weapons">
+      <object>objects\obj_boomerang</object>
       <object>objects\obj_bullet</object>
     </objects>
     <object>objects\obj_upgrade</object>
@@ -224,6 +224,7 @@
     <object>objects\obj_craft</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_test</room>
     <room>rooms\rm_01</room>
     <room>rooms\rm_skill</room>
     <room>rooms\rm_forge</room>
